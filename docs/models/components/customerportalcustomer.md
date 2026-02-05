@@ -24,6 +24,7 @@ let value: CustomerPortalCustomer = {
       accountUsername: "<value>",
     },
   },
+  type: "individual",
 };
 ```
 
@@ -42,3 +43,4 @@ let value: CustomerPortalCustomer = {
 | `taxId`                                                                                                        | *components.CustomerPortalCustomerTaxId*[]                                                                     | :heavy_check_mark:                                                                                             | N/A                                                                                                            | [<br/>"911144442",<br/>"us_ein"<br/>]                                                                          |
 | `oauthAccounts`                                                                                                | Record<string, [components.CustomerPortalOAuthAccount](../../models/components/customerportaloauthaccount.md)> | :heavy_check_mark:                                                                                             | N/A                                                                                                            |                                                                                                                |
 | `defaultPaymentMethodId`                                                                                       | *string*                                                                                                       | :heavy_minus_sign:                                                                                             | N/A                                                                                                            |                                                                                                                |
+| `type`                                                                                                         | [components.CustomerType](../../models/components/customertype.md)                                             | :heavy_minus_sign:                                                                                             | N/A                                                                                                            | individual                                                                                                     |

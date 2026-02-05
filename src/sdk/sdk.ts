@@ -11,6 +11,7 @@ import { WebhookBenefitGrantRevokedPayload } from "../models/components/webhookb
 import { WebhookBenefitGrantUpdatedPayload } from "../models/components/webhookbenefitgrantupdatedpayload.js";
 import { WebhookBenefitUpdatedPayload } from "../models/components/webhookbenefitupdatedpayload.js";
 import { WebhookCheckoutCreatedPayload } from "../models/components/webhookcheckoutcreatedpayload.js";
+import { WebhookCheckoutExpiredPayload } from "../models/components/webhookcheckoutexpiredpayload.js";
 import { WebhookCheckoutUpdatedPayload } from "../models/components/webhookcheckoutupdatedpayload.js";
 import { WebhookCustomerCreatedPayload } from "../models/components/webhookcustomercreatedpayload.js";
 import { WebhookCustomerDeletedPayload } from "../models/components/webhookcustomerdeletedpayload.js";
@@ -226,6 +227,7 @@ export class Polar extends ClientSDK {
   }): Promise<
     | WebhookCheckoutCreatedPayload
     | WebhookCheckoutUpdatedPayload
+    | WebhookCheckoutExpiredPayload
     | WebhookCustomerCreatedPayload
     | WebhookCustomerUpdatedPayload
     | WebhookCustomerDeletedPayload

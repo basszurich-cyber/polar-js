@@ -32,6 +32,10 @@ import {
   webhookCheckoutCreatedPayloadFromJSON,
 } from "../models/components/webhookcheckoutcreatedpayload.js";
 import {
+  WebhookCheckoutExpiredPayload,
+  webhookCheckoutExpiredPayloadFromJSON,
+} from "../models/components/webhookcheckoutexpiredpayload.js";
+import {
   WebhookCheckoutUpdatedPayload,
   webhookCheckoutUpdatedPayloadFromJSON,
 } from "../models/components/webhookcheckoutupdatedpayload.js";
@@ -143,6 +147,7 @@ export async function validateWebhook(_client: PolarCore, {
   Result<
     | WebhookCheckoutCreatedPayload
     | WebhookCheckoutUpdatedPayload
+    | WebhookCheckoutExpiredPayload
     | WebhookCustomerCreatedPayload
     | WebhookCustomerUpdatedPayload
     | WebhookCustomerDeletedPayload
@@ -179,6 +184,7 @@ export async function validateWebhook(_client: PolarCore, {
   const knownSchemas = [
     webhookCheckoutCreatedPayloadFromJSON,
     webhookCheckoutUpdatedPayloadFromJSON,
+    webhookCheckoutExpiredPayloadFromJSON,
     webhookCustomerCreatedPayloadFromJSON,
     webhookCustomerUpdatedPayloadFromJSON,
     webhookCustomerDeletedPayloadFromJSON,

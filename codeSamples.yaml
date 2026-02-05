@@ -261,6 +261,30 @@ actions:
         - "lang": "typescript"
           "label": "Typescript (SDK)"
           "source": "import { Polar } from \"@polar-sh/sdk\";\n\nconst polar = new Polar();\n\nasync function run() {\n  const result = await polar.customerPortal.licenseKeys.get({\n    customerSession: process.env[\"POLAR_CUSTOMER_SESSION\"] ?? \"\",\n  }, {\n    id: \"<value>\",\n  });\n\n  console.log(result);\n}\n\nrun();"
+  - target: $["paths"]["/v1/customer-portal/members"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "typescript"
+          "label": "Typescript (SDK)"
+          "source": "import { Polar } from \"@polar-sh/sdk\";\n\nconst polar = new Polar({\n  accessToken: process.env[\"POLAR_ACCESS_TOKEN\"] ?? \"\",\n});\n\nasync function run() {\n  const result = await polar.customerPortal.members.listMembers();\n\n  console.log(result);\n}\n\nrun();"
+  - target: $["paths"]["/v1/customer-portal/members"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "typescript"
+          "label": "Typescript (SDK)"
+          "source": "import { Polar } from \"@polar-sh/sdk\";\n\nconst polar = new Polar({\n  accessToken: process.env[\"POLAR_ACCESS_TOKEN\"] ?? \"\",\n});\n\nasync function run() {\n  const result = await polar.customerPortal.members.addMember({\n    email: \"Domenica.Schamberger@yahoo.com\",\n  });\n\n  console.log(result);\n}\n\nrun();"
+  - target: $["paths"]["/v1/customer-portal/members/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "typescript"
+          "label": "Typescript (SDK)"
+          "source": "import { Polar } from \"@polar-sh/sdk\";\n\nconst polar = new Polar({\n  accessToken: process.env[\"POLAR_ACCESS_TOKEN\"] ?? \"\",\n});\n\nasync function run() {\n  await polar.customerPortal.members.removeMember({\n    id: \"b61c5e87-cda5-4b14-93ee-71a695f42d9d\",\n  });\n\n\n}\n\nrun();"
+  - target: $["paths"]["/v1/customer-portal/members/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "typescript"
+          "label": "Typescript (SDK)"
+          "source": "import { Polar } from \"@polar-sh/sdk\";\n\nconst polar = new Polar({\n  accessToken: process.env[\"POLAR_ACCESS_TOKEN\"] ?? \"\",\n});\n\nasync function run() {\n  const result = await polar.customerPortal.members.updateMember({\n    id: \"8319ae11-ed5f-4642-81e4-4b40731df195\",\n    customerPortalMemberUpdate: {},\n  });\n\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/v1/customer-portal/meters/"]["get"]
     update:
       "x-codeSamples":
@@ -884,7 +908,7 @@ actions:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript (SDK)"
-          "source": "import { Polar } from \"@polar-sh/sdk\";\n\nconst polar = new Polar({\n  accessToken: process.env[\"POLAR_ACCESS_TOKEN\"] ?? \"\",\n});\n\nasync function run() {\n  const result = await polar.products.create({\n    name: \"<value>\",\n    prices: [\n      {\n        amountType: \"custom\",\n        priceCurrency: \"usd\",\n        minimumAmount: 50,\n      },\n    ],\n    organizationId: \"1dbfc517-0bbf-4301-9ba8-555ca42b9737\",\n  });\n\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Polar } from \"@polar-sh/sdk\";\n\nconst polar = new Polar({\n  accessToken: process.env[\"POLAR_ACCESS_TOKEN\"] ?? \"\",\n});\n\nasync function run() {\n  const result = await polar.products.create({\n    name: \"<value>\",\n    prices: [\n      {\n        amountType: \"custom\",\n        minimumAmount: 50,\n      },\n    ],\n    organizationId: \"1dbfc517-0bbf-4301-9ba8-555ca42b9737\",\n  });\n\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/v1/products/{id}"]["get"]
     update:
       "x-codeSamples":
