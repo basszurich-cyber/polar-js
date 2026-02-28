@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import {
   encodeDeepObjectQuery,
   encodeFormQuery,
@@ -31,7 +31,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import {
   ResourceNotFound,
   ResourceNotFound$inboundSchema,
@@ -54,7 +54,7 @@ import { Result } from "../types/fp.js";
  * **Scopes**: `meters:read` `meters:write`
  */
 export function metersQuantities(
-  client: PolarCore,
+  client: SpaireCore,
   request: MetersQuantitiesRequest,
   options?: RequestOptions,
 ): APIPromise<
@@ -62,7 +62,7 @@ export function metersQuantities(
     MeterQuantities,
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -80,7 +80,7 @@ export function metersQuantities(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   request: MetersQuantitiesRequest,
   options?: RequestOptions,
 ): Promise<
@@ -89,7 +89,7 @@ async function $do(
       MeterQuantities,
       | ResourceNotFound
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -194,7 +194,7 @@ async function $do(
     MeterQuantities,
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

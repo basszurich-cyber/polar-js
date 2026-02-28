@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UniqueAggregation } from "@polar-sh/sdk/models/components/uniqueaggregation.js";
+import { UniqueAggregation } from "@spaire/sdk/models/components/uniqueaggregation.js";
 
 let value: UniqueAggregation = {
   func: "unique",

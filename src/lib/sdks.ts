@@ -112,7 +112,7 @@ export class ClientSDK {
     this._options = { ...options, hooks: this.#hooks };
 
     this.#logger = this._options.debugLogger;
-    if (!this.#logger && env().POLAR_DEBUG) {
+    if (!this.#logger && env().SPAIRE_DEBUG) {
       this.#logger = console;
     }
   }

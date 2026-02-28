@@ -7,7 +7,7 @@ A free recurring price for a product, i.e. a subscription.
 ## Example Usage
 
 ```typescript
-import { LegacyRecurringProductPriceFree } from "@polar-sh/sdk/models/components/legacyrecurringproductpricefree.js";
+import { LegacyRecurringProductPriceFree } from "@spaire/sdk/models/components/legacyrecurringproductpricefree.js";
 
 let value: LegacyRecurringProductPriceFree = {
   createdAt: new Date("2025-05-26T22:02:46.951Z"),

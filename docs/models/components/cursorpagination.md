@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CursorPagination } from "@polar-sh/sdk/models/components/cursorpagination.js";
+import { CursorPagination } from "@spaire/sdk/models/components/cursorpagination.js";
 
 let value: CursorPagination = {
   hasNextPage: true,

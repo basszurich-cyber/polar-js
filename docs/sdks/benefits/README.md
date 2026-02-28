@@ -21,14 +21,14 @@ List benefits.
 
 <!-- UsageSnippet language="typescript" operationID="benefits:list" method="get" path="/v1/benefits/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.benefits.list({
+  const result = await spaire.benefits.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -45,17 +45,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { benefitsList } from "@polar-sh/sdk/funcs/benefitsList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { benefitsList } from "@spaire/sdk/funcs/benefitsList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await benefitsList(polar, {
+  const res = await benefitsList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -101,14 +101,14 @@ Create a benefit.
 
 <!-- UsageSnippet language="typescript" operationID="benefits:create" method="post" path="/v1/benefits/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.benefits.create({
+  const result = await spaire.benefits.create({
     type: "license_keys",
     description: "mature emergent at outside arrogantly gadzooks zealous equatorial notwithstanding",
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
@@ -126,17 +126,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { benefitsCreate } from "@polar-sh/sdk/funcs/benefitsCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { benefitsCreate } from "@spaire/sdk/funcs/benefitsCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await benefitsCreate(polar, {
+  const res = await benefitsCreate(spaire, {
     type: "license_keys",
     description: "mature emergent at outside arrogantly gadzooks zealous equatorial notwithstanding",
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
@@ -183,14 +183,14 @@ Get a benefit by ID.
 
 <!-- UsageSnippet language="typescript" operationID="benefits:get" method="get" path="/v1/benefits/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.benefits.get({
+  const result = await spaire.benefits.get({
     id: "<value>",
   });
 
@@ -205,17 +205,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { benefitsGet } from "@polar-sh/sdk/funcs/benefitsGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { benefitsGet } from "@spaire/sdk/funcs/benefitsGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await benefitsGet(polar, {
+  const res = await benefitsGet(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -264,14 +264,14 @@ Delete a benefit.
 
 <!-- UsageSnippet language="typescript" operationID="benefits:delete" method="delete" path="/v1/benefits/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  await polar.benefits.delete({
+  await spaire.benefits.delete({
     id: "<value>",
   });
 
@@ -286,17 +286,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { benefitsDelete } from "@polar-sh/sdk/funcs/benefitsDelete.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { benefitsDelete } from "@spaire/sdk/funcs/benefitsDelete.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await benefitsDelete(polar, {
+  const res = await benefitsDelete(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -342,14 +342,14 @@ Update a benefit.
 
 <!-- UsageSnippet language="typescript" operationID="benefits:update" method="patch" path="/v1/benefits/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.benefits.update({
+  const result = await spaire.benefits.update({
     id: "<value>",
     requestBody: {
       type: "custom",
@@ -367,17 +367,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { benefitsUpdate } from "@polar-sh/sdk/funcs/benefitsUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { benefitsUpdate } from "@spaire/sdk/funcs/benefitsUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await benefitsUpdate(polar, {
+  const res = await benefitsUpdate(spaire, {
     id: "<value>",
     requestBody: {
       type: "custom",
@@ -427,14 +427,14 @@ It's especially useful to check if a user has been granted a benefit.
 
 <!-- UsageSnippet language="typescript" operationID="benefits:grants" method="get" path="/v1/benefits/{id}/grants" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.benefits.grants({
+  const result = await spaire.benefits.grants({
     id: "<value>",
   });
 
@@ -451,17 +451,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { benefitsGrants } from "@polar-sh/sdk/funcs/benefitsGrants.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { benefitsGrants } from "@spaire/sdk/funcs/benefitsGrants.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await benefitsGrants(polar, {
+  const res = await benefitsGrants(spaire, {
     id: "<value>",
   });
   if (res.ok) {

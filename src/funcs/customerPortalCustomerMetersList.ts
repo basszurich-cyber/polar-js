@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { dlv } from "../lib/dlv.js";
 import { encodeFormQuery } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
@@ -23,7 +23,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import {
@@ -51,7 +51,7 @@ import {
  * **Scopes**: `customer_portal:read` `customer_portal:write`
  */
 export function customerPortalCustomerMetersList(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalCustomerMetersListSecurity,
   request: CustomerPortalCustomerMetersListRequest,
   options?: RequestOptions,
@@ -60,7 +60,7 @@ export function customerPortalCustomerMetersList(
     Result<
       CustomerPortalCustomerMetersListResponse,
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -81,7 +81,7 @@ export function customerPortalCustomerMetersList(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalCustomerMetersListSecurity,
   request: CustomerPortalCustomerMetersListRequest,
   options?: RequestOptions,
@@ -91,7 +91,7 @@ async function $do(
       Result<
         CustomerPortalCustomerMetersListResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError
@@ -197,7 +197,7 @@ async function $do(
   const [result, raw] = await M.match<
     CustomerPortalCustomerMetersListResponse,
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -228,7 +228,7 @@ async function $do(
       Result<
         CustomerPortalCustomerMetersListResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError

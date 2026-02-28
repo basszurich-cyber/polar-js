@@ -5,7 +5,7 @@ Filter by HTTP response code class (2xx, 3xx, 4xx, 5xx).
 ## Example Usage
 
 ```typescript
-import { HttpCodeClass } from "@polar-sh/sdk/models/operations/webhookslistwebhookdeliveries.js";
+import { HttpCodeClass } from "@spaire/sdk/models/operations/webhookslistwebhookdeliveries.js";
 
 let value: HttpCodeClass = "4xx";
 ```

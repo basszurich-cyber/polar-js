@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { WebTokenRequestSubType } from "@polar-sh/sdk/models/components/webtokenrequest.js";
+import { WebTokenRequestSubType } from "@spaire/sdk/models/components/webtokenrequest.js";
 
 let value: WebTokenRequestSubType = "user";
 ```

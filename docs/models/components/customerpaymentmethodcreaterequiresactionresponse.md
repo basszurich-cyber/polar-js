@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomerPaymentMethodCreateRequiresActionResponse } from "@polar-sh/sdk/models/components/customerpaymentmethodcreaterequiresactionresponse.js";
+import { CustomerPaymentMethodCreateRequiresActionResponse } from "@spaire/sdk/models/components/customerpaymentmethodcreaterequiresactionresponse.js";
 
 let value: CustomerPaymentMethodCreateRequiresActionResponse = {
   status: "requires_action",

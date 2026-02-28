@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { encodeJSON, encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
@@ -26,7 +26,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import {
   ResourceNotFound,
   ResourceNotFound$inboundSchema,
@@ -53,7 +53,7 @@ import { Result } from "../types/fp.js";
  * **Scopes**: `license_keys:write`
  */
 export function licenseKeysUpdate(
-  client: PolarCore,
+  client: SpaireCore,
   request: LicenseKeysUpdateRequest,
   options?: RequestOptions,
 ): APIPromise<
@@ -62,7 +62,7 @@ export function licenseKeysUpdate(
     | Unauthorized
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -80,7 +80,7 @@ export function licenseKeysUpdate(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   request: LicenseKeysUpdateRequest,
   options?: RequestOptions,
 ): Promise<
@@ -90,7 +90,7 @@ async function $do(
       | Unauthorized
       | ResourceNotFound
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -181,7 +181,7 @@ async function $do(
     | Unauthorized
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

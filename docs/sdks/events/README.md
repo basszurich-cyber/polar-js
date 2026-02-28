@@ -19,14 +19,14 @@ List events.
 
 <!-- UsageSnippet language="typescript" operationID="events:list" method="get" path="/v1/events/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.events.list({
+  const result = await spaire.events.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -41,17 +41,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { eventsList } from "@polar-sh/sdk/funcs/eventsList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { eventsList } from "@spaire/sdk/funcs/eventsList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await eventsList(polar, {
+  const res = await eventsList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -95,14 +95,14 @@ List event names.
 
 <!-- UsageSnippet language="typescript" operationID="events:list_names" method="get" path="/v1/events/names" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.events.listNames({
+  const result = await spaire.events.listNames({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -119,17 +119,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { eventsListNames } from "@polar-sh/sdk/funcs/eventsListNames.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { eventsListNames } from "@spaire/sdk/funcs/eventsListNames.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await eventsListNames(polar, {
+  const res = await eventsListNames(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -175,14 +175,14 @@ Get an event by ID.
 
 <!-- UsageSnippet language="typescript" operationID="events:get" method="get" path="/v1/events/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.events.get({
+  const result = await spaire.events.get({
     id: "<value>",
   });
 
@@ -197,17 +197,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { eventsGet } from "@polar-sh/sdk/funcs/eventsGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { eventsGet } from "@spaire/sdk/funcs/eventsGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await eventsGet(polar, {
+  const res = await eventsGet(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -252,14 +252,14 @@ Ingest batch of events.
 
 <!-- UsageSnippet language="typescript" operationID="events:ingest" method="post" path="/v1/events/ingest" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.events.ingest({
+  const result = await spaire.events.ingest({
     events: [],
   });
 
@@ -274,17 +274,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { eventsIngest } from "@polar-sh/sdk/funcs/eventsIngest.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { eventsIngest } from "@spaire/sdk/funcs/eventsIngest.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await eventsIngest(polar, {
+  const res = await eventsIngest(spaire, {
     events: [],
   });
   if (res.ok) {

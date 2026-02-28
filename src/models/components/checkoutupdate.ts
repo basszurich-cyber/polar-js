@@ -121,7 +121,7 @@ export type CheckoutUpdate = {
    */
   returnUrl?: string | null | undefined;
   /**
-   * If you plan to embed the checkout session, set this to the Origin of the embedding page. It'll allow the Polar iframe to communicate with the parent page.
+   * If you plan to embed the checkout session, set this to the Origin of the embedding page. It'll allow the Spaire iframe to communicate with the parent page.
    */
   embedOrigin?: string | null | undefined;
 };

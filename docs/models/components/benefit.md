@@ -106,7 +106,7 @@ const value: components.BenefitGitHubRepository = {
     "key": false,
   },
   properties: {
-    repositoryOwner: "polarsource",
+    repositoryOwner: "spairesource",
     repositoryName: "private_repo",
     permission: "admin",
   },

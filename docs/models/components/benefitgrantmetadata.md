@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BenefitGrantMetadata } from "@polar-sh/sdk/models/components/benefitgrantmetadata.js";
+import { BenefitGrantMetadata } from "@spaire/sdk/models/components/benefitgrantmetadata.js";
 
 let value: BenefitGrantMetadata = {
   benefitId: "<id>",

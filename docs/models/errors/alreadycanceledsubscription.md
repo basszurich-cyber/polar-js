@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { AlreadyCanceledSubscription } from "@polar-sh/sdk/models/errors/alreadycanceledsubscription.js";
+import { AlreadyCanceledSubscription } from "@spaire/sdk/models/errors/alreadycanceledsubscription.js";
 
 // No examples available for this model
 ```

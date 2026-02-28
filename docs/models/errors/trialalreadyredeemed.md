@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { TrialAlreadyRedeemed } from "@polar-sh/sdk/models/errors/trialalreadyredeemed.js";
+import { TrialAlreadyRedeemed } from "@spaire/sdk/models/errors/trialalreadyredeemed.js";
 
 // No examples available for this model
 ```

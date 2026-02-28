@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PaymentMethodCard } from "@polar-sh/sdk/models/components/paymentmethodcard.js";
+import { PaymentMethodCard } from "@spaire/sdk/models/components/paymentmethodcard.js";
 
 let value: PaymentMethodCard = {
   id: "<value>",

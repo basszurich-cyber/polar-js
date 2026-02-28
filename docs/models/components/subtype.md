@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SubType } from "@polar-sh/sdk/models/components/subtype.js";
+import { SubType } from "@spaire/sdk/models/components/subtype.js";
 
 let value: SubType = "organization";
 ```

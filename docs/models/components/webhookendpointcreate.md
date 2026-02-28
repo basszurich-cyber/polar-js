@@ -5,7 +5,7 @@ Schema to create a webhook endpoint.
 ## Example Usage
 
 ```typescript
-import { WebhookEndpointCreate } from "@polar-sh/sdk/models/components/webhookendpointcreate.js";
+import { WebhookEndpointCreate } from "@spaire/sdk/models/components/webhookendpointcreate.js";
 
 let value: WebhookEndpointCreate = {
   url: "https://webhook.site/cb791d80-f26e-4f8c-be88-6e56054192b0",

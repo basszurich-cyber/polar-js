@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { IntrospectTokenRequestTokenTypeHint } from "@polar-sh/sdk/models/components/introspecttokenrequest.js";
+import { IntrospectTokenRequestTokenTypeHint } from "@spaire/sdk/models/components/introspecttokenrequest.js";
 
 let value: IntrospectTokenRequestTokenTypeHint = "access_token";
 ```

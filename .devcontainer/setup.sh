@@ -10,7 +10,7 @@ mkdir samples
 npm install --ignore-scripts
 npm install -g ts-node --ignore-scripts
 npm link
-npm link @polar-sh/sdk
+npm link @spaire/sdk
 TS_CONFIG_CONTENT=$(cat <<EOL
 {
   "compilerOptions": {
@@ -27,4 +27,4 @@ EOL
 echo "$TS_CONFIG_CONTENT" > samples/tsconfig.json
 
 # Generate starter usage sample with speakeasy
-speakeasy generate usage -s https://api.polar.sh/openapi.json -l typescript -o samples/root.ts
+speakeasy generate usage -s https://api.spaire.sh/openapi.json -l typescript -o samples/root.ts

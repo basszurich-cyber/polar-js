@@ -3,10 +3,10 @@
  */
 
 import * as z from "zod/v4/core";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 import { formatZodError } from "./sdkvalidationerror.js";
 
-export class ResponseValidationError extends PolarError {
+export class ResponseValidationError extends SpaireError {
   /**
    * The raw value that failed validation.
    */

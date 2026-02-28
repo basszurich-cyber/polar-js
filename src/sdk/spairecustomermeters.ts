@@ -18,7 +18,7 @@ import {
 import { unwrapAsync } from "../types/fp.js";
 import { PageIterator, unwrapResultIterator } from "../types/operations.js";
 
-export class PolarCustomerMeters extends ClientSDK {
+export class SpaireCustomerMeters extends ClientSDK {
   /**
    * List Meters
    *

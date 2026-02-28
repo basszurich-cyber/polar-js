@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { MeterQuantity } from "@polar-sh/sdk/models/components/meterquantity.js";
+import { MeterQuantity } from "@spaire/sdk/models/components/meterquantity.js";
 
 let value: MeterQuantity = {
   timestamp: new Date("2026-09-09T11:00:36.714Z"),

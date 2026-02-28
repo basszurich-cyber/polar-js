@@ -12,7 +12,7 @@ If payment retries are exhausted, a `subscription.revoked` event will be sent.
 ## Example Usage
 
 ```typescript
-import { WebhookSubscriptionPastDuePayload } from "@polar-sh/sdk/models/components/webhooksubscriptionpastduepayload.js";
+import { WebhookSubscriptionPastDuePayload } from "@spaire/sdk/models/components/webhooksubscriptionpastduepayload.js";
 
 let value: WebhookSubscriptionPastDuePayload = {
   type: "subscription.past_due",

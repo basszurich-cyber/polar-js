@@ -18,7 +18,7 @@ import { CustomerPortalMembersUpdateMemberRequest } from "../models/operations/c
 import { unwrapAsync } from "../types/fp.js";
 import { PageIterator, unwrapResultIterator } from "../types/operations.js";
 
-export class PolarMembers extends ClientSDK {
+export class SpaireMembers extends ClientSDK {
   /**
    * List Members
    *

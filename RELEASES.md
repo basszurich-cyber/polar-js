@@ -8,7 +8,7 @@ Based on:
 ### Generated
 - [typescript v0.6.1] .
 ### Releases
-- [NPM v0.6.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.6.1 - .
+- [NPM v0.6.1] https://www.npmjs.com/package/@spaire/sdk/v/0.6.1 - .
 
 ## 2024-09-04 00:24:19
 ### Changes
@@ -18,7 +18,7 @@ Based on:
 ### Generated
 - [typescript v0.7.0] .
 ### Releases
-- [NPM v0.7.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.7.0 - .
+- [NPM v0.7.0] https://www.npmjs.com/package/@spaire/sdk/v/0.7.0 - .
 
 ## 2024-09-05 00:24:10
 ### Changes
@@ -28,7 +28,7 @@ Based on:
 ### Generated
 - [typescript v0.7.1] .
 ### Releases
-- [NPM v0.7.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.7.1 - .
+- [NPM v0.7.1] https://www.npmjs.com/package/@spaire/sdk/v/0.7.1 - .
 
 ## 2024-09-13 00:24:28
 ### Changes
@@ -38,7 +38,7 @@ Based on:
 ### Generated
 - [typescript v0.8.0] .
 ### Releases
-- [NPM v0.8.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.8.0 - .
+- [NPM v0.8.0] https://www.npmjs.com/package/@spaire/sdk/v/0.8.0 - .
 
 ## 2024-09-16 00:26:12
 ### Changes
@@ -48,7 +48,7 @@ Based on:
 ### Generated
 - [typescript v0.8.1] .
 ### Releases
-- [NPM v0.8.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.8.1 - .
+- [NPM v0.8.1] https://www.npmjs.com/package/@spaire/sdk/v/0.8.1 - .
 
 ## 2024-09-17 00:21:01
 ### Changes
@@ -58,7 +58,7 @@ Based on:
 ### Generated
 - [typescript v0.8.2] .
 ### Releases
-- [NPM v0.8.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.8.2 - .
+- [NPM v0.8.2] https://www.npmjs.com/package/@spaire/sdk/v/0.8.2 - .
 
 ## 2024-09-18 16:08:01
 ### Changes
@@ -68,7 +68,7 @@ Based on:
 ### Generated
 - [typescript v0.9.0] .
 ### Releases
-- [NPM v0.9.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.9.0 - .
+- [NPM v0.9.0] https://www.npmjs.com/package/@spaire/sdk/v/0.9.0 - .
 
 ## 2024-09-23 09:00:14
 ### Changes
@@ -78,7 +78,7 @@ Based on:
 ### Generated
 - [typescript v0.10.0] .
 ### Releases
-- [NPM v0.10.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.10.0 - .
+- [NPM v0.10.0] https://www.npmjs.com/package/@spaire/sdk/v/0.10.0 - .
 
 ## 2024-09-30 00:26:59
 ### Changes
@@ -88,7 +88,7 @@ Based on:
 ### Generated
 - [typescript v0.11.0] .
 ### Releases
-- [NPM v0.11.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.11.0 - .
+- [NPM v0.11.0] https://www.npmjs.com/package/@spaire/sdk/v/0.11.0 - .
 
 ## 2024-10-02 00:25:35
 ### Changes
@@ -98,7 +98,7 @@ Based on:
 ### Generated
 - [typescript v0.11.1] .
 ### Releases
-- [NPM v0.11.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.11.1 - .
+- [NPM v0.11.1] https://www.npmjs.com/package/@spaire/sdk/v/0.11.1 - .
 
 ## 2024-10-04 00:25:33
 ### Changes
@@ -108,7 +108,7 @@ Based on:
 ### Generated
 - [typescript v0.12.0] .
 ### Releases
-- [NPM v0.12.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.12.0 - .
+- [NPM v0.12.0] https://www.npmjs.com/package/@spaire/sdk/v/0.12.0 - .
 
 ## 2024-10-10 00:25:27
 ### Changes
@@ -118,7 +118,7 @@ Based on:
 ### Generated
 - [typescript v0.13.0] .
 ### Releases
-- [NPM v0.13.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.13.0 - .
+- [NPM v0.13.0] https://www.npmjs.com/package/@spaire/sdk/v/0.13.0 - .
 
 ## 2024-10-16 00:25:52
 ### Changes
@@ -128,7 +128,7 @@ Based on:
 ### Generated
 - [typescript v0.13.1] .
 ### Releases
-- [NPM v0.13.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.13.1 - .
+- [NPM v0.13.1] https://www.npmjs.com/package/@spaire/sdk/v/0.13.1 - .
 
 ## 2024-10-17 00:25:54
 ### Changes
@@ -138,7 +138,7 @@ Based on:
 ### Generated
 - [typescript v0.13.2] .
 ### Releases
-- [NPM v0.13.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.13.2 - .
+- [NPM v0.13.2] https://www.npmjs.com/package/@spaire/sdk/v/0.13.2 - .
 
 ## 2024-10-22 00:26:13
 ### Changes
@@ -148,7 +148,7 @@ Based on:
 ### Generated
 - [typescript v0.13.3] .
 ### Releases
-- [NPM v0.13.3] https://www.npmjs.com/package/@polar-sh/sdk/v/0.13.3 - .
+- [NPM v0.13.3] https://www.npmjs.com/package/@spaire/sdk/v/0.13.3 - .
 
 ## 2024-10-24 00:25:54
 ### Changes
@@ -158,7 +158,7 @@ Based on:
 ### Generated
 - [typescript v0.13.4] .
 ### Releases
-- [NPM v0.13.4] https://www.npmjs.com/package/@polar-sh/sdk/v/0.13.4 - .
+- [NPM v0.13.4] https://www.npmjs.com/package/@spaire/sdk/v/0.13.4 - .
 
 ## 2024-10-28 12:32:16
 ### Changes
@@ -168,7 +168,7 @@ Based on:
 ### Generated
 - [typescript v0.13.5] .
 ### Releases
-- [NPM v0.13.5] https://www.npmjs.com/package/@polar-sh/sdk/v/0.13.5 - .
+- [NPM v0.13.5] https://www.npmjs.com/package/@spaire/sdk/v/0.13.5 - .
 
 ## 2024-11-04 08:17:26
 ### Changes
@@ -178,7 +178,7 @@ Based on:
 ### Generated
 - [typescript v0.14.0] .
 ### Releases
-- [NPM v0.14.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.14.0 - .
+- [NPM v0.14.0] https://www.npmjs.com/package/@spaire/sdk/v/0.14.0 - .
 
 ## 2024-11-06 00:25:36
 ### Changes
@@ -188,7 +188,7 @@ Based on:
 ### Generated
 - [typescript v0.15.0] .
 ### Releases
-- [NPM v0.15.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.15.0 - .
+- [NPM v0.15.0] https://www.npmjs.com/package/@spaire/sdk/v/0.15.0 - .
 
 ## 2024-11-06 14:14:28
 ### Changes
@@ -198,7 +198,7 @@ Based on:
 ### Generated
 - [typescript v0.15.1] .
 ### Releases
-- [NPM v0.15.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.15.1 - .
+- [NPM v0.15.1] https://www.npmjs.com/package/@spaire/sdk/v/0.15.1 - .
 
 ## 2024-11-13 14:21:07
 ### Changes
@@ -208,7 +208,7 @@ Based on:
 ### Generated
 - [typescript v0.16.0] .
 ### Releases
-- [NPM v0.16.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.16.0 - .
+- [NPM v0.16.0] https://www.npmjs.com/package/@spaire/sdk/v/0.16.0 - .
 
 ## 2024-11-21 14:21:06
 ### Changes
@@ -218,7 +218,7 @@ Based on:
 ### Generated
 - [typescript v0.16.1] .
 ### Releases
-- [NPM v0.16.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.16.1 - .
+- [NPM v0.16.1] https://www.npmjs.com/package/@spaire/sdk/v/0.16.1 - .
 
 ## 2024-11-25 15:30:30
 ### Changes
@@ -228,7 +228,7 @@ Based on:
 ### Generated
 - [typescript v0.16.2] .
 ### Releases
-- [NPM v0.16.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.16.2 - .
+- [NPM v0.16.2] https://www.npmjs.com/package/@spaire/sdk/v/0.16.2 - .
 
 ## 2024-11-26 15:20:15
 ### Changes
@@ -238,7 +238,7 @@ Based on:
 ### Generated
 - [typescript v0.17.0] .
 ### Releases
-- [NPM v0.17.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.17.0 - .
+- [NPM v0.17.0] https://www.npmjs.com/package/@spaire/sdk/v/0.17.0 - .
 
 ## 2024-11-27 13:58:54
 ### Changes
@@ -248,7 +248,7 @@ Based on:
 ### Generated
 - [typescript v0.17.1] .
 ### Releases
-- [NPM v0.17.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.17.1 - .
+- [NPM v0.17.1] https://www.npmjs.com/package/@spaire/sdk/v/0.17.1 - .
 
 ## 2024-11-29 00:27:55
 ### Changes
@@ -258,7 +258,7 @@ Based on:
 ### Generated
 - [typescript v0.17.2] .
 ### Releases
-- [NPM v0.17.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.17.2 - .
+- [NPM v0.17.2] https://www.npmjs.com/package/@spaire/sdk/v/0.17.2 - .
 
 ## 2024-12-02 10:18:03
 ### Changes
@@ -268,7 +268,7 @@ Based on:
 ### Generated
 - [typescript v0.17.3] .
 ### Releases
-- [NPM v0.17.3] https://www.npmjs.com/package/@polar-sh/sdk/v/0.17.3 - .
+- [NPM v0.17.3] https://www.npmjs.com/package/@spaire/sdk/v/0.17.3 - .
 
 ## 2024-12-02 10:37:40
 ### Changes
@@ -278,7 +278,7 @@ Based on:
 ### Generated
 - [typescript v0.17.4] .
 ### Releases
-- [NPM v0.17.4] https://www.npmjs.com/package/@polar-sh/sdk/v/0.17.4 - .
+- [NPM v0.17.4] https://www.npmjs.com/package/@spaire/sdk/v/0.17.4 - .
 
 ## 2024-12-10 00:28:53
 ### Changes
@@ -288,7 +288,7 @@ Based on:
 ### Generated
 - [typescript v0.18.0] .
 ### Releases
-- [NPM v0.18.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.18.0 - .
+- [NPM v0.18.0] https://www.npmjs.com/package/@spaire/sdk/v/0.18.0 - .
 
 ## 2024-12-16 13:26:22
 ### Changes
@@ -298,7 +298,7 @@ Based on:
 ### Generated
 - [typescript v0.18.1] .
 ### Releases
-- [NPM v0.18.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.18.1 - .
+- [NPM v0.18.1] https://www.npmjs.com/package/@spaire/sdk/v/0.18.1 - .
 
 ## 2024-12-17 09:11:08
 ### Changes
@@ -308,7 +308,7 @@ Based on:
 ### Generated
 - [typescript v0.19.0] .
 ### Releases
-- [NPM v0.19.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.19.0 - .
+- [NPM v0.19.0] https://www.npmjs.com/package/@spaire/sdk/v/0.19.0 - .
 
 ## 2024-12-18 08:38:13
 ### Changes
@@ -318,7 +318,7 @@ Based on:
 ### Generated
 - [typescript v0.19.1] .
 ### Releases
-- [NPM v0.19.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.19.1 - .
+- [NPM v0.19.1] https://www.npmjs.com/package/@spaire/sdk/v/0.19.1 - .
 
 ## 2024-12-20 00:26:23
 ### Changes
@@ -328,7 +328,7 @@ Based on:
 ### Generated
 - [typescript v0.19.2] .
 ### Releases
-- [NPM v0.19.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.19.2 - .
+- [NPM v0.19.2] https://www.npmjs.com/package/@spaire/sdk/v/0.19.2 - .
 
 ## 2025-01-02 12:12:31
 ### Changes
@@ -338,7 +338,7 @@ Based on:
 ### Generated
 - [typescript v0.20.0] .
 ### Releases
-- [NPM v0.20.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.20.0 - .
+- [NPM v0.20.0] https://www.npmjs.com/package/@spaire/sdk/v/0.20.0 - .
 
 ## 2025-01-06 00:27:52
 ### Changes
@@ -348,7 +348,7 @@ Based on:
 ### Generated
 - [typescript v0.20.1] .
 ### Releases
-- [NPM v0.20.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.20.1 - .
+- [NPM v0.20.1] https://www.npmjs.com/package/@spaire/sdk/v/0.20.1 - .
 
 ## 2025-01-07 00:26:57
 ### Changes
@@ -358,7 +358,7 @@ Based on:
 ### Generated
 - [typescript v0.20.2] .
 ### Releases
-- [NPM v0.20.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.20.2 - .
+- [NPM v0.20.2] https://www.npmjs.com/package/@spaire/sdk/v/0.20.2 - .
 
 ## 2025-01-14 00:25:09
 ### Changes
@@ -368,7 +368,7 @@ Based on:
 ### Generated
 - [typescript v0.21.0] .
 ### Releases
-- [NPM v0.21.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.21.0 - .
+- [NPM v0.21.0] https://www.npmjs.com/package/@spaire/sdk/v/0.21.0 - .
 
 ## 2025-01-16 09:53:04
 ### Changes
@@ -378,7 +378,7 @@ Based on:
 ### Generated
 - [typescript v0.21.1] .
 ### Releases
-- [NPM v0.21.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.21.1 - .
+- [NPM v0.21.1] https://www.npmjs.com/package/@spaire/sdk/v/0.21.1 - .
 
 ## 2025-01-17 13:16:57
 ### Changes
@@ -388,7 +388,7 @@ Based on:
 ### Generated
 - [typescript v0.21.2] .
 ### Releases
-- [NPM v0.21.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.21.2 - .
+- [NPM v0.21.2] https://www.npmjs.com/package/@spaire/sdk/v/0.21.2 - .
 
 ## 2025-01-24 12:29:48
 ### Changes
@@ -398,7 +398,7 @@ Based on:
 ### Generated
 - [typescript v0.21.3] .
 ### Releases
-- [NPM v0.21.3] https://www.npmjs.com/package/@polar-sh/sdk/v/0.21.3 - .
+- [NPM v0.21.3] https://www.npmjs.com/package/@spaire/sdk/v/0.21.3 - .
 
 ## 2025-01-24 16:02:12
 ### Changes
@@ -408,7 +408,7 @@ Based on:
 ### Generated
 - [typescript v0.22.0] .
 ### Releases
-- [NPM v0.22.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.22.0 - .
+- [NPM v0.22.0] https://www.npmjs.com/package/@spaire/sdk/v/0.22.0 - .
 
 ## 2025-01-27 00:26:39
 ### Changes
@@ -418,7 +418,7 @@ Based on:
 ### Generated
 - [typescript v0.22.1] .
 ### Releases
-- [NPM v0.22.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.22.1 - .
+- [NPM v0.22.1] https://www.npmjs.com/package/@spaire/sdk/v/0.22.1 - .
 
 ## 2025-01-30 00:25:25
 ### Changes
@@ -428,7 +428,7 @@ Based on:
 ### Generated
 - [typescript v0.22.2] .
 ### Releases
-- [NPM v0.22.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.22.2 - .
+- [NPM v0.22.2] https://www.npmjs.com/package/@spaire/sdk/v/0.22.2 - .
 
 ## 2025-02-05 14:24:09
 ### Changes
@@ -438,7 +438,7 @@ Based on:
 ### Generated
 - [typescript v0.23.0] .
 ### Releases
-- [NPM v0.23.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.23.0 - .
+- [NPM v0.23.0] https://www.npmjs.com/package/@spaire/sdk/v/0.23.0 - .
 
 ## 2025-02-05 16:31:15
 ### Changes
@@ -448,7 +448,7 @@ Based on:
 ### Generated
 - [typescript v0.24.0] .
 ### Releases
-- [NPM v0.24.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.24.0 - .
+- [NPM v0.24.0] https://www.npmjs.com/package/@spaire/sdk/v/0.24.0 - .
 
 ## 2025-02-07 10:13:26
 ### Changes
@@ -458,7 +458,7 @@ Based on:
 ### Generated
 - [typescript v0.25.0] .
 ### Releases
-- [NPM v0.25.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.25.0 - .
+- [NPM v0.25.0] https://www.npmjs.com/package/@spaire/sdk/v/0.25.0 - .
 
 ## 2025-02-17 00:28:14
 ### Changes
@@ -468,7 +468,7 @@ Based on:
 ### Generated
 - [typescript v0.25.1] .
 ### Releases
-- [NPM v0.25.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.25.1 - .
+- [NPM v0.25.1] https://www.npmjs.com/package/@spaire/sdk/v/0.25.1 - .
 
 ## 2025-02-18 15:04:58
 ### Changes
@@ -478,7 +478,7 @@ Based on:
 ### Generated
 - [typescript v0.26.0] .
 ### Releases
-- [NPM v0.26.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.26.0 - .
+- [NPM v0.26.0] https://www.npmjs.com/package/@spaire/sdk/v/0.26.0 - .
 
 ## 2025-02-19 09:07:18
 ### Changes
@@ -488,7 +488,7 @@ Based on:
 ### Generated
 - [typescript v0.26.1] .
 ### Releases
-- [NPM v0.26.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.26.1 - .
+- [NPM v0.26.1] https://www.npmjs.com/package/@spaire/sdk/v/0.26.1 - .
 
 ## 2025-02-25 17:43:44
 ### Changes
@@ -498,7 +498,7 @@ Based on:
 ### Generated
 - [typescript v0.27.0] .
 ### Releases
-- [NPM v0.27.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.27.0 - .
+- [NPM v0.27.0] https://www.npmjs.com/package/@spaire/sdk/v/0.27.0 - .
 
 ## 2025-02-26 11:13:19
 ### Changes
@@ -508,7 +508,7 @@ Based on:
 ### Generated
 - [typescript v0.27.1] .
 ### Releases
-- [NPM v0.27.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.27.1 - .
+- [NPM v0.27.1] https://www.npmjs.com/package/@spaire/sdk/v/0.27.1 - .
 
 ## 2025-02-27 15:49:41
 ### Changes
@@ -518,7 +518,7 @@ Based on:
 ### Generated
 - [typescript v0.28.0] .
 ### Releases
-- [NPM v0.28.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.28.0 - .
+- [NPM v0.28.0] https://www.npmjs.com/package/@spaire/sdk/v/0.28.0 - .
 
 ## 2025-03-04 16:43:50
 ### Changes
@@ -528,7 +528,7 @@ Based on:
 ### Generated
 - [typescript v0.29.0] .
 ### Releases
-- [NPM v0.29.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.29.0 - .
+- [NPM v0.29.0] https://www.npmjs.com/package/@spaire/sdk/v/0.29.0 - .
 
 ## 2025-03-05 15:54:39
 ### Changes
@@ -538,7 +538,7 @@ Based on:
 ### Generated
 - [typescript v0.29.1] .
 ### Releases
-- [NPM v0.29.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.29.1 - .
+- [NPM v0.29.1] https://www.npmjs.com/package/@spaire/sdk/v/0.29.1 - .
 
 ## 2025-03-05 16:51:07
 ### Changes
@@ -548,7 +548,7 @@ Based on:
 ### Generated
 - [typescript v0.29.2] .
 ### Releases
-- [NPM v0.29.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.29.2 - .
+- [NPM v0.29.2] https://www.npmjs.com/package/@spaire/sdk/v/0.29.2 - .
 
 ## 2025-03-06 09:55:07
 ### Changes
@@ -558,7 +558,7 @@ Based on:
 ### Generated
 - [typescript v0.29.3] .
 ### Releases
-- [NPM v0.29.3] https://www.npmjs.com/package/@polar-sh/sdk/v/0.29.3 - .
+- [NPM v0.29.3] https://www.npmjs.com/package/@spaire/sdk/v/0.29.3 - .
 
 ## 2025-03-07 00:27:34
 ### Changes
@@ -568,7 +568,7 @@ Based on:
 ### Generated
 - [typescript v0.30.0] .
 ### Releases
-- [NPM v0.30.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.30.0 - .
+- [NPM v0.30.0] https://www.npmjs.com/package/@spaire/sdk/v/0.30.0 - .
 
 ## 2025-03-14 16:09:09
 ### Changes
@@ -578,7 +578,7 @@ Based on:
 ### Generated
 - [typescript v0.31.0] .
 ### Releases
-- [NPM v0.31.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.31.0 - .
+- [NPM v0.31.0] https://www.npmjs.com/package/@spaire/sdk/v/0.31.0 - .
 
 ## 2025-03-20 11:03:57
 ### Changes
@@ -588,7 +588,7 @@ Based on:
 ### Generated
 - [typescript v0.32.0] .
 ### Releases
-- [NPM v0.32.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.0 - .
+- [NPM v0.32.0] https://www.npmjs.com/package/@spaire/sdk/v/0.32.0 - .
 
 ## 2025-03-25 09:44:14
 ### Changes
@@ -598,7 +598,7 @@ Based on:
 ### Generated
 - [typescript v0.32.1] .
 ### Releases
-- [NPM v0.32.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.1 - .
+- [NPM v0.32.1] https://www.npmjs.com/package/@spaire/sdk/v/0.32.1 - .
 
 ## 2025-03-25 15:34:25
 ### Changes
@@ -608,7 +608,7 @@ Based on:
 ### Generated
 - [typescript v0.32.2] .
 ### Releases
-- [NPM v0.32.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.2 - .
+- [NPM v0.32.2] https://www.npmjs.com/package/@spaire/sdk/v/0.32.2 - .
 
 ## 2025-03-27 09:11:52
 ### Changes
@@ -618,7 +618,7 @@ Based on:
 ### Generated
 - [typescript v0.32.3] .
 ### Releases
-- [NPM v0.32.3] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.3 - .
+- [NPM v0.32.3] https://www.npmjs.com/package/@spaire/sdk/v/0.32.3 - .
 
 ## 2025-04-02 08:01:50
 ### Changes
@@ -628,7 +628,7 @@ Based on:
 ### Generated
 - [typescript v0.32.4] .
 ### Releases
-- [NPM v0.32.4] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.4 - .
+- [NPM v0.32.4] https://www.npmjs.com/package/@spaire/sdk/v/0.32.4 - .
 
 ## 2025-04-09 08:12:44
 ### Changes
@@ -638,7 +638,7 @@ Based on:
 ### Generated
 - [typescript v0.32.5] .
 ### Releases
-- [NPM v0.32.5] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.5 - .
+- [NPM v0.32.5] https://www.npmjs.com/package/@spaire/sdk/v/0.32.5 - .
 
 ## 2025-04-11 11:56:54
 ### Changes
@@ -648,7 +648,7 @@ Based on:
 ### Generated
 - [typescript v0.32.7] .
 ### Releases
-- [NPM v0.32.7] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.7 - .
+- [NPM v0.32.7] https://www.npmjs.com/package/@spaire/sdk/v/0.32.7 - .
 
 ## 2025-04-16 07:25:46
 ### Changes
@@ -658,7 +658,7 @@ Based on:
 ### Generated
 - [typescript v0.32.8] .
 ### Releases
-- [NPM v0.32.8] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.8 - .
+- [NPM v0.32.8] https://www.npmjs.com/package/@spaire/sdk/v/0.32.8 - .
 
 ## 2025-04-16 09:17:39
 ### Changes
@@ -668,7 +668,7 @@ Based on:
 ### Generated
 - [typescript v0.32.9] .
 ### Releases
-- [NPM v0.32.9] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.9 - .
+- [NPM v0.32.9] https://www.npmjs.com/package/@spaire/sdk/v/0.32.9 - .
 
 ## 2025-04-17 14:17:41
 ### Changes
@@ -678,7 +678,7 @@ Based on:
 ### Generated
 - [typescript v0.32.10] .
 ### Releases
-- [NPM v0.32.10] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.10 - .
+- [NPM v0.32.10] https://www.npmjs.com/package/@spaire/sdk/v/0.32.10 - .
 
 ## 2025-04-18 12:43:58
 ### Changes
@@ -688,7 +688,7 @@ Based on:
 ### Generated
 - [typescript v0.32.11] .
 ### Releases
-- [NPM v0.32.11] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.11 - .
+- [NPM v0.32.11] https://www.npmjs.com/package/@spaire/sdk/v/0.32.11 - .
 
 ## 2025-04-30 09:17:22
 ### Changes
@@ -698,7 +698,7 @@ Based on:
 ### Generated
 - [typescript v0.32.12] .
 ### Releases
-- [NPM v0.32.12] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.12 - .
+- [NPM v0.32.12] https://www.npmjs.com/package/@spaire/sdk/v/0.32.12 - .
 
 ## 2025-04-30 14:16:03
 ### Changes
@@ -708,7 +708,7 @@ Based on:
 ### Generated
 - [typescript v0.32.13] .
 ### Releases
-- [NPM v0.32.13] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.13 - .
+- [NPM v0.32.13] https://www.npmjs.com/package/@spaire/sdk/v/0.32.13 - .
 
 ## 2025-05-15 11:34:11
 ### Changes
@@ -718,7 +718,7 @@ Based on:
 ### Generated
 - [typescript v0.32.14] .
 ### Releases
-- [NPM v0.32.14] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.14 - .
+- [NPM v0.32.14] https://www.npmjs.com/package/@spaire/sdk/v/0.32.14 - .
 
 ## 2025-05-16 11:51:39
 ### Changes
@@ -728,7 +728,7 @@ Based on:
 ### Generated
 - [typescript v0.32.15] .
 ### Releases
-- [NPM v0.32.15] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.15 - .
+- [NPM v0.32.15] https://www.npmjs.com/package/@spaire/sdk/v/0.32.15 - .
 
 ## 2025-05-22 00:29:59
 ### Changes
@@ -738,7 +738,7 @@ Based on:
 ### Generated
 - [typescript v0.32.16] .
 ### Releases
-- [NPM v0.32.16] https://www.npmjs.com/package/@polar-sh/sdk/v/0.32.16 - .
+- [NPM v0.32.16] https://www.npmjs.com/package/@spaire/sdk/v/0.32.16 - .
 
 ## 2025-06-02 00:32:13
 ### Changes
@@ -748,7 +748,7 @@ Based on:
 ### Generated
 - [typescript v0.33.0] .
 ### Releases
-- [NPM v0.33.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.33.0 - .
+- [NPM v0.33.0] https://www.npmjs.com/package/@spaire/sdk/v/0.33.0 - .
 
 ## 2025-06-12 08:26:28
 ### Changes
@@ -758,7 +758,7 @@ Based on:
 ### Generated
 - [typescript v0.33.1] .
 ### Releases
-- [NPM v0.33.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.33.1 - .
+- [NPM v0.33.1] https://www.npmjs.com/package/@spaire/sdk/v/0.33.1 - .
 
 ## 2025-06-17 12:13:03
 ### Changes
@@ -768,7 +768,7 @@ Based on:
 ### Generated
 - [typescript v0.33.2] .
 ### Releases
-- [NPM v0.33.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.33.2 - .
+- [NPM v0.33.2] https://www.npmjs.com/package/@spaire/sdk/v/0.33.2 - .
 
 ## 2025-06-18 12:40:37
 ### Changes
@@ -778,7 +778,7 @@ Based on:
 ### Generated
 - [typescript v0.34.0] .
 ### Releases
-- [NPM v0.34.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.0 - .
+- [NPM v0.34.0] https://www.npmjs.com/package/@spaire/sdk/v/0.34.0 - .
 
 ## 2025-06-19 10:51:56
 ### Changes
@@ -788,7 +788,7 @@ Based on:
 ### Generated
 - [typescript v0.34.1] .
 ### Releases
-- [NPM v0.34.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.1 - .
+- [NPM v0.34.1] https://www.npmjs.com/package/@spaire/sdk/v/0.34.1 - .
 
 ## 2025-06-19 11:37:02
 ### Changes
@@ -798,7 +798,7 @@ Based on:
 ### Generated
 - [typescript v0.34.2] .
 ### Releases
-- [NPM v0.34.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.2 - .
+- [NPM v0.34.2] https://www.npmjs.com/package/@spaire/sdk/v/0.34.2 - .
 
 ## 2025-07-01 00:35:34
 ### Changes
@@ -808,7 +808,7 @@ Based on:
 ### Generated
 - [typescript v0.34.3] .
 ### Releases
-- [NPM v0.34.3] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.3 - .
+- [NPM v0.34.3] https://www.npmjs.com/package/@spaire/sdk/v/0.34.3 - .
 
 ## 2025-07-14 00:34:12
 ### Changes
@@ -818,7 +818,7 @@ Based on:
 ### Generated
 - [typescript v0.34.4] .
 ### Releases
-- [NPM v0.34.4] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.4 - .
+- [NPM v0.34.4] https://www.npmjs.com/package/@spaire/sdk/v/0.34.4 - .
 
 ## 2025-07-14 22:32:08
 ### Changes
@@ -828,7 +828,7 @@ Based on:
 ### Generated
 - [typescript v0.34.5] .
 ### Releases
-- [NPM v0.34.5] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.5 - .
+- [NPM v0.34.5] https://www.npmjs.com/package/@spaire/sdk/v/0.34.5 - .
 
 ## 2025-07-21 13:00:27
 ### Changes
@@ -838,7 +838,7 @@ Based on:
 ### Generated
 - [typescript v0.34.6] .
 ### Releases
-- [NPM v0.34.6] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.6 - .
+- [NPM v0.34.6] https://www.npmjs.com/package/@spaire/sdk/v/0.34.6 - .
 
 ## 2025-07-27 00:36:25
 ### Changes
@@ -848,7 +848,7 @@ Based on:
 ### Generated
 - [typescript v0.34.7] .
 ### Releases
-- [NPM v0.34.7] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.7 - .
+- [NPM v0.34.7] https://www.npmjs.com/package/@spaire/sdk/v/0.34.7 - .
 
 ## 2025-07-27 10:26:09
 ### Changes
@@ -858,7 +858,7 @@ Based on:
 ### Generated
 - [typescript v0.34.8] .
 ### Releases
-- [NPM v0.34.8] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.8 - .
+- [NPM v0.34.8] https://www.npmjs.com/package/@spaire/sdk/v/0.34.8 - .
 
 ## 2025-07-31 13:39:03
 ### Changes
@@ -868,7 +868,7 @@ Based on:
 ### Generated
 - [typescript v0.34.9] .
 ### Releases
-- [NPM v0.34.9] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.9 - .
+- [NPM v0.34.9] https://www.npmjs.com/package/@spaire/sdk/v/0.34.9 - .
 
 ## 2025-08-11 00:34:42
 ### Changes
@@ -878,7 +878,7 @@ Based on:
 ### Generated
 - [typescript v0.34.10] .
 ### Releases
-- [NPM v0.34.10] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.10 - .
+- [NPM v0.34.10] https://www.npmjs.com/package/@spaire/sdk/v/0.34.10 - .
 
 ## 2025-08-12 11:28:39
 ### Changes
@@ -888,7 +888,7 @@ Based on:
 ### Generated
 - [typescript v0.34.11] .
 ### Releases
-- [NPM v0.34.11] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.11 - .
+- [NPM v0.34.11] https://www.npmjs.com/package/@spaire/sdk/v/0.34.11 - .
 
 ## 2025-08-20 00:29:14
 ### Changes
@@ -898,7 +898,7 @@ Based on:
 ### Generated
 - [typescript v0.34.12] .
 ### Releases
-- [NPM v0.34.12] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.12 - .
+- [NPM v0.34.12] https://www.npmjs.com/package/@spaire/sdk/v/0.34.12 - .
 
 ## 2025-08-22 12:35:02
 ### Changes
@@ -908,7 +908,7 @@ Based on:
 ### Generated
 - [typescript v0.34.13] .
 ### Releases
-- [NPM v0.34.13] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.13 - .
+- [NPM v0.34.13] https://www.npmjs.com/package/@spaire/sdk/v/0.34.13 - .
 
 ## 2025-08-28 07:26:30
 ### Changes
@@ -918,7 +918,7 @@ Based on:
 ### Generated
 - [typescript v0.34.14] .
 ### Releases
-- [NPM v0.34.14] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.14 - .
+- [NPM v0.34.14] https://www.npmjs.com/package/@spaire/sdk/v/0.34.14 - .
 
 ## 2025-09-03 12:28:04
 ### Changes
@@ -928,7 +928,7 @@ Based on:
 ### Generated
 - [typescript v0.34.15] .
 ### Releases
-- [NPM v0.34.15] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.15 - .
+- [NPM v0.34.15] https://www.npmjs.com/package/@spaire/sdk/v/0.34.15 - .
 
 ## 2025-09-05 00:28:44
 ### Changes
@@ -938,7 +938,7 @@ Based on:
 ### Generated
 - [typescript v0.34.16] .
 ### Releases
-- [NPM v0.34.16] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.16 - .
+- [NPM v0.34.16] https://www.npmjs.com/package/@spaire/sdk/v/0.34.16 - .
 
 ## 2025-09-16 00:27:55
 ### Changes
@@ -948,7 +948,7 @@ Based on:
 ### Generated
 - [typescript v0.34.17] .
 ### Releases
-- [NPM v0.34.17] https://www.npmjs.com/package/@polar-sh/sdk/v/0.34.17 - .
+- [NPM v0.34.17] https://www.npmjs.com/package/@spaire/sdk/v/0.34.17 - .
 
 ## 2025-09-22 10:13:01
 ### Changes
@@ -958,7 +958,7 @@ Based on:
 ### Generated
 - [typescript v0.35.0] .
 ### Releases
-- [NPM v0.35.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.35.0 - .
+- [NPM v0.35.0] https://www.npmjs.com/package/@spaire/sdk/v/0.35.0 - .
 
 ## 2025-09-22 14:09:31
 ### Changes
@@ -968,7 +968,7 @@ Based on:
 ### Generated
 - [typescript v0.35.1] .
 ### Releases
-- [NPM v0.35.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.35.1 - .
+- [NPM v0.35.1] https://www.npmjs.com/package/@spaire/sdk/v/0.35.1 - .
 
 ## 2025-09-23 10:20:58
 ### Changes
@@ -978,7 +978,7 @@ Based on:
 ### Generated
 - [typescript v0.35.2] .
 ### Releases
-- [NPM v0.35.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.35.2 - .
+- [NPM v0.35.2] https://www.npmjs.com/package/@spaire/sdk/v/0.35.2 - .
 
 ## 2025-09-29 00:30:00
 ### Changes
@@ -988,7 +988,7 @@ Based on:
 ### Generated
 - [typescript v0.35.3] .
 ### Releases
-- [NPM v0.35.3] https://www.npmjs.com/package/@polar-sh/sdk/v/0.35.3 - .
+- [NPM v0.35.3] https://www.npmjs.com/package/@spaire/sdk/v/0.35.3 - .
 
 ## 2025-09-30 10:03:47
 ### Changes
@@ -998,7 +998,7 @@ Based on:
 ### Generated
 - [typescript v0.35.4] .
 ### Releases
-- [NPM v0.35.4] https://www.npmjs.com/package/@polar-sh/sdk/v/0.35.4 - .
+- [NPM v0.35.4] https://www.npmjs.com/package/@spaire/sdk/v/0.35.4 - .
 
 ## 2025-10-14 13:27:35
 ### Changes
@@ -1008,7 +1008,7 @@ Based on:
 ### Generated
 - [typescript v0.36.0] .
 ### Releases
-- [NPM v0.36.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.36.0 - .
+- [NPM v0.36.0] https://www.npmjs.com/package/@spaire/sdk/v/0.36.0 - .
 
 ## 2025-10-14 18:56:58
 ### Changes
@@ -1018,7 +1018,7 @@ Based on:
 ### Generated
 - [typescript v0.36.1] .
 ### Releases
-- [NPM v0.36.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.36.1 - .
+- [NPM v0.36.1] https://www.npmjs.com/package/@spaire/sdk/v/0.36.1 - .
 
 ## 2025-10-16 00:29:38
 ### Changes
@@ -1028,7 +1028,7 @@ Based on:
 ### Generated
 - [typescript v0.36.2] .
 ### Releases
-- [NPM v0.36.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.36.2 - .
+- [NPM v0.36.2] https://www.npmjs.com/package/@spaire/sdk/v/0.36.2 - .
 
 ## 2025-10-16 13:56:51
 ### Changes
@@ -1038,7 +1038,7 @@ Based on:
 ### Generated
 - [typescript v0.37.0] .
 ### Releases
-- [NPM v0.37.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.37.0 - .
+- [NPM v0.37.0] https://www.npmjs.com/package/@spaire/sdk/v/0.37.0 - .
 
 ## 2025-10-21 00:29:37
 ### Changes
@@ -1048,7 +1048,7 @@ Based on:
 ### Generated
 - [typescript v0.38.0] .
 ### Releases
-- [NPM v0.38.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.38.0 - .
+- [NPM v0.38.0] https://www.npmjs.com/package/@spaire/sdk/v/0.38.0 - .
 
 ## 2025-10-21 13:13:29
 ### Changes
@@ -1058,7 +1058,7 @@ Based on:
 ### Generated
 - [typescript v0.38.1] .
 ### Releases
-- [NPM v0.38.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.38.1 - .
+- [NPM v0.38.1] https://www.npmjs.com/package/@spaire/sdk/v/0.38.1 - .
 
 ## 2025-10-23 06:35:02
 ### Changes
@@ -1068,7 +1068,7 @@ Based on:
 ### Generated
 - [typescript v0.39.0] .
 ### Releases
-- [NPM v0.39.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.39.0 - .
+- [NPM v0.39.0] https://www.npmjs.com/package/@spaire/sdk/v/0.39.0 - .
 
 ## 2025-10-23 14:23:36
 ### Changes
@@ -1078,7 +1078,7 @@ Based on:
 ### Generated
 - [typescript v0.39.1] .
 ### Releases
-- [NPM v0.39.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.39.1 - .
+- [NPM v0.39.1] https://www.npmjs.com/package/@spaire/sdk/v/0.39.1 - .
 
 ## 2025-10-24 15:01:49
 ### Changes
@@ -1088,7 +1088,7 @@ Based on:
 ### Generated
 - [typescript v0.40.0] .
 ### Releases
-- [NPM v0.40.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.40.0 - .
+- [NPM v0.40.0] https://www.npmjs.com/package/@spaire/sdk/v/0.40.0 - .
 
 ## 2025-10-24 15:58:42
 ### Changes
@@ -1098,7 +1098,7 @@ Based on:
 ### Generated
 - [typescript v0.40.1] .
 ### Releases
-- [NPM v0.40.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.40.1 - .
+- [NPM v0.40.1] https://www.npmjs.com/package/@spaire/sdk/v/0.40.1 - .
 
 ## 2025-10-27 15:10:19
 ### Changes
@@ -1108,7 +1108,7 @@ Based on:
 ### Generated
 - [typescript v0.40.2] .
 ### Releases
-- [NPM v0.40.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.40.2 - .
+- [NPM v0.40.2] https://www.npmjs.com/package/@spaire/sdk/v/0.40.2 - .
 
 ## 2025-10-31 13:40:30
 ### Changes
@@ -1118,7 +1118,7 @@ Based on:
 ### Generated
 - [typescript v0.40.3] .
 ### Releases
-- [NPM v0.40.3] https://www.npmjs.com/package/@polar-sh/sdk/v/0.40.3 - .
+- [NPM v0.40.3] https://www.npmjs.com/package/@spaire/sdk/v/0.40.3 - .
 
 ## 2025-11-04 00:30:12
 ### Changes
@@ -1128,7 +1128,7 @@ Based on:
 ### Generated
 - [typescript v0.41.0] .
 ### Releases
-- [NPM v0.41.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.41.0 - .
+- [NPM v0.41.0] https://www.npmjs.com/package/@spaire/sdk/v/0.41.0 - .
 
 ## 2025-11-05 00:31:08
 ### Changes
@@ -1138,7 +1138,7 @@ Based on:
 ### Generated
 - [typescript v0.41.1] .
 ### Releases
-- [NPM v0.41.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.41.1 - .
+- [NPM v0.41.1] https://www.npmjs.com/package/@spaire/sdk/v/0.41.1 - .
 
 ## 2025-11-11 10:43:29
 ### Changes
@@ -1148,7 +1148,7 @@ Based on:
 ### Generated
 - [typescript v0.41.2] .
 ### Releases
-- [NPM v0.41.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.41.2 - .
+- [NPM v0.41.2] https://www.npmjs.com/package/@spaire/sdk/v/0.41.2 - .
 
 ## 2025-11-12 08:23:09
 ### Changes
@@ -1158,7 +1158,7 @@ Based on:
 ### Generated
 - [typescript v0.41.3] .
 ### Releases
-- [NPM v0.41.3] https://www.npmjs.com/package/@polar-sh/sdk/v/0.41.3 - .
+- [NPM v0.41.3] https://www.npmjs.com/package/@spaire/sdk/v/0.41.3 - .
 
 ## 2025-11-14 00:31:16
 ### Changes
@@ -1168,7 +1168,7 @@ Based on:
 ### Generated
 - [typescript v0.41.4] .
 ### Releases
-- [NPM v0.41.4] https://www.npmjs.com/package/@polar-sh/sdk/v/0.41.4 - .
+- [NPM v0.41.4] https://www.npmjs.com/package/@spaire/sdk/v/0.41.4 - .
 
 ## 2025-11-18 12:47:30
 ### Changes
@@ -1178,7 +1178,7 @@ Based on:
 ### Generated
 - [typescript v0.41.5] .
 ### Releases
-- [NPM v0.41.5] https://www.npmjs.com/package/@polar-sh/sdk/v/0.41.5 - .
+- [NPM v0.41.5] https://www.npmjs.com/package/@spaire/sdk/v/0.41.5 - .
 
 ## 2025-12-19 16:04:14
 ### Changes
@@ -1188,7 +1188,7 @@ Based on:
 ### Generated
 - [typescript v0.42.0] .
 ### Releases
-- [NPM v0.42.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.42.0 - .
+- [NPM v0.42.0] https://www.npmjs.com/package/@spaire/sdk/v/0.42.0 - .
 
 ## 2025-12-20 12:45:43
 ### Changes
@@ -1198,7 +1198,7 @@ Based on:
 ### Generated
 - [typescript v0.42.1] .
 ### Releases
-- [NPM v0.42.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.42.1 - .
+- [NPM v0.42.1] https://www.npmjs.com/package/@spaire/sdk/v/0.42.1 - .
 
 ## 2026-01-13 14:59:21
 ### Changes
@@ -1208,7 +1208,7 @@ Based on:
 ### Generated
 - [typescript v0.42.2] .
 ### Releases
-- [NPM v0.42.2] https://www.npmjs.com/package/@polar-sh/sdk/v/0.42.2 - .
+- [NPM v0.42.2] https://www.npmjs.com/package/@spaire/sdk/v/0.42.2 - .
 
 ## 2026-01-28 13:30:27
 ### Changes
@@ -1218,7 +1218,7 @@ Based on:
 ### Generated
 - [typescript v0.42.5] .
 ### Releases
-- [NPM v0.42.5] https://www.npmjs.com/package/@polar-sh/sdk/v/0.42.5 - .
+- [NPM v0.42.5] https://www.npmjs.com/package/@spaire/sdk/v/0.42.5 - .
 
 ## 2026-02-10 10:30:57
 ### Changes
@@ -1228,7 +1228,7 @@ Based on:
 ### Generated
 - [typescript v0.43.0] .
 ### Releases
-- [NPM v0.43.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.43.0 - .
+- [NPM v0.43.0] https://www.npmjs.com/package/@spaire/sdk/v/0.43.0 - .
 
 ## 2026-02-13 16:30:53
 ### Changes
@@ -1238,7 +1238,7 @@ Based on:
 ### Generated
 - [typescript v0.43.1] .
 ### Releases
-- [NPM v0.43.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.43.1 - .
+- [NPM v0.43.1] https://www.npmjs.com/package/@spaire/sdk/v/0.43.1 - .
 
 ## 2026-02-24 10:57:48
 ### Changes
@@ -1248,7 +1248,7 @@ Based on:
 ### Generated
 - [typescript v0.44.0] .
 ### Releases
-- [NPM v0.44.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.44.0 - .
+- [NPM v0.44.0] https://www.npmjs.com/package/@spaire/sdk/v/0.44.0 - .
 
 ## 2026-02-25 00:44:16
 ### Changes
@@ -1258,7 +1258,7 @@ Based on:
 ### Generated
 - [typescript v0.45.0] .
 ### Releases
-- [NPM v0.45.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.45.0 - .
+- [NPM v0.45.0] https://www.npmjs.com/package/@spaire/sdk/v/0.45.0 - .
 
 ## 2026-02-27 00:41:24
 ### Changes
@@ -1268,4 +1268,4 @@ Based on:
 ### Generated
 - [typescript v0.45.1] .
 ### Releases
-- [NPM v0.45.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.45.1 - .
+- [NPM v0.45.1] https://www.npmjs.com/package/@spaire/sdk/v/0.45.1 - .

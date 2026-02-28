@@ -2,8 +2,8 @@ configVersion: 2.0.0
 generation:
   devContainers:
     enabled: true
-    schemaPath: https://api.polar.sh/openapi.json
-  sdkClassName: Polar
+    schemaPath: https://api.spaire.sh/openapi.json
+  sdkClassName: Spaire
   maintainOpenAPIOrder: true
   usageSnippets:
     optionalPropertyRendering: withExample
@@ -47,7 +47,7 @@ typescript:
   additionalScripts: {}
   alwaysIncludeInboundAndOutbound: false
   author: Speakeasy
-  baseErrorName: PolarError
+  baseErrorName: SpaireError
   clientServerStatusCodesAsErrors: true
   constFieldsAlwaysOptional: false
   defaultErrorName: SDKError
@@ -55,7 +55,7 @@ typescript:
   enableMCPServer: false
   enableReactQuery: false
   enumFormat: union
-  envVarPrefix: POLAR
+  envVarPrefix: SPAIRE
   exportZodModelNamespace: false
   flatAdditionalProperties: false
   flattenGlobalSecurity: true
@@ -83,7 +83,7 @@ typescript:
   moduleFormat: dual
   multipartArrayFormat: legacy
   outputModelSuffix: output
-  packageName: '@polar-sh/sdk'
+  packageName: '@spaire/sdk'
   preApplyUnionDiscriminators: true
   preserveModelFieldNames: false
   responseFormat: flat

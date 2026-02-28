@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type TrialAlreadyRedeemedData = {
   error: "TrialAlreadyRedeemed";
   detail: string;
 };
 
-export class TrialAlreadyRedeemed extends PolarError {
+export class TrialAlreadyRedeemed extends SpaireError {
   error: "TrialAlreadyRedeemed";
   detail: string;
 

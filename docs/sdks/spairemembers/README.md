@@ -1,32 +1,32 @@
-# CustomerPortal.Subscriptions
+# CustomerPortal.Members
 
 ## Overview
 
 ### Available Operations
 
-* [list](#list) - List Subscriptions
-* [get](#get) - Get Subscription
-* [cancel](#cancel) - Cancel Subscription
-* [update](#update) - Update Subscription
+* [listMembers](#listmembers) - List Members
+* [addMember](#addmember) - Add Member
+* [removeMember](#removemember) - Remove Member
+* [updateMember](#updatemember) - Update Member
 
-## list
+## listMembers
 
-List subscriptions of the authenticated customer.
+List all members of the customer's team.
 
-**Scopes**: `customer_portal:read` `customer_portal:write`
+Only available to owners and billing managers of team customers.
 
 ### Example Usage
 
-<!-- UsageSnippet language="typescript" operationID="customer_portal:subscriptions:list" method="get" path="/v1/customer-portal/subscriptions/" -->
+<!-- UsageSnippet language="typescript" operationID="customer_portal:members:list_members" method="get" path="/v1/customer-portal/members" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
+});
 
 async function run() {
-  const result = await polar.customerPortal.subscriptions.list({
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
-  }, {});
+  const result = await spaire.customerPortal.members.listMembers({});
 
   for await (const page of result) {
     console.log(page);
@@ -41,24 +41,24 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalSubscriptionsList } from "@polar-sh/sdk/funcs/customerPortalSubscriptionsList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalMembersListMembers } from "@spaire/sdk/funcs/customerPortalMembersListMembers.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
+});
 
 async function run() {
-  const res = await customerPortalSubscriptionsList(polar, {
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
-  }, {});
+  const res = await customerPortalMembersListMembers(spaire, {});
   if (res.ok) {
     const { value: result } = res;
     for await (const page of result) {
     console.log(page);
   }
   } else {
-    console.log("customerPortalSubscriptionsList failed:", res.error);
+    console.log("customerPortalMembersListMembers failed:", res.error);
   }
 }
 
@@ -69,15 +69,14 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.CustomerPortalSubscriptionsListRequest](../../models/operations/customerportalsubscriptionslistrequest.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.CustomerPortalSubscriptionsListSecurity](../../models/operations/customerportalsubscriptionslistsecurity.md)                                                       | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `request`                                                                                                                                                                      | [operations.CustomerPortalMembersListMembersRequest](../../models/operations/customerportalmemberslistmembersrequest.md)                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[operations.CustomerPortalSubscriptionsListResponse](../../models/operations/customerportalsubscriptionslistresponse.md)\>**
+**Promise\<[operations.CustomerPortalMembersListMembersResponse](../../models/operations/customerportalmemberslistmembersresponse.md)\>**
 
 ### Errors
 
@@ -86,25 +85,29 @@ run();
 | errors.HTTPValidationError | 422                        | application/json           |
 | errors.SDKError            | 4XX, 5XX                   | \*/\*                      |
 
-## get
+## addMember
 
-Get a subscription for the authenticated customer.
+Add a new member to the customer's team.
 
-**Scopes**: `customer_portal:read` `customer_portal:write`
+Only available to owners and billing managers of team customers.
+
+Rules:
+- Cannot add a member with the owner role (there must be exactly one owner)
+- If a member with this email already exists, the existing member is returned
 
 ### Example Usage
 
-<!-- UsageSnippet language="typescript" operationID="customer_portal:subscriptions:get" method="get" path="/v1/customer-portal/subscriptions/{id}" -->
+<!-- UsageSnippet language="typescript" operationID="customer_portal:members:add_member" method="post" path="/v1/customer-portal/members" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
+});
 
 async function run() {
-  const result = await polar.customerPortal.subscriptions.get({
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
-  }, {
-    id: "<value>",
+  const result = await spaire.customerPortal.members.addMember({
+    email: "Domenica.Schamberger@yahoo.com",
   });
 
   console.log(result);
@@ -118,24 +121,24 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalSubscriptionsGet } from "@polar-sh/sdk/funcs/customerPortalSubscriptionsGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalMembersAddMember } from "@spaire/sdk/funcs/customerPortalMembersAddMember.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
+});
 
 async function run() {
-  const res = await customerPortalSubscriptionsGet(polar, {
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
-  }, {
-    id: "<value>",
+  const res = await customerPortalMembersAddMember(spaire, {
+    email: "Domenica.Schamberger@yahoo.com",
   });
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("customerPortalSubscriptionsGet failed:", res.error);
+    console.log("customerPortalMembersAddMember failed:", res.error);
   }
 }
 
@@ -146,41 +149,126 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.CustomerPortalSubscriptionsGetRequest](../../models/operations/customerportalsubscriptionsgetrequest.md)                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.CustomerPortalSubscriptionsGetSecurity](../../models/operations/customerportalsubscriptionsgetsecurity.md)                                                         | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `request`                                                                                                                                                                      | [components.CustomerPortalMemberCreate](../../models/components/customerportalmembercreate.md)                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[components.CustomerSubscription](../../models/components/customersubscription.md)\>**
+**Promise\<[components.CustomerPortalMember](../../models/components/customerportalmember.md)\>**
 
 ### Errors
 
 | Error Type                 | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
-| errors.ResourceNotFound    | 404                        | application/json           |
 | errors.HTTPValidationError | 422                        | application/json           |
 | errors.SDKError            | 4XX, 5XX                   | \*/\*                      |
 
-## cancel
+## removeMember
 
-Cancel a subscription of the authenticated customer.
+Remove a member from the team.
+
+Only available to owners and billing managers of team customers.
+
+Rules:
+- Cannot remove yourself
+- Cannot remove the only owner
 
 ### Example Usage
 
-<!-- UsageSnippet language="typescript" operationID="customer_portal:subscriptions:cancel" method="delete" path="/v1/customer-portal/subscriptions/{id}" -->
+<!-- UsageSnippet language="typescript" operationID="customer_portal:members:remove_member" method="delete" path="/v1/customer-portal/members/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
+});
 
 async function run() {
-  const result = await polar.customerPortal.subscriptions.cancel({
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
-  }, {
-    id: "<value>",
+  await spaire.customerPortal.members.removeMember({
+    id: "b61c5e87-cda5-4b14-93ee-71a695f42d9d",
+  });
+
+
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalMembersRemoveMember } from "@spaire/sdk/funcs/customerPortalMembersRemoveMember.js";
+
+// Use `SpaireCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
+});
+
+async function run() {
+  const res = await customerPortalMembersRemoveMember(spaire, {
+    id: "b61c5e87-cda5-4b14-93ee-71a695f42d9d",
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    
+  } else {
+    console.log("customerPortalMembersRemoveMember failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.CustomerPortalMembersRemoveMemberRequest](../../models/operations/customerportalmembersremovememberrequest.md)                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<void\>**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 4XX, 5XX                   | \*/\*                      |
+
+## updateMember
+
+Update a member's role.
+
+Only available to owners and billing managers of team customers.
+
+Rules:
+- Cannot modify your own role (to prevent self-demotion)
+- Customer must have exactly one owner at all times
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="customer_portal:members:update_member" method="patch" path="/v1/customer-portal/members/{id}" -->
+```typescript
+import { Spaire } from "@spaire/sdk";
+
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
+});
+
+async function run() {
+  const result = await spaire.customerPortal.members.updateMember({
+    id: "8319ae11-ed5f-4642-81e4-4b40731df195",
+    customerPortalMemberUpdate: {},
   });
 
   console.log(result);
@@ -194,24 +282,25 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalSubscriptionsCancel } from "@polar-sh/sdk/funcs/customerPortalSubscriptionsCancel.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalMembersUpdateMember } from "@spaire/sdk/funcs/customerPortalMembersUpdateMember.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
+});
 
 async function run() {
-  const res = await customerPortalSubscriptionsCancel(polar, {
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
-  }, {
-    id: "<value>",
+  const res = await customerPortalMembersUpdateMember(spaire, {
+    id: "8319ae11-ed5f-4642-81e4-4b40731df195",
+    customerPortalMemberUpdate: {},
   });
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("customerPortalSubscriptionsCancel failed:", res.error);
+    console.log("customerPortalMembersUpdateMember failed:", res.error);
   }
 }
 
@@ -222,100 +311,18 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.CustomerPortalSubscriptionsCancelRequest](../../models/operations/customerportalsubscriptionscancelrequest.md)                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.CustomerPortalSubscriptionsCancelSecurity](../../models/operations/customerportalsubscriptionscancelsecurity.md)                                                   | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `request`                                                                                                                                                                      | [operations.CustomerPortalMembersUpdateMemberRequest](../../models/operations/customerportalmembersupdatememberrequest.md)                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[components.CustomerSubscription](../../models/components/customersubscription.md)\>**
+**Promise\<[components.CustomerPortalMember](../../models/components/customerportalmember.md)\>**
 
 ### Errors
 
-| Error Type                         | Status Code                        | Content Type                       |
-| ---------------------------------- | ---------------------------------- | ---------------------------------- |
-| errors.AlreadyCanceledSubscription | 403                                | application/json                   |
-| errors.ResourceNotFound            | 404                                | application/json                   |
-| errors.HTTPValidationError         | 422                                | application/json                   |
-| errors.SDKError                    | 4XX, 5XX                           | \*/\*                              |
-
-## update
-
-Update a subscription of the authenticated customer.
-
-### Example Usage
-
-<!-- UsageSnippet language="typescript" operationID="customer_portal:subscriptions:update" method="patch" path="/v1/customer-portal/subscriptions/{id}" -->
-```typescript
-import { Polar } from "@polar-sh/sdk";
-
-const polar = new Polar();
-
-async function run() {
-  const result = await polar.customerPortal.subscriptions.update({
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
-  }, {
-    id: "<value>",
-    customerSubscriptionUpdate: {},
-  });
-
-  console.log(result);
-}
-
-run();
-```
-
-### Standalone function
-
-The standalone function version of this method:
-
-```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalSubscriptionsUpdate } from "@polar-sh/sdk/funcs/customerPortalSubscriptionsUpdate.js";
-
-// Use `PolarCore` for best tree-shaking performance.
-// You can create one instance of it to use across an application.
-const polar = new PolarCore();
-
-async function run() {
-  const res = await customerPortalSubscriptionsUpdate(polar, {
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
-  }, {
-    id: "<value>",
-    customerSubscriptionUpdate: {},
-  });
-  if (res.ok) {
-    const { value: result } = res;
-    console.log(result);
-  } else {
-    console.log("customerPortalSubscriptionsUpdate failed:", res.error);
-  }
-}
-
-run();
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.CustomerPortalSubscriptionsUpdateRequest](../../models/operations/customerportalsubscriptionsupdaterequest.md)                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.CustomerPortalSubscriptionsUpdateSecurity](../../models/operations/customerportalsubscriptionsupdatesecurity.md)                                                   | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
-| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
-| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
-
-### Response
-
-**Promise\<[components.CustomerSubscription](../../models/components/customersubscription.md)\>**
-
-### Errors
-
-| Error Type                         | Status Code                        | Content Type                       |
-| ---------------------------------- | ---------------------------------- | ---------------------------------- |
-| errors.AlreadyCanceledSubscription | 403                                | application/json                   |
-| errors.ResourceNotFound            | 404                                | application/json                   |
-| errors.HTTPValidationError         | 422                                | application/json                   |
-| errors.SDKError                    | 4XX, 5XX                           | \*/\*                              |
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 4XX, 5XX                   | \*/\*                      |

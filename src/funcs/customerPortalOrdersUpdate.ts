@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { encodeJSON, encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
@@ -26,7 +26,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import {
   ResourceNotFound,
   ResourceNotFound$inboundSchema,
@@ -48,7 +48,7 @@ import { Result } from "../types/fp.js";
  * Update an order for the authenticated customer.
  */
 export function customerPortalOrdersUpdate(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalOrdersUpdateSecurity,
   request: CustomerPortalOrdersUpdateRequest,
   options?: RequestOptions,
@@ -57,7 +57,7 @@ export function customerPortalOrdersUpdate(
     CustomerOrder,
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -76,7 +76,7 @@ export function customerPortalOrdersUpdate(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalOrdersUpdateSecurity,
   request: CustomerPortalOrdersUpdateRequest,
   options?: RequestOptions,
@@ -86,7 +86,7 @@ async function $do(
       CustomerOrder,
       | ResourceNotFound
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -191,7 +191,7 @@ async function $do(
     CustomerOrder,
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

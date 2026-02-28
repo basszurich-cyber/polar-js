@@ -20,14 +20,14 @@ List checkout links.
 
 <!-- UsageSnippet language="typescript" operationID="checkout-links:list" method="get" path="/v1/checkout-links/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.checkoutLinks.list({
+  const result = await spaire.checkoutLinks.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -44,17 +44,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutLinksList } from "@polar-sh/sdk/funcs/checkoutLinksList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutLinksList } from "@spaire/sdk/funcs/checkoutLinksList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await checkoutLinksList(polar, {
+  const res = await checkoutLinksList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -100,14 +100,14 @@ Create a checkout link.
 
 <!-- UsageSnippet language="typescript" operationID="checkout-links:create" method="post" path="/v1/checkout-links/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.checkoutLinks.create({
+  const result = await spaire.checkoutLinks.create({
     paymentProcessor: "stripe",
     allowDiscountCodes: true,
     requireBillingAddress: false,
@@ -125,17 +125,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutLinksCreate } from "@polar-sh/sdk/funcs/checkoutLinksCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutLinksCreate } from "@spaire/sdk/funcs/checkoutLinksCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await checkoutLinksCreate(polar, {
+  const res = await checkoutLinksCreate(spaire, {
     paymentProcessor: "stripe",
     allowDiscountCodes: true,
     requireBillingAddress: false,
@@ -182,14 +182,14 @@ Get a checkout link by ID.
 
 <!-- UsageSnippet language="typescript" operationID="checkout-links:get" method="get" path="/v1/checkout-links/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.checkoutLinks.get({
+  const result = await spaire.checkoutLinks.get({
     id: "<value>",
   });
 
@@ -204,17 +204,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutLinksGet } from "@polar-sh/sdk/funcs/checkoutLinksGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutLinksGet } from "@spaire/sdk/funcs/checkoutLinksGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await checkoutLinksGet(polar, {
+  const res = await checkoutLinksGet(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -259,14 +259,14 @@ Delete a checkout link.
 
 <!-- UsageSnippet language="typescript" operationID="checkout-links:delete" method="delete" path="/v1/checkout-links/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  await polar.checkoutLinks.delete({
+  await spaire.checkoutLinks.delete({
     id: "<value>",
   });
 
@@ -281,17 +281,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutLinksDelete } from "@polar-sh/sdk/funcs/checkoutLinksDelete.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutLinksDelete } from "@spaire/sdk/funcs/checkoutLinksDelete.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await checkoutLinksDelete(polar, {
+  const res = await checkoutLinksDelete(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -336,14 +336,14 @@ Update a checkout link.
 
 <!-- UsageSnippet language="typescript" operationID="checkout-links:update" method="patch" path="/v1/checkout-links/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.checkoutLinks.update({
+  const result = await spaire.checkoutLinks.update({
     id: "<value>",
     checkoutLinkUpdate: {},
   });
@@ -359,17 +359,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutLinksUpdate } from "@polar-sh/sdk/funcs/checkoutLinksUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutLinksUpdate } from "@spaire/sdk/funcs/checkoutLinksUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await checkoutLinksUpdate(polar, {
+  const res = await checkoutLinksUpdate(spaire, {
     id: "<value>",
     checkoutLinkUpdate: {},
   });

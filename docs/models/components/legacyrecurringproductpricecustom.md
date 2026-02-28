@@ -7,7 +7,7 @@ A pay-what-you-want recurring price for a product, i.e. a subscription.
 ## Example Usage
 
 ```typescript
-import { LegacyRecurringProductPriceCustom } from "@polar-sh/sdk/models/components/legacyrecurringproductpricecustom.js";
+import { LegacyRecurringProductPriceCustom } from "@spaire/sdk/models/components/legacyrecurringproductpricecustom.js";
 
 let value: LegacyRecurringProductPriceCustom = {
   createdAt: new Date("2025-12-07T03:04:39.121Z"),

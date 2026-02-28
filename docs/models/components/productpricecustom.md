@@ -5,7 +5,7 @@ A pay-what-you-want price for a product.
 ## Example Usage
 
 ```typescript
-import { ProductPriceCustom } from "@polar-sh/sdk/models/components/productpricecustom.js";
+import { ProductPriceCustom } from "@spaire/sdk/models/components/productpricecustom.js";
 
 let value: ProductPriceCustom = {
   createdAt: new Date("2024-06-11T19:38:31.503Z"),

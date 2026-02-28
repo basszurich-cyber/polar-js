@@ -5,7 +5,7 @@ Order's invoice data.
 ## Example Usage
 
 ```typescript
-import { OrderInvoice } from "@polar-sh/sdk/models/components/orderinvoice.js";
+import { OrderInvoice } from "@spaire/sdk/models/components/orderinvoice.js";
 
 let value: OrderInvoice = {
   url: "https://heartfelt-contrail.name/",

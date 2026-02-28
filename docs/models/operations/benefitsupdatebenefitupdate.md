@@ -25,7 +25,7 @@ const value: components.BenefitDiscordUpdate = {
 const value: components.BenefitGitHubRepositoryUpdate = {
   type: "github_repository",
   properties: {
-    repositoryOwner: "polarsource",
+    repositoryOwner: "spairesource",
     repositoryName: "private_repo",
     permission: "admin",
   },

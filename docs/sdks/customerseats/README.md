@@ -19,14 +19,14 @@
 
 <!-- UsageSnippet language="typescript" operationID="customer-seats:list_seats" method="get" path="/v1/customer-seats" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.customerSeats.listSeats({});
+  const result = await spaire.customerSeats.listSeats({});
 
   console.log(result);
 }
@@ -39,17 +39,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerSeatsListSeats } from "@polar-sh/sdk/funcs/customerSeatsListSeats.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerSeatsListSeats } from "@spaire/sdk/funcs/customerSeatsListSeats.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await customerSeatsListSeats(polar, {});
+  const res = await customerSeatsListSeats(spaire, {});
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
@@ -89,14 +89,14 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="customer-seats:assign_seat" method="post" path="/v1/customer-seats" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.customerSeats.assignSeat({});
+  const result = await spaire.customerSeats.assignSeat({});
 
   console.log(result);
 }
@@ -109,17 +109,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerSeatsAssignSeat } from "@polar-sh/sdk/funcs/customerSeatsAssignSeat.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerSeatsAssignSeat } from "@spaire/sdk/funcs/customerSeatsAssignSeat.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await customerSeatsAssignSeat(polar, {});
+  const res = await customerSeatsAssignSeat(spaire, {});
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
@@ -159,14 +159,14 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="customer-seats:revoke_seat" method="delete" path="/v1/customer-seats/{seat_id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.customerSeats.revokeSeat({
+  const result = await spaire.customerSeats.revokeSeat({
     seatId: "<id>",
   });
 
@@ -181,17 +181,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerSeatsRevokeSeat } from "@polar-sh/sdk/funcs/customerSeatsRevokeSeat.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerSeatsRevokeSeat } from "@spaire/sdk/funcs/customerSeatsRevokeSeat.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await customerSeatsRevokeSeat(polar, {
+  const res = await customerSeatsRevokeSeat(spaire, {
     seatId: "<id>",
   });
   if (res.ok) {
@@ -233,14 +233,14 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="customer-seats:resend_invitation" method="post" path="/v1/customer-seats/{seat_id}/resend" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.customerSeats.resendInvitation({
+  const result = await spaire.customerSeats.resendInvitation({
     seatId: "<id>",
   });
 
@@ -255,17 +255,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerSeatsResendInvitation } from "@polar-sh/sdk/funcs/customerSeatsResendInvitation.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerSeatsResendInvitation } from "@spaire/sdk/funcs/customerSeatsResendInvitation.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await customerSeatsResendInvitation(polar, {
+  const res = await customerSeatsResendInvitation(spaire, {
     seatId: "<id>",
   });
   if (res.ok) {
@@ -307,12 +307,12 @@ Get Claim Info
 
 <!-- UsageSnippet language="typescript" operationID="customer-seats:get_claim_info" method="get" path="/v1/customer-seats/claim/{invitation_token}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.customerSeats.getClaimInfo({
+  const result = await spaire.customerSeats.getClaimInfo({
     invitationToken: "<value>",
   });
 
@@ -327,15 +327,15 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerSeatsGetClaimInfo } from "@polar-sh/sdk/funcs/customerSeatsGetClaimInfo.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerSeatsGetClaimInfo } from "@spaire/sdk/funcs/customerSeatsGetClaimInfo.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await customerSeatsGetClaimInfo(polar, {
+  const res = await customerSeatsGetClaimInfo(spaire, {
     invitationToken: "<value>",
   });
   if (res.ok) {
@@ -377,12 +377,12 @@ Claim Seat
 
 <!-- UsageSnippet language="typescript" operationID="customer-seats:claim_seat" method="post" path="/v1/customer-seats/claim" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.customerSeats.claimSeat({
+  const result = await spaire.customerSeats.claimSeat({
     invitationToken: "<value>",
   });
 
@@ -397,15 +397,15 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerSeatsClaimSeat } from "@polar-sh/sdk/funcs/customerSeatsClaimSeat.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerSeatsClaimSeat } from "@spaire/sdk/funcs/customerSeatsClaimSeat.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await customerSeatsClaimSeat(polar, {
+  const res = await customerSeatsClaimSeat(spaire, {
     invitationToken: "<value>",
   });
   if (res.ok) {

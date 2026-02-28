@@ -5,7 +5,7 @@ Schema for creating a new member.
 ## Example Usage
 
 ```typescript
-import { MemberCreate } from "@polar-sh/sdk/models/components/membercreate.js";
+import { MemberCreate } from "@spaire/sdk/models/components/membercreate.js";
 
 let value: MemberCreate = {
   customerId: "<value>",

@@ -7,7 +7,7 @@ Sent when a refund is created regardless of status.
 ## Example Usage
 
 ```typescript
-import { WebhookRefundCreatedPayload } from "@polar-sh/sdk/models/components/webhookrefundcreatedpayload.js";
+import { WebhookRefundCreatedPayload } from "@spaire/sdk/models/components/webhookrefundcreatedpayload.js";
 
 let value: WebhookRefundCreatedPayload = {
   type: "refund.created",

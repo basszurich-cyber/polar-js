@@ -8,7 +8,7 @@ import { CustomerOrganizationData } from "../models/components/customerorganizat
 import { CustomerPortalOrganizationsGetRequest } from "../models/operations/customerportalorganizationsget.js";
 import { unwrapAsync } from "../types/fp.js";
 
-export class PolarOrganizations extends ClientSDK {
+export class SpaireOrganizations extends ClientSDK {
   /**
    * Get Organization
    *

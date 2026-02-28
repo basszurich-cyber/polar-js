@@ -14,7 +14,7 @@ import {
 } from "./subscriptioncycledmetadata.js";
 
 /**
- * An event created by Polar when a subscription is cycled.
+ * An event created by Spaire when a subscription is cycled.
  */
 export type SubscriptionCycledEvent = {
   /**
@@ -30,7 +30,7 @@ export type SubscriptionCycledEvent = {
    */
   organizationId: string;
   /**
-   * ID of the customer in your Polar organization associated with the event.
+   * ID of the customer in your Spaire organization associated with the event.
    */
   customerId: string | null;
   /**
@@ -62,7 +62,7 @@ export type SubscriptionCycledEvent = {
    */
   label: string;
   /**
-   * The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
+   * The source of the event. `system` events are created by Spaire. `user` events are the one you create through our ingestion API.
    */
   source: "system";
   /**

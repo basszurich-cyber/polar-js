@@ -17,14 +17,14 @@ Create an OAuth2 client.
 
 <!-- UsageSnippet language="typescript" operationID="oauth2:clients:oauth2:create_client" method="post" path="/v1/oauth2/register" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.oauth2.clients.create({
+  const result = await spaire.oauth2.clients.create({
     redirectUris: [
       "https://impolite-hippodrome.com/",
       "https://acidic-tomography.net/",
@@ -43,17 +43,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { oauth2ClientsCreate } from "@polar-sh/sdk/funcs/oauth2ClientsCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { oauth2ClientsCreate } from "@spaire/sdk/funcs/oauth2ClientsCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await oauth2ClientsCreate(polar, {
+  const res = await oauth2ClientsCreate(spaire, {
     redirectUris: [
       "https://impolite-hippodrome.com/",
       "https://acidic-tomography.net/",
@@ -99,14 +99,14 @@ Get an OAuth2 client by Client ID.
 
 <!-- UsageSnippet language="typescript" operationID="oauth2:clients:oauth2:get_client" method="get" path="/v1/oauth2/register/{client_id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.oauth2.clients.get({
+  const result = await spaire.oauth2.clients.get({
     clientId: "<id>",
   });
 
@@ -121,17 +121,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { oauth2ClientsGet } from "@polar-sh/sdk/funcs/oauth2ClientsGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { oauth2ClientsGet } from "@spaire/sdk/funcs/oauth2ClientsGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await oauth2ClientsGet(polar, {
+  const res = await oauth2ClientsGet(spaire, {
     clientId: "<id>",
   });
   if (res.ok) {
@@ -173,14 +173,14 @@ Update an OAuth2 client.
 
 <!-- UsageSnippet language="typescript" operationID="oauth2:clients:oauth2:update_client" method="put" path="/v1/oauth2/register/{client_id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.oauth2.clients.update({
+  const result = await spaire.oauth2.clients.update({
     clientId: "<id>",
     oAuth2ClientConfigurationUpdate: {
       redirectUris: [
@@ -203,17 +203,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { oauth2ClientsUpdate } from "@polar-sh/sdk/funcs/oauth2ClientsUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { oauth2ClientsUpdate } from "@spaire/sdk/funcs/oauth2ClientsUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await oauth2ClientsUpdate(polar, {
+  const res = await oauth2ClientsUpdate(spaire, {
     clientId: "<id>",
     oAuth2ClientConfigurationUpdate: {
       redirectUris: [
@@ -263,14 +263,14 @@ Delete an OAuth2 client.
 
 <!-- UsageSnippet language="typescript" operationID="oauth2:clients:oauth2:delete_client" method="delete" path="/v1/oauth2/register/{client_id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.oauth2.clients.delete({
+  const result = await spaire.oauth2.clients.delete({
     clientId: "<id>",
   });
 
@@ -285,17 +285,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { oauth2ClientsDelete } from "@polar-sh/sdk/funcs/oauth2ClientsDelete.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { oauth2ClientsDelete } from "@spaire/sdk/funcs/oauth2ClientsDelete.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await oauth2ClientsDelete(polar, {
+  const res = await oauth2ClientsDelete(spaire, {
     clientId: "<id>",
   });
   if (res.ok) {

@@ -5,7 +5,7 @@ Response after confirming a retry payment.
 ## Example Usage
 
 ```typescript
-import { CustomerOrderPaymentConfirmation } from "@polar-sh/sdk/models/components/customerorderpaymentconfirmation.js";
+import { CustomerOrderPaymentConfirmation } from "@spaire/sdk/models/components/customerorderpaymentconfirmation.js";
 
 let value: CustomerOrderPaymentConfirmation = {
   status: "<value>",

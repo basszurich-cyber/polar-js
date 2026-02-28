@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BenefitLicenseKeyActivationCreateProperties } from "@polar-sh/sdk/models/components/benefitlicensekeyactivationcreateproperties.js";
+import { BenefitLicenseKeyActivationCreateProperties } from "@spaire/sdk/models/components/benefitlicensekeyactivationcreateproperties.js";
 
 let value: BenefitLicenseKeyActivationCreateProperties = {
   limit: 557787,

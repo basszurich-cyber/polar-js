@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Func } from "@polar-sh/sdk/models/components/propertyaggregation.js";
+import { Func } from "@spaire/sdk/models/components/propertyaggregation.js";
 
 let value: Func = "avg";
 ```

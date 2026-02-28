@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomerSeatsGetClaimInfoRequest } from "@polar-sh/sdk/models/operations/customerseatsgetclaiminfo.js";
+import { CustomerSeatsGetClaimInfoRequest } from "@spaire/sdk/models/operations/customerseatsgetclaiminfo.js";
 
 let value: CustomerSeatsGetClaimInfoRequest = {
   invitationToken: "<value>",

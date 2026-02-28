@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type PaymentAlreadyInProgressData = {
   error: "PaymentAlreadyInProgress";
   detail: string;
 };
 
-export class PaymentAlreadyInProgress extends PolarError {
+export class PaymentAlreadyInProgress extends SpaireError {
   error: "PaymentAlreadyInProgress";
   detail: string;
 

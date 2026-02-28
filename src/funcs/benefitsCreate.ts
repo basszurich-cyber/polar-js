@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { encodeJSON } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
@@ -30,7 +30,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import { APICall, APIPromise } from "../types/async.js";
@@ -45,14 +45,14 @@ import { Result } from "../types/fp.js";
  * **Scopes**: `benefits:write`
  */
 export function benefitsCreate(
-  client: PolarCore,
+  client: SpaireCore,
   request: BenefitCreate,
   options?: RequestOptions,
 ): APIPromise<
   Result<
     Benefit,
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -70,7 +70,7 @@ export function benefitsCreate(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   request: BenefitCreate,
   options?: RequestOptions,
 ): Promise<
@@ -78,7 +78,7 @@ async function $do(
     Result<
       Benefit,
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -160,7 +160,7 @@ async function $do(
   const [result] = await M.match<
     Benefit,
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

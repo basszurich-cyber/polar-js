@@ -10,7 +10,7 @@ such as their name or role within the customer.
 ## Example Usage
 
 ```typescript
-import { WebhookMemberUpdatedPayload } from "@polar-sh/sdk/models/components/webhookmemberupdatedpayload.js";
+import { WebhookMemberUpdatedPayload } from "@spaire/sdk/models/components/webhookmemberupdatedpayload.js";
 
 let value: WebhookMemberUpdatedPayload = {
   type: "member.updated",

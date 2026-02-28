@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ProductCreateOneTime } from "@polar-sh/sdk/models/components/productcreateonetime.js";
+import { ProductCreateOneTime } from "@spaire/sdk/models/components/productcreateonetime.js";
 
 let value: ProductCreateOneTime = {
   name: "<value>",

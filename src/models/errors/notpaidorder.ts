@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type NotPaidOrderData = {
   error: "NotPaidOrder";
   detail: string;
 };
 
-export class NotPaidOrder extends PolarError {
+export class NotPaidOrder extends SpaireError {
   error: "NotPaidOrder";
   detail: string;
 

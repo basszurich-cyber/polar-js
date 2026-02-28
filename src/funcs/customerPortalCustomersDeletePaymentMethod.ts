@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
@@ -26,7 +26,7 @@ import {
   PaymentMethodInUseByActiveSubscription,
   PaymentMethodInUseByActiveSubscription$inboundSchema,
 } from "../models/errors/paymentmethodinusebyactivesubscription.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import {
   ResourceNotFound,
   ResourceNotFound$inboundSchema,
@@ -48,7 +48,7 @@ import { Result } from "../types/fp.js";
  * Delete a payment method from the authenticated customer.
  */
 export function customerPortalCustomersDeletePaymentMethod(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalCustomersDeletePaymentMethodSecurity,
   request: CustomerPortalCustomersDeletePaymentMethodRequest,
   options?: RequestOptions,
@@ -58,7 +58,7 @@ export function customerPortalCustomersDeletePaymentMethod(
     | PaymentMethodInUseByActiveSubscription
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -77,7 +77,7 @@ export function customerPortalCustomersDeletePaymentMethod(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalCustomersDeletePaymentMethodSecurity,
   request: CustomerPortalCustomersDeletePaymentMethodRequest,
   options?: RequestOptions,
@@ -88,7 +88,7 @@ async function $do(
       | PaymentMethodInUseByActiveSubscription
       | ResourceNotFound
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -197,7 +197,7 @@ async function $do(
     | PaymentMethodInUseByActiveSubscription
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

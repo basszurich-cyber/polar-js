@@ -7,7 +7,7 @@ Sent when a benefit grant is revoked.
 ## Example Usage
 
 ```typescript
-import { WebhookBenefitGrantRevokedPayload } from "@polar-sh/sdk/models/components/webhookbenefitgrantrevokedpayload.js";
+import { WebhookBenefitGrantRevokedPayload } from "@spaire/sdk/models/components/webhookbenefitgrantrevokedpayload.js";
 
 let value: WebhookBenefitGrantRevokedPayload = {
   type: "benefit_grant.revoked",

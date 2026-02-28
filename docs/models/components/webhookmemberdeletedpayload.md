@@ -10,7 +10,7 @@ Any active seats assigned to the member will be automatically revoked.
 ## Example Usage
 
 ```typescript
-import { WebhookMemberDeletedPayload } from "@polar-sh/sdk/models/components/webhookmemberdeletedpayload.js";
+import { WebhookMemberDeletedPayload } from "@spaire/sdk/models/components/webhookmemberdeletedpayload.js";
 
 let value: WebhookMemberDeletedPayload = {
   type: "member.deleted",

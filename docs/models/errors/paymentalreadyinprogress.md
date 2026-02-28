@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PaymentAlreadyInProgress } from "@polar-sh/sdk/models/errors/paymentalreadyinprogress.js";
+import { PaymentAlreadyInProgress } from "@spaire/sdk/models/errors/paymentalreadyinprogress.js";
 
 // No examples available for this model
 ```

@@ -8,7 +8,7 @@ Customers might still have access until the end of the current period.
 ## Example Usage
 
 ```typescript
-import { WebhookSubscriptionCanceledPayload } from "@polar-sh/sdk/models/components/webhooksubscriptioncanceledpayload.js";
+import { WebhookSubscriptionCanceledPayload } from "@spaire/sdk/models/components/webhooksubscriptioncanceledpayload.js";
 
 let value: WebhookSubscriptionCanceledPayload = {
   type: "subscription.canceled",

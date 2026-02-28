@@ -5,7 +5,7 @@ A member of a customer.
 ## Example Usage
 
 ```typescript
-import { Member } from "@polar-sh/sdk/models/components/member.js";
+import { Member } from "@spaire/sdk/models/components/member.js";
 
 let value: Member = {
   id: "<value>",

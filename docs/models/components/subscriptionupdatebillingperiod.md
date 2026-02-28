@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SubscriptionUpdateBillingPeriod } from "@polar-sh/sdk/models/components/subscriptionupdatebillingperiod.js";
+import { SubscriptionUpdateBillingPeriod } from "@spaire/sdk/models/components/subscriptionupdatebillingperiod.js";
 
 let value: SubscriptionUpdateBillingPeriod = {
   currentBillingPeriodEnd: new Date("2026-11-17T15:45:43.046Z"),

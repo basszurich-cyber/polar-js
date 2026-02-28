@@ -5,7 +5,7 @@ Product data for a checkout link.
 ## Example Usage
 
 ```typescript
-import { CheckoutLinkProduct } from "@polar-sh/sdk/models/components/checkoutlinkproduct.js";
+import { CheckoutLinkProduct } from "@spaire/sdk/models/components/checkoutlinkproduct.js";
 
 let value: CheckoutLinkProduct = {
   metadata: {},

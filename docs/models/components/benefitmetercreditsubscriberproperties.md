@@ -5,7 +5,7 @@ Properties available to subscribers for a benefit of type `meter_unit`.
 ## Example Usage
 
 ```typescript
-import { BenefitMeterCreditSubscriberProperties } from "@polar-sh/sdk/models/components/benefitmetercreditsubscriberproperties.js";
+import { BenefitMeterCreditSubscriberProperties } from "@spaire/sdk/models/components/benefitmetercreditsubscriberproperties.js";
 
 let value: BenefitMeterCreditSubscriberProperties = {
   units: 179462,

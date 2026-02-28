@@ -12,7 +12,7 @@ A customer can be created:
 ## Example Usage
 
 ```typescript
-import { WebhookCustomerCreatedPayload } from "@polar-sh/sdk/models/components/webhookcustomercreatedpayload.js";
+import { WebhookCustomerCreatedPayload } from "@spaire/sdk/models/components/webhookcustomercreatedpayload.js";
 
 let value: WebhookCustomerCreatedPayload = {
   type: "customer.created",

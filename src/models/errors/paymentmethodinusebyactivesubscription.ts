@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type PaymentMethodInUseByActiveSubscriptionData = {
   error: "PaymentMethodInUseByActiveSubscription";
   detail: string;
 };
 
-export class PaymentMethodInUseByActiveSubscription extends PolarError {
+export class PaymentMethodInUseByActiveSubscription extends SpaireError {
   error: "PaymentMethodInUseByActiveSubscription";
   detail: string;
 

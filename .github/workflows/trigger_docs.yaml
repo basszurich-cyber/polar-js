@@ -17,15 +17,15 @@ jobs:
       with:
         app-id: ${{ secrets.INTERNAL_GHA_APP_ID }}
         private-key: ${{ secrets.INTERNAL_GHA_APP_PRIVATE_KEY }}
-        owner: polarsource
-        repositories: polar
+        owner: spairesource
+        repositories: spaire
 
     - name: Dispatch workflow
       uses: octokit/request-action@v2.x
       with:
         route: POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches
-        owner: polarsource
-        repo: polar
+        owner: spairesource
+        repo: spaire
         workflow_id: code_samples.yml
         ref: main
         inputs: null

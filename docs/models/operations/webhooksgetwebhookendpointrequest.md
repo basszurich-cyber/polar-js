@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { WebhooksGetWebhookEndpointRequest } from "@polar-sh/sdk/models/operations/webhooksgetwebhookendpoint.js";
+import { WebhooksGetWebhookEndpointRequest } from "@spaire/sdk/models/operations/webhooksgetwebhookendpoint.js";
 
 let value: WebhooksGetWebhookEndpointRequest = {
   id: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { AuthorizationCodeTokenRequest } from "@polar-sh/sdk/models/components/authorizationcodetokenrequest.js";
+import { AuthorizationCodeTokenRequest } from "@spaire/sdk/models/components/authorizationcodetokenrequest.js";
 
 let value: AuthorizationCodeTokenRequest = {
   grantType: "authorization_code",

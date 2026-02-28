@@ -5,7 +5,7 @@ The permission level to grant. Read more about roles and their permissions on [G
 ## Example Usage
 
 ```typescript
-import { BenefitGitHubRepositoryCreatePropertiesPermission } from "@polar-sh/sdk/models/components/benefitgithubrepositorycreateproperties.js";
+import { BenefitGitHubRepositoryCreatePropertiesPermission } from "@spaire/sdk/models/components/benefitgithubrepositorycreateproperties.js";
 
 let value: BenefitGitHubRepositoryCreatePropertiesPermission = "admin";
 ```

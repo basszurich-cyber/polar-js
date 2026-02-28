@@ -7,7 +7,7 @@ Use it to automatically invite your backers to a Discord server.
 ## Example Usage
 
 ```typescript
-import { BenefitDiscord } from "@polar-sh/sdk/models/components/benefitdiscord.js";
+import { BenefitDiscord } from "@spaire/sdk/models/components/benefitdiscord.js";
 
 let value: BenefitDiscord = {
   id: "<value>",

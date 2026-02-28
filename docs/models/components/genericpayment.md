@@ -5,7 +5,7 @@ Schema of a payment with a generic payment method.
 ## Example Usage
 
 ```typescript
-import { GenericPayment } from "@polar-sh/sdk/models/components/genericpayment.js";
+import { GenericPayment } from "@spaire/sdk/models/components/genericpayment.js";
 
 let value: GenericPayment = {
   createdAt: new Date("2026-02-18T21:30:37.361Z"),

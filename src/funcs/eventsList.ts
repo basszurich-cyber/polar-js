@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import {
   encodeDeepObjectQuery,
   encodeFormQuery,
@@ -26,7 +26,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import {
@@ -47,14 +47,14 @@ import { Result } from "../types/fp.js";
  * **Scopes**: `events:read` `events:write`
  */
 export function eventsList(
-  client: PolarCore,
+  client: SpaireCore,
   request: EventsListRequest,
   options?: RequestOptions,
 ): APIPromise<
   Result<
     EventsListResponseEventsList,
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -72,7 +72,7 @@ export function eventsList(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   request: EventsListRequest,
   options?: RequestOptions,
 ): Promise<
@@ -80,7 +80,7 @@ async function $do(
     Result<
       EventsListResponseEventsList,
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -185,7 +185,7 @@ async function $do(
   const [result] = await M.match<
     EventsListResponseEventsList,
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

@@ -5,7 +5,7 @@ Schema to create a custom field of type number.
 ## Example Usage
 
 ```typescript
-import { CustomFieldCreateNumber } from "@polar-sh/sdk/models/components/customfieldcreatenumber.js";
+import { CustomFieldCreateNumber } from "@spaire/sdk/models/components/customfieldcreatenumber.js";
 
 let value: CustomFieldCreateNumber = {
   type: "number",

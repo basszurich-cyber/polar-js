@@ -5,7 +5,7 @@ Current consumption and spending for a subscription meter.
 ## Example Usage
 
 ```typescript
-import { SubscriptionMeter } from "@polar-sh/sdk/models/components/subscriptionmeter.js";
+import { SubscriptionMeter } from "@spaire/sdk/models/components/subscriptionmeter.js";
 
 let value: SubscriptionMeter = {
   createdAt: new Date("2025-12-11T10:04:45.653Z"),

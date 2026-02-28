@@ -5,7 +5,7 @@ A customer session that can be used to authenticate as a customer.
 ## Example Usage
 
 ```typescript
-import { CustomerSession } from "@polar-sh/sdk/models/components/customersession.js";
+import { CustomerSession } from "@spaire/sdk/models/components/customersession.js";
 
 let value: CustomerSession = {
   createdAt: new Date("2024-07-01T22:27:37.876Z"),

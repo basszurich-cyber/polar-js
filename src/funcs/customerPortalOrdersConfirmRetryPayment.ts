@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { encodeJSON, encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
@@ -30,7 +30,7 @@ import {
   PaymentAlreadyInProgress,
   PaymentAlreadyInProgress$inboundSchema,
 } from "../models/errors/paymentalreadyinprogress.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import {
   ResourceNotFound,
   ResourceNotFound$inboundSchema,
@@ -52,7 +52,7 @@ import { Result } from "../types/fp.js";
  * Confirm a retry payment using a Stripe confirmation token.
  */
 export function customerPortalOrdersConfirmRetryPayment(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalOrdersConfirmRetryPaymentSecurity,
   request: CustomerPortalOrdersConfirmRetryPaymentRequest,
   options?: RequestOptions,
@@ -62,7 +62,7 @@ export function customerPortalOrdersConfirmRetryPayment(
     | ResourceNotFound
     | PaymentAlreadyInProgress
     | OrderNotEligibleForRetry
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -81,7 +81,7 @@ export function customerPortalOrdersConfirmRetryPayment(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalOrdersConfirmRetryPaymentSecurity,
   request: CustomerPortalOrdersConfirmRetryPaymentRequest,
   options?: RequestOptions,
@@ -92,7 +92,7 @@ async function $do(
       | ResourceNotFound
       | PaymentAlreadyInProgress
       | OrderNotEligibleForRetry
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -204,7 +204,7 @@ async function $do(
     | ResourceNotFound
     | PaymentAlreadyInProgress
     | OrderNotEligibleForRetry
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

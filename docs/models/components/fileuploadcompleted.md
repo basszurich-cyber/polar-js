@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { FileUploadCompleted } from "@polar-sh/sdk/models/components/fileuploadcompleted.js";
+import { FileUploadCompleted } from "@spaire/sdk/models/components/fileuploadcompleted.js";
 
 let value: FileUploadCompleted = {
   id: "<id>",

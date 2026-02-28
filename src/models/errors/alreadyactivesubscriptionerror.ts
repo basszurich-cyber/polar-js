@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type AlreadyActiveSubscriptionErrorData = {
   error: "AlreadyActiveSubscriptionError";
   detail: string;
 };
 
-export class AlreadyActiveSubscriptionError extends PolarError {
+export class AlreadyActiveSubscriptionError extends SpaireError {
   error: "AlreadyActiveSubscriptionError";
   detail: string;
 

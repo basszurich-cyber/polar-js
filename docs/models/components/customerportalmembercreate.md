@@ -5,7 +5,7 @@ Schema for adding a new member to the customer's team.
 ## Example Usage
 
 ```typescript
-import { CustomerPortalMemberCreate } from "@polar-sh/sdk/models/components/customerportalmembercreate.js";
+import { CustomerPortalMemberCreate } from "@spaire/sdk/models/components/customerportalmembercreate.js";
 
 let value: CustomerPortalMemberCreate = {
   email: "Germaine_Moen@hotmail.com",

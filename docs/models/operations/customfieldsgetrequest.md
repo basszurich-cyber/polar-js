@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomFieldsGetRequest } from "@polar-sh/sdk/models/operations/customfieldsget.js";
+import { CustomFieldsGetRequest } from "@spaire/sdk/models/operations/customfieldsget.js";
 
 let value: CustomFieldsGetRequest = {
   id: "<value>",

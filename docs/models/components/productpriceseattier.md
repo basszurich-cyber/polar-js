@@ -5,7 +5,7 @@ A pricing tier for seat-based pricing.
 ## Example Usage
 
 ```typescript
-import { ProductPriceSeatTier } from "@polar-sh/sdk/models/components/productpriceseattier.js";
+import { ProductPriceSeatTier } from "@spaire/sdk/models/components/productpriceseattier.js";
 
 let value: ProductPriceSeatTier = {
   minSeats: 129448,

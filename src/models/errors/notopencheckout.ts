@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type NotOpenCheckoutData = {
   error: "NotOpenCheckout";
   detail: string;
 };
 
-export class NotOpenCheckout extends PolarError {
+export class NotOpenCheckout extends SpaireError {
   error: "NotOpenCheckout";
   detail: string;
 

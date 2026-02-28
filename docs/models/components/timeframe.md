@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Timeframe } from "@polar-sh/sdk/models/components/benefitlicensekeyexpirationproperties.js";
+import { Timeframe } from "@spaire/sdk/models/components/benefitlicensekeyexpirationproperties.js";
 
 let value: Timeframe = "year";
 ```

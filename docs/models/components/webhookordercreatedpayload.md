@@ -17,7 +17,7 @@ A new order is created when:
 ## Example Usage
 
 ```typescript
-import { WebhookOrderCreatedPayload } from "@polar-sh/sdk/models/components/webhookordercreatedpayload.js";
+import { WebhookOrderCreatedPayload } from "@spaire/sdk/models/components/webhookordercreatedpayload.js";
 
 let value: WebhookOrderCreatedPayload = {
   type: "order.created",

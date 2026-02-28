@@ -5,7 +5,7 @@ Schema for updating a member's role in the customer portal.
 ## Example Usage
 
 ```typescript
-import { CustomerPortalMemberUpdate } from "@polar-sh/sdk/models/components/customerportalmemberupdate.js";
+import { CustomerPortalMemberUpdate } from "@spaire/sdk/models/components/customerportalmemberupdate.js";
 
 let value: CustomerPortalMemberUpdate = {};
 ```

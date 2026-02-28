@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomerPortalOrdersGetPaymentStatusRequest } from "@polar-sh/sdk/models/operations/customerportalordersgetpaymentstatus.js";
+import { CustomerPortalOrdersGetPaymentStatusRequest } from "@spaire/sdk/models/operations/customerportalordersgetpaymentstatus.js";
 
 let value: CustomerPortalOrdersGetPaymentStatusRequest = {
   id: "<value>",

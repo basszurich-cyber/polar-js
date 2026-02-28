@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomFieldSelectProperties } from "@polar-sh/sdk/models/components/customfieldselectproperties.js";
+import { CustomFieldSelectProperties } from "@spaire/sdk/models/components/customfieldselectproperties.js";
 
 let value: CustomFieldSelectProperties = {
   options: [

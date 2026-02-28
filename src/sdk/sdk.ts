@@ -70,7 +70,7 @@ import { Refunds } from "./refunds.js";
 import { Subscriptions } from "./subscriptions.js";
 import { Webhooks } from "./webhooks.js";
 
-export class Polar extends ClientSDK {
+export class Spaire extends ClientSDK {
   private _organizations?: Organizations;
   get organizations(): Organizations {
     return (this._organizations ??= new Organizations(this._options));

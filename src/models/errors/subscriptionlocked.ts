@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type SubscriptionLockedData = {
   error: "SubscriptionLocked";
   detail: string;
 };
 
-export class SubscriptionLocked extends PolarError {
+export class SubscriptionLocked extends SpaireError {
   error: "SubscriptionLocked";
   detail: string;
 

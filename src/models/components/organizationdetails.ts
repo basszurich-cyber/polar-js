@@ -25,7 +25,7 @@ export type OrganizationDetails = {
    */
   productDescription: string;
   /**
-   * How the organization will integrate and use Polar.
+   * How the organization will integrate and use Spaire.
    */
   intendedUse: string;
   /**

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SubscriptionProrationBehavior } from "@polar-sh/sdk/models/components/subscriptionprorationbehavior.js";
+import { SubscriptionProrationBehavior } from "@spaire/sdk/models/components/subscriptionprorationbehavior.js";
 
 let value: SubscriptionProrationBehavior = "invoice";
 ```

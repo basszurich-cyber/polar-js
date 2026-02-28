@@ -5,7 +5,7 @@ Schema for creating a customer session using an external customer ID.
 ## Example Usage
 
 ```typescript
-import { CustomerSessionCustomerExternalIDCreate } from "@polar-sh/sdk/models/components/customersessioncustomerexternalidcreate.js";
+import { CustomerSessionCustomerExternalIDCreate } from "@spaire/sdk/models/components/customersessioncustomerexternalidcreate.js";
 
 let value: CustomerSessionCustomerExternalIDCreate = {
   returnUrl: "https://example.com/account",

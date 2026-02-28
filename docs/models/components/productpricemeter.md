@@ -5,7 +5,7 @@ A meter associated to a metered price.
 ## Example Usage
 
 ```typescript
-import { ProductPriceMeter } from "@polar-sh/sdk/models/components/productpricemeter.js";
+import { ProductPriceMeter } from "@spaire/sdk/models/components/productpricemeter.js";
 
 let value: ProductPriceMeter = {
   id: "<value>",

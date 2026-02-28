@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { EventsIngest } from "@polar-sh/sdk/models/components/eventsingest.js";
+import { EventsIngest } from "@spaire/sdk/models/components/eventsingest.js";
 
 let value: EventsIngest = {
   events: [],

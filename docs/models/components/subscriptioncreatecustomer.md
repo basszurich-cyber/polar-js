@@ -5,7 +5,7 @@ Create a subscription for an existing customer.
 ## Example Usage
 
 ```typescript
-import { SubscriptionCreateCustomer } from "@polar-sh/sdk/models/components/subscriptioncreatecustomer.js";
+import { SubscriptionCreateCustomer } from "@spaire/sdk/models/components/subscriptioncreatecustomer.js";
 
 let value: SubscriptionCreateCustomer = {
   productId: "d8dd2de1-21b7-4a41-8bc3-ce909c0cfe23",

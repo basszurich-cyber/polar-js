@@ -8,7 +8,7 @@ that can be queried via the API and webhooks.
 ## Example Usage
 
 ```typescript
-import { BenefitFeatureFlag } from "@polar-sh/sdk/models/components/benefitfeatureflag.js";
+import { BenefitFeatureFlag } from "@spaire/sdk/models/components/benefitfeatureflag.js";
 
 let value: BenefitFeatureFlag = {
   id: "<value>",

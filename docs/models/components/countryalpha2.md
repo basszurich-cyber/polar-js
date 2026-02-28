@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CountryAlpha2 } from "@polar-sh/sdk/models/components/address.js";
+import { CountryAlpha2 } from "@spaire/sdk/models/components/address.js";
 
 let value: CountryAlpha2 = "US";
 ```

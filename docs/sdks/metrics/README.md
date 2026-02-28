@@ -19,15 +19,15 @@ Currency values are output in cents.
 
 <!-- UsageSnippet language="typescript" operationID="metrics:get" method="get" path="/v1/metrics/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
-import { RFCDate } from "@polar-sh/sdk/types/rfcdate.js";
+import { Spaire } from "@spaire/sdk";
+import { RFCDate } from "@spaire/sdk/types/rfcdate.js";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.metrics.get({
+  const result = await spaire.metrics.get({
     startDate: new RFCDate("2025-03-14"),
     endDate: new RFCDate("2025-03-18"),
     interval: "hour",
@@ -45,18 +45,18 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { metricsGet } from "@polar-sh/sdk/funcs/metricsGet.js";
-import { RFCDate } from "@polar-sh/sdk/types/rfcdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { metricsGet } from "@spaire/sdk/funcs/metricsGet.js";
+import { RFCDate } from "@spaire/sdk/types/rfcdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await metricsGet(polar, {
+  const res = await metricsGet(spaire, {
     startDate: new RFCDate("2025-03-14"),
     endDate: new RFCDate("2025-03-18"),
     interval: "hour",
@@ -103,14 +103,14 @@ Get the interval limits for the metrics endpoint.
 
 <!-- UsageSnippet language="typescript" operationID="metrics:limits" method="get" path="/v1/metrics/limits" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.metrics.limits();
+  const result = await spaire.metrics.limits();
 
   console.log(result);
 }
@@ -123,17 +123,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { metricsLimits } from "@polar-sh/sdk/funcs/metricsLimits.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { metricsLimits } from "@spaire/sdk/funcs/metricsLimits.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await metricsLimits(polar);
+  const res = await metricsLimits(spaire);
   if (res.ok) {
     const { value: result } = res;
     console.log(result);

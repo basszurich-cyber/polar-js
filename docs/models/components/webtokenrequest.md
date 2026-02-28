@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { WebTokenRequest } from "@polar-sh/sdk/models/components/webtokenrequest.js";
+import { WebTokenRequest } from "@spaire/sdk/models/components/webtokenrequest.js";
 
 let value: WebTokenRequest = {
   grantType: "web",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { HTTPValidationError } from "@polar-sh/sdk/models/errors/httpvalidationerror.js";
+import { HTTPValidationError } from "@spaire/sdk/models/errors/httpvalidationerror.js";
 
 // No examples available for this model
 ```

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { NotOpenCheckout } from "@polar-sh/sdk/models/errors/notopencheckout.js";
+import { NotOpenCheckout } from "@spaire/sdk/models/errors/notopencheckout.js";
 
 // No examples available for this model
 ```

@@ -1,5 +1,5 @@
 {
-  "name": "@polar-sh/sdk-examples",
+  "name": "@spaire/sdk-examples",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,6 @@
     "tsx": "^4.19.2"
   },
   "dependencies": {
-    "@polar-sh/sdk": "file:.."
+    "@spaire/sdk": "file:.."
   }
 }

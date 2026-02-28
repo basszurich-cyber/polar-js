@@ -1,7 +1,7 @@
 speakeasyVersion: 1.731.2
 sources:
-    Polar-OAS:
-        sourceNamespace: polar-oas
+    Spaire-OAS:
+        sourceNamespace: spaire-oas
         sourceRevisionDigest: sha256:cedf01bd0a321880b2d63da59fd56d0f30bd3b49901169c4c8cbc8036d7b084d
         sourceBlobDigest: sha256:27a3566b537e81ccadd87d3797947822ea19b2222c14c29b8c378cfbbfa74262
         tags:
@@ -9,39 +9,39 @@ sources:
             - speakeasy-sdk-regen-1772066370
             - 0.1.0
 targets:
-    polar:
-        source: Polar-OAS
-        sourceNamespace: polar-oas
+    spaire:
+        source: Spaire-OAS
+        sourceNamespace: spaire-oas
         sourceRevisionDigest: sha256:cedf01bd0a321880b2d63da59fd56d0f30bd3b49901169c4c8cbc8036d7b084d
         sourceBlobDigest: sha256:27a3566b537e81ccadd87d3797947822ea19b2222c14c29b8c378cfbbfa74262
-        codeSamplesNamespace: polar-oas-ts-code-samples
+        codeSamplesNamespace: spaire-oas-ts-code-samples
         codeSamplesRevisionDigest: sha256:58849c9aba62b85ba546fe0ffb329d3cbe38396d8940e2c6959998f6fd84f5f3
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
-        Polar-OAS:
+        Spaire-OAS:
             inputs:
-                - location: https://api.polar.sh/openapi.json
+                - location: https://api.spaire.sh/openapi.json
             overlays:
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/security.yml
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/type_parameter.yml
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/read_only.yml
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/event_discriminator.yml
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/timezone_enum.yml
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/event_metadata.yml
+                - location: https://raw.githubusercontent.com/spairesource/spaire/main/sdk/overlays/security.yml
+                - location: https://raw.githubusercontent.com/spairesource/spaire/main/sdk/overlays/type_parameter.yml
+                - location: https://raw.githubusercontent.com/spairesource/spaire/main/sdk/overlays/read_only.yml
+                - location: https://raw.githubusercontent.com/spairesource/spaire/main/sdk/overlays/event_discriminator.yml
+                - location: https://raw.githubusercontent.com/spairesource/spaire/main/sdk/overlays/timezone_enum.yml
+                - location: https://raw.githubusercontent.com/spairesource/spaire/main/sdk/overlays/event_metadata.yml
             registry:
-                location: registry.speakeasyapi.dev/polar/polar/polar-oas
+                location: registry.speakeasyapi.dev/spaire/spaire/spaire-oas
     targets:
-        polar:
+        spaire:
             target: typescript
-            source: Polar-OAS
+            source: Spaire-OAS
             publish:
                 npm:
                     token: $npm_token
             codeSamples:
                 output: codeSamples.yaml
                 registry:
-                    location: registry.speakeasyapi.dev/polar/polar/polar-oas-ts-code-samples
+                    location: registry.speakeasyapi.dev/spaire/spaire/spaire-oas-ts-code-samples
                 labelOverride:
                     fixedValue: Typescript (SDK)

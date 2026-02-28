@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ProductCreateRecurring } from "@polar-sh/sdk/models/components/productcreaterecurring.js";
+import { ProductCreateRecurring } from "@spaire/sdk/models/components/productcreaterecurring.js";
 
 let value: ProductCreateRecurring = {
   name: "<value>",

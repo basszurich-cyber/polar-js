@@ -7,7 +7,7 @@ A dispute is a challenge raised by a customer or their bank regarding a payment.
 ## Example Usage
 
 ```typescript
-import { Dispute } from "@polar-sh/sdk/models/components/dispute.js";
+import { Dispute } from "@spaire/sdk/models/components/dispute.js";
 
 let value: Dispute = {
   createdAt: new Date("2024-03-29T12:33:21.882Z"),

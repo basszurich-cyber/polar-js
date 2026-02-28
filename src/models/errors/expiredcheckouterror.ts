@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type ExpiredCheckoutErrorData = {
   error: "ExpiredCheckoutError";
   detail: string;
 };
 
-export class ExpiredCheckoutError extends PolarError {
+export class ExpiredCheckoutError extends SpaireError {
   error: "ExpiredCheckoutError";
   detail: string;
 

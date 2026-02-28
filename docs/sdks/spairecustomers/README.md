@@ -1,30 +1,181 @@
-# CustomerPortal.LicenseKeys
+# CustomerPortal.Customers
 
 ## Overview
 
 ### Available Operations
 
-* [list](#list) - List License Keys
-* [get](#get) - Get License Key
-* [validate](#validate) - Validate License Key
-* [activate](#activate) - Activate License Key
-* [deactivate](#deactivate) - Deactivate License Key
+* [get](#get) - Get Customer
+* [update](#update) - Update Customer
+* [listPaymentMethods](#listpaymentmethods) - List Customer Payment Methods
+* [addPaymentMethod](#addpaymentmethod) - Add Customer Payment Method
+* [confirmPaymentMethod](#confirmpaymentmethod) - Confirm Customer Payment Method
+* [deletePaymentMethod](#deletepaymentmethod) - Delete Customer Payment Method
 
-## list
+## get
+
+Get authenticated customer.
 
 **Scopes**: `customer_portal:read` `customer_portal:write`
 
 ### Example Usage
 
-<!-- UsageSnippet language="typescript" operationID="customer_portal:license_keys:list" method="get" path="/v1/customer-portal/license-keys/" -->
+<!-- UsageSnippet language="typescript" operationID="customer_portal:customers:get" method="get" path="/v1/customer-portal/customers/me" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.customerPortal.licenseKeys.list({
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
+  const result = await spaire.customerPortal.customers.get({
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalCustomersGet } from "@spaire/sdk/funcs/customerPortalCustomersGet.js";
+
+// Use `SpaireCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const spaire = new SpaireCore();
+
+async function run() {
+  const res = await customerPortalCustomersGet(spaire, {
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("customerPortalCustomersGet failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `security`                                                                                                                                                                     | [operations.CustomerPortalCustomersGetSecurity](../../models/operations/customerportalcustomersgetsecurity.md)                                                                 | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[components.CustomerPortalCustomer](../../models/components/customerportalcustomer.md)\>**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update
+
+Update authenticated customer.
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="customer_portal:customers:update" method="patch" path="/v1/customer-portal/customers/me" -->
+```typescript
+import { Spaire } from "@spaire/sdk";
+
+const spaire = new Spaire();
+
+async function run() {
+  const result = await spaire.customerPortal.customers.update({
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
+  }, {
+    billingAddress: {
+      country: "US",
+    },
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalCustomersUpdate } from "@spaire/sdk/funcs/customerPortalCustomersUpdate.js";
+
+// Use `SpaireCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const spaire = new SpaireCore();
+
+async function run() {
+  const res = await customerPortalCustomersUpdate(spaire, {
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
+  }, {
+    billingAddress: {
+      country: "US",
+    },
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("customerPortalCustomersUpdate failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [components.CustomerPortalCustomerUpdate](../../models/components/customerportalcustomerupdate.md)                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.CustomerPortalCustomersUpdateSecurity](../../models/operations/customerportalcustomersupdatesecurity.md)                                                           | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[components.CustomerPortalCustomer](../../models/components/customerportalcustomer.md)\>**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 4XX, 5XX                   | \*/\*                      |
+
+## listPaymentMethods
+
+Get saved payment methods of the authenticated customer.
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="customer_portal:customers:list_payment_methods" method="get" path="/v1/customer-portal/customers/me/payment-methods" -->
+```typescript
+import { Spaire } from "@spaire/sdk";
+
+const spaire = new Spaire();
+
+async function run() {
+  const result = await spaire.customerPortal.customers.listPaymentMethods({
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
   }, {});
 
   for await (const page of result) {
@@ -40,16 +191,16 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalLicenseKeysList } from "@polar-sh/sdk/funcs/customerPortalLicenseKeysList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalCustomersListPaymentMethods } from "@spaire/sdk/funcs/customerPortalCustomersListPaymentMethods.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await customerPortalLicenseKeysList(polar, {
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
+  const res = await customerPortalCustomersListPaymentMethods(spaire, {
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
   }, {});
   if (res.ok) {
     const { value: result } = res;
@@ -57,7 +208,7 @@ async function run() {
     console.log(page);
   }
   } else {
-    console.log("customerPortalLicenseKeysList failed:", res.error);
+    console.log("customerPortalCustomersListPaymentMethods failed:", res.error);
   }
 }
 
@@ -68,44 +219,42 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.CustomerPortalLicenseKeysListRequest](../../models/operations/customerportallicensekeyslistrequest.md)                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.CustomerPortalLicenseKeysListSecurity](../../models/operations/customerportallicensekeyslistsecurity.md)                                                           | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `request`                                                                                                                                                                      | [operations.CustomerPortalCustomersListPaymentMethodsRequest](../../models/operations/customerportalcustomerslistpaymentmethodsrequest.md)                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.CustomerPortalCustomersListPaymentMethodsSecurity](../../models/operations/customerportalcustomerslistpaymentmethodssecurity.md)                                   | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[operations.CustomerPortalLicenseKeysListResponse](../../models/operations/customerportallicensekeyslistresponse.md)\>**
+**Promise\<[operations.CustomerPortalCustomersListPaymentMethodsResponse](../../models/operations/customerportalcustomerslistpaymentmethodsresponse.md)\>**
 
 ### Errors
 
 | Error Type                 | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
-| errors.Unauthorized        | 401                        | application/json           |
-| errors.ResourceNotFound    | 404                        | application/json           |
 | errors.HTTPValidationError | 422                        | application/json           |
 | errors.SDKError            | 4XX, 5XX                   | \*/\*                      |
 
-## get
+## addPaymentMethod
 
-Get a license key.
-
-**Scopes**: `customer_portal:read` `customer_portal:write`
+Add a payment method to the authenticated customer.
 
 ### Example Usage
 
-<!-- UsageSnippet language="typescript" operationID="customer_portal:license_keys:get" method="get" path="/v1/customer-portal/license-keys/{id}" -->
+<!-- UsageSnippet language="typescript" operationID="customer_portal:customers:add_payment_method" method="post" path="/v1/customer-portal/customers/me/payment-methods" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.customerPortal.licenseKeys.get({
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
+  const result = await spaire.customerPortal.customers.addPaymentMethod({
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
   }, {
-    id: "<value>",
+    confirmationTokenId: "<id>",
+    setDefault: false,
+    returnUrl: "https://yearly-custom.net/",
   });
 
   console.log(result);
@@ -119,24 +268,26 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalLicenseKeysGet } from "@polar-sh/sdk/funcs/customerPortalLicenseKeysGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalCustomersAddPaymentMethod } from "@spaire/sdk/funcs/customerPortalCustomersAddPaymentMethod.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await customerPortalLicenseKeysGet(polar, {
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
+  const res = await customerPortalCustomersAddPaymentMethod(spaire, {
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
   }, {
-    id: "<value>",
+    confirmationTokenId: "<id>",
+    setDefault: false,
+    returnUrl: "https://yearly-custom.net/",
   });
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("customerPortalLicenseKeysGet failed:", res.error);
+    console.log("customerPortalCustomersAddPaymentMethod failed:", res.error);
   }
 }
 
@@ -147,45 +298,41 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.CustomerPortalLicenseKeysGetRequest](../../models/operations/customerportallicensekeysgetrequest.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.CustomerPortalLicenseKeysGetSecurity](../../models/operations/customerportallicensekeysgetsecurity.md)                                                             | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `request`                                                                                                                                                                      | [components.CustomerPaymentMethodCreate](../../models/components/customerpaymentmethodcreate.md)                                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.CustomerPortalCustomersAddPaymentMethodSecurity](../../models/operations/customerportalcustomersaddpaymentmethodsecurity.md)                                       | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[components.LicenseKeyWithActivations](../../models/components/licensekeywithactivations.md)\>**
+**Promise\<[components.CustomerPaymentMethodCreateResponse](../../models/components/customerpaymentmethodcreateresponse.md)\>**
 
 ### Errors
 
 | Error Type                 | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
-| errors.ResourceNotFound    | 404                        | application/json           |
 | errors.HTTPValidationError | 422                        | application/json           |
 | errors.SDKError            | 4XX, 5XX                   | \*/\*                      |
 
-## validate
+## confirmPaymentMethod
 
-Validate a license key.
-
-> This endpoint doesn't require authentication and can be safely used on a public
-> client, like a desktop application or a mobile app.
-> If you plan to validate a license key on a server, use the `/v1/license-keys/validate`
-> endpoint instead.
+Confirm a payment method for the authenticated customer.
 
 ### Example Usage
 
-<!-- UsageSnippet language="typescript" operationID="customer_portal:license_keys:validate" method="post" path="/v1/customer-portal/license-keys/validate" -->
+<!-- UsageSnippet language="typescript" operationID="customer_portal:customers:confirm_payment_method" method="post" path="/v1/customer-portal/customers/me/payment-methods/confirm" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.customerPortal.licenseKeys.validate({
-    key: "<key>",
-    organizationId: "<value>",
+  const result = await spaire.customerPortal.customers.confirmPaymentMethod({
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
+  }, {
+    setupIntentId: "<id>",
+    setDefault: true,
   });
 
   console.log(result);
@@ -199,23 +346,25 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalLicenseKeysValidate } from "@polar-sh/sdk/funcs/customerPortalLicenseKeysValidate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalCustomersConfirmPaymentMethod } from "@spaire/sdk/funcs/customerPortalCustomersConfirmPaymentMethod.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await customerPortalLicenseKeysValidate(polar, {
-    key: "<key>",
-    organizationId: "<value>",
+  const res = await customerPortalCustomersConfirmPaymentMethod(spaire, {
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
+  }, {
+    setupIntentId: "<id>",
+    setDefault: true,
   });
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("customerPortalLicenseKeysValidate failed:", res.error);
+    console.log("customerPortalCustomersConfirmPaymentMethod failed:", res.error);
   }
 }
 
@@ -226,126 +375,41 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [components.LicenseKeyValidate](../../models/components/licensekeyvalidate.md)                                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [components.CustomerPaymentMethodConfirm](../../models/components/customerpaymentmethodconfirm.md)                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.CustomerPortalCustomersConfirmPaymentMethodSecurity](../../models/operations/customerportalcustomersconfirmpaymentmethodsecurity.md)                               | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[components.ValidatedLicenseKey](../../models/components/validatedlicensekey.md)\>**
+**Promise\<[components.CustomerPaymentMethodCreateResponse](../../models/components/customerpaymentmethodcreateresponse.md)\>**
 
 ### Errors
 
 | Error Type                 | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
-| errors.ResourceNotFound    | 404                        | application/json           |
+| errors.CustomerNotReady    | 400                        | application/json           |
 | errors.HTTPValidationError | 422                        | application/json           |
 | errors.SDKError            | 4XX, 5XX                   | \*/\*                      |
 
-## activate
+## deletePaymentMethod
 
-Activate a license key instance.
-
-> This endpoint doesn't require authentication and can be safely used on a public
-> client, like a desktop application or a mobile app.
-> If you plan to validate a license key on a server, use the `/v1/license-keys/activate`
-> endpoint instead.
+Delete a payment method from the authenticated customer.
 
 ### Example Usage
 
-<!-- UsageSnippet language="typescript" operationID="customer_portal:license_keys:activate" method="post" path="/v1/customer-portal/license-keys/activate" -->
+<!-- UsageSnippet language="typescript" operationID="customer_portal:customers:delete_payment_method" method="delete" path="/v1/customer-portal/customers/me/payment-methods/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.customerPortal.licenseKeys.activate({
-    key: "<key>",
-    organizationId: "<value>",
-    label: "<value>",
-  });
-
-  console.log(result);
-}
-
-run();
-```
-
-### Standalone function
-
-The standalone function version of this method:
-
-```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalLicenseKeysActivate } from "@polar-sh/sdk/funcs/customerPortalLicenseKeysActivate.js";
-
-// Use `PolarCore` for best tree-shaking performance.
-// You can create one instance of it to use across an application.
-const polar = new PolarCore();
-
-async function run() {
-  const res = await customerPortalLicenseKeysActivate(polar, {
-    key: "<key>",
-    organizationId: "<value>",
-    label: "<value>",
-  });
-  if (res.ok) {
-    const { value: result } = res;
-    console.log(result);
-  } else {
-    console.log("customerPortalLicenseKeysActivate failed:", res.error);
-  }
-}
-
-run();
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [components.LicenseKeyActivate](../../models/components/licensekeyactivate.md)                                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
-| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
-
-### Response
-
-**Promise\<[components.LicenseKeyActivationRead](../../models/components/licensekeyactivationread.md)\>**
-
-### Errors
-
-| Error Type                 | Status Code                | Content Type               |
-| -------------------------- | -------------------------- | -------------------------- |
-| errors.NotPermitted        | 403                        | application/json           |
-| errors.ResourceNotFound    | 404                        | application/json           |
-| errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 4XX, 5XX                   | \*/\*                      |
-
-## deactivate
-
-Deactivate a license key instance.
-
-> This endpoint doesn't require authentication and can be safely used on a public
-> client, like a desktop application or a mobile app.
-> If you plan to validate a license key on a server, use the `/v1/license-keys/deactivate`
-> endpoint instead.
-
-### Example Usage
-
-<!-- UsageSnippet language="typescript" operationID="customer_portal:license_keys:deactivate" method="post" path="/v1/customer-portal/license-keys/deactivate" -->
-```typescript
-import { Polar } from "@polar-sh/sdk";
-
-const polar = new Polar();
-
-async function run() {
-  await polar.customerPortal.licenseKeys.deactivate({
-    key: "<key>",
-    organizationId: "<value>",
-    activationId: "<value>",
+  await spaire.customerPortal.customers.deletePaymentMethod({
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
+  }, {
+    id: "<id>",
   });
 
 
@@ -359,24 +423,24 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalLicenseKeysDeactivate } from "@polar-sh/sdk/funcs/customerPortalLicenseKeysDeactivate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalCustomersDeletePaymentMethod } from "@spaire/sdk/funcs/customerPortalCustomersDeletePaymentMethod.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await customerPortalLicenseKeysDeactivate(polar, {
-    key: "<key>",
-    organizationId: "<value>",
-    activationId: "<value>",
+  const res = await customerPortalCustomersDeletePaymentMethod(spaire, {
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
+  }, {
+    id: "<id>",
   });
   if (res.ok) {
     const { value: result } = res;
     
   } else {
-    console.log("customerPortalLicenseKeysDeactivate failed:", res.error);
+    console.log("customerPortalCustomersDeletePaymentMethod failed:", res.error);
   }
 }
 
@@ -387,7 +451,8 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [components.LicenseKeyDeactivate](../../models/components/licensekeydeactivate.md)                                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [operations.CustomerPortalCustomersDeletePaymentMethodRequest](../../models/operations/customerportalcustomersdeletepaymentmethodrequest.md)                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.CustomerPortalCustomersDeletePaymentMethodSecurity](../../models/operations/customerportalcustomersdeletepaymentmethodsecurity.md)                                 | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
@@ -398,8 +463,9 @@ run();
 
 ### Errors
 
-| Error Type                 | Status Code                | Content Type               |
-| -------------------------- | -------------------------- | -------------------------- |
-| errors.ResourceNotFound    | 404                        | application/json           |
-| errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 4XX, 5XX                   | \*/\*                      |
+| Error Type                                    | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| errors.PaymentMethodInUseByActiveSubscription | 400                                           | application/json                              |
+| errors.ResourceNotFound                       | 404                                           | application/json                              |
+| errors.HTTPValidationError                    | 422                                           | application/json                              |
+| errors.SDKError                               | 4XX, 5XX                                      | \*/\*                                         |

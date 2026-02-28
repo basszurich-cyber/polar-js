@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CheckoutCreatedMetadata } from "@polar-sh/sdk/models/components/checkoutcreatedmetadata.js";
+import { CheckoutCreatedMetadata } from "@spaire/sdk/models/components/checkoutcreatedmetadata.js";
 
 let value: CheckoutCreatedMetadata = {
   checkoutId: "<id>",

@@ -20,14 +20,14 @@ List files.
 
 <!-- UsageSnippet language="typescript" operationID="files:list" method="get" path="/v1/files/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.files.list({
+  const result = await spaire.files.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -44,17 +44,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { filesList } from "@polar-sh/sdk/funcs/filesList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { filesList } from "@spaire/sdk/funcs/filesList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await filesList(polar, {
+  const res = await filesList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -100,14 +100,14 @@ Create a file.
 
 <!-- UsageSnippet language="typescript" operationID="files:create" method="post" path="/v1/files/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.files.create({
+  const result = await spaire.files.create({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
     name: "<value>",
     mimeType: "<value>",
@@ -129,17 +129,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { filesCreate } from "@polar-sh/sdk/funcs/filesCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { filesCreate } from "@spaire/sdk/funcs/filesCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await filesCreate(polar, {
+  const res = await filesCreate(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
     name: "<value>",
     mimeType: "<value>",
@@ -190,14 +190,14 @@ Complete a file upload.
 
 <!-- UsageSnippet language="typescript" operationID="files:uploaded" method="post" path="/v1/files/{id}/uploaded" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.files.uploaded({
+  const result = await spaire.files.uploaded({
     id: "<value>",
     fileUploadCompleted: {
       id: "<id>",
@@ -233,17 +233,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { filesUploaded } from "@polar-sh/sdk/funcs/filesUploaded.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { filesUploaded } from "@spaire/sdk/funcs/filesUploaded.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await filesUploaded(polar, {
+  const res = await filesUploaded(spaire, {
     id: "<value>",
     fileUploadCompleted: {
       id: "<id>",
@@ -310,14 +310,14 @@ Delete a file.
 
 <!-- UsageSnippet language="typescript" operationID="files:delete" method="delete" path="/v1/files/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  await polar.files.delete({
+  await spaire.files.delete({
     id: "<value>",
   });
 
@@ -332,17 +332,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { filesDelete } from "@polar-sh/sdk/funcs/filesDelete.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { filesDelete } from "@spaire/sdk/funcs/filesDelete.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await filesDelete(polar, {
+  const res = await filesDelete(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -388,14 +388,14 @@ Update a file.
 
 <!-- UsageSnippet language="typescript" operationID="files:update" method="patch" path="/v1/files/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.files.update({
+  const result = await spaire.files.update({
     id: "<value>",
     filePatch: {},
   });
@@ -411,17 +411,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { filesUpdate } from "@polar-sh/sdk/funcs/filesUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { filesUpdate } from "@spaire/sdk/funcs/filesUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await filesUpdate(polar, {
+  const res = await filesUpdate(spaire, {
     id: "<value>",
     filePatch: {},
   });

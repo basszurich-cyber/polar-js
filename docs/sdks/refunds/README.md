@@ -17,14 +17,14 @@ List refunds.
 
 <!-- UsageSnippet language="typescript" operationID="refunds:list" method="get" path="/v1/refunds/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.refunds.list({
+  const result = await spaire.refunds.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -41,17 +41,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { refundsList } from "@polar-sh/sdk/funcs/refundsList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { refundsList } from "@spaire/sdk/funcs/refundsList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await refundsList(polar, {
+  const res = await refundsList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -97,14 +97,14 @@ Create a refund.
 
 <!-- UsageSnippet language="typescript" operationID="refunds:create" method="post" path="/v1/refunds/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.refunds.create({
+  const result = await spaire.refunds.create({
     orderId: "<value>",
     reason: "customer_request",
     amount: 90,
@@ -121,17 +121,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { refundsCreate } from "@polar-sh/sdk/funcs/refundsCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { refundsCreate } from "@spaire/sdk/funcs/refundsCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await refundsCreate(polar, {
+  const res = await refundsCreate(spaire, {
     orderId: "<value>",
     reason: "customer_request",
     amount: 90,

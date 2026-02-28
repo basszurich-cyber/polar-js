@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { WebhooksListWebhookDeliveriesResponse } from "@polar-sh/sdk/models/operations/webhookslistwebhookdeliveries.js";
+import { WebhooksListWebhookDeliveriesResponse } from "@spaire/sdk/models/operations/webhookslistwebhookdeliveries.js";
 
 let value: WebhooksListWebhookDeliveriesResponse = {
   result: {

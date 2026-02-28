@@ -14,12 +14,12 @@ Get a customer portal's organization by slug.
 
 <!-- UsageSnippet language="typescript" operationID="customer_portal:organizations:get" method="get" path="/v1/customer-portal/organizations/{slug}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.customerPortal.organizations.get({
+  const result = await spaire.customerPortal.organizations.get({
     slug: "<value>",
   });
 
@@ -34,15 +34,15 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalOrganizationsGet } from "@polar-sh/sdk/funcs/customerPortalOrganizationsGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalOrganizationsGet } from "@spaire/sdk/funcs/customerPortalOrganizationsGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await customerPortalOrganizationsGet(polar, {
+  const res = await customerPortalOrganizationsGet(spaire, {
     slug: "<value>",
   });
   if (res.ok) {

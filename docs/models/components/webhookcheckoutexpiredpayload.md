@@ -10,7 +10,7 @@ Developers can use this to send reminder emails or track checkout abandonment.
 ## Example Usage
 
 ```typescript
-import { WebhookCheckoutExpiredPayload } from "@polar-sh/sdk/models/components/webhookcheckoutexpiredpayload.js";
+import { WebhookCheckoutExpiredPayload } from "@spaire/sdk/models/components/webhookcheckoutexpiredpayload.js";
 
 let value: WebhookCheckoutExpiredPayload = {
   type: "checkout.expired",

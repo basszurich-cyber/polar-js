@@ -12,7 +12,7 @@ An order is updated when:
 ## Example Usage
 
 ```typescript
-import { WebhookOrderUpdatedPayload } from "@polar-sh/sdk/models/components/webhookorderupdatedpayload.js";
+import { WebhookOrderUpdatedPayload } from "@spaire/sdk/models/components/webhookorderupdatedpayload.js";
 
 let value: WebhookOrderUpdatedPayload = {
   type: "order.updated",

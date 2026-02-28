@@ -9,7 +9,7 @@ The minimum and maximum seat limits are derived from the tiers:
 ## Example Usage
 
 ```typescript
-import { ProductPriceSeatTiersInput } from "@polar-sh/sdk/models/components/productpriceseattiersinput.js";
+import { ProductPriceSeatTiersInput } from "@spaire/sdk/models/components/productpriceseattiersinput.js";
 
 let value: ProductPriceSeatTiersInput = {
   tiers: [

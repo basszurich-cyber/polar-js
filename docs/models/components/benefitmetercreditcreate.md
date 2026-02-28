@@ -5,7 +5,7 @@ Schema to create a benefit of type `meter_unit`.
 ## Example Usage
 
 ```typescript
-import { BenefitMeterCreditCreate } from "@polar-sh/sdk/models/components/benefitmetercreditcreate.js";
+import { BenefitMeterCreditCreate } from "@spaire/sdk/models/components/benefitmetercreditcreate.js";
 
 let value: BenefitMeterCreditCreate = {
   type: "meter_credit",

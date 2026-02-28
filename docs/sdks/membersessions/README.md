@@ -19,14 +19,14 @@ and `seat_based_pricing_enabled` feature flags enabled.
 
 <!-- UsageSnippet language="typescript" operationID="member-sessions:create" method="post" path="/v1/member-sessions/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.memberSessions.create({
+  const result = await spaire.memberSessions.create({
     memberId: "<value>",
     returnUrl: "https://example.com/account",
   });
@@ -42,17 +42,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { memberSessionsCreate } from "@polar-sh/sdk/funcs/memberSessionsCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { memberSessionsCreate } from "@spaire/sdk/funcs/memberSessionsCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await memberSessionsCreate(polar, {
+  const res = await memberSessionsCreate(spaire, {
     memberId: "<value>",
     returnUrl: "https://example.com/account",
   });

@@ -5,7 +5,7 @@ Checkout link data.
 ## Example Usage
 
 ```typescript
-import { CheckoutLink } from "@polar-sh/sdk/models/components/checkoutlink.js";
+import { CheckoutLink } from "@spaire/sdk/models/components/checkoutlink.js";
 
 let value: CheckoutLink = {
   id: "<value>",

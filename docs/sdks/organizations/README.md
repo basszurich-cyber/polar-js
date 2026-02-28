@@ -19,14 +19,14 @@ List organizations.
 
 <!-- UsageSnippet language="typescript" operationID="organizations:list" method="get" path="/v1/organizations/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizations.list({});
+  const result = await spaire.organizations.list({});
 
   for await (const page of result) {
     console.log(page);
@@ -41,17 +41,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { organizationsList } from "@polar-sh/sdk/funcs/organizationsList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { organizationsList } from "@spaire/sdk/funcs/organizationsList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await organizationsList(polar, {});
+  const res = await organizationsList(spaire, {});
   if (res.ok) {
     const { value: result } = res;
     for await (const page of result) {
@@ -95,14 +95,14 @@ Create an organization.
 
 <!-- UsageSnippet language="typescript" operationID="organizations:create" method="post" path="/v1/organizations/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizations.create({
+  const result = await spaire.organizations.create({
     name: "<value>",
     slug: "<value>",
   });
@@ -118,17 +118,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { organizationsCreate } from "@polar-sh/sdk/funcs/organizationsCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { organizationsCreate } from "@spaire/sdk/funcs/organizationsCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await organizationsCreate(polar, {
+  const res = await organizationsCreate(spaire, {
     name: "<value>",
     slug: "<value>",
   });
@@ -173,14 +173,14 @@ Get an organization by ID.
 
 <!-- UsageSnippet language="typescript" operationID="organizations:get" method="get" path="/v1/organizations/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizations.get({
+  const result = await spaire.organizations.get({
     id: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -195,17 +195,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { organizationsGet } from "@polar-sh/sdk/funcs/organizationsGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { organizationsGet } from "@spaire/sdk/funcs/organizationsGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await organizationsGet(polar, {
+  const res = await organizationsGet(spaire, {
     id: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -250,14 +250,14 @@ Update an organization.
 
 <!-- UsageSnippet language="typescript" operationID="organizations:update" method="patch" path="/v1/organizations/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizations.update({
+  const result = await spaire.organizations.update({
     id: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
     organizationUpdate: {},
   });
@@ -273,17 +273,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { organizationsUpdate } from "@polar-sh/sdk/funcs/organizationsUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { organizationsUpdate } from "@spaire/sdk/funcs/organizationsUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await organizationsUpdate(polar, {
+  const res = await organizationsUpdate(spaire, {
     id: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
     organizationUpdate: {},
   });

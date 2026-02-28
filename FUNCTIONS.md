@@ -19,17 +19,17 @@ specific category of applications.
 ## Example
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { organizationsList } from "@polar-sh/sdk/funcs/organizationsList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { organizationsList } from "@spaire/sdk/funcs/organizationsList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await organizationsList(polar, {});
+  const res = await organizationsList(spaire, {});
   if (res.ok) {
     const { value: result } = res;
     for await (const page of result) {

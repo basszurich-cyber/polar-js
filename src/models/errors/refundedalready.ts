@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type RefundedAlreadyData = {
   error: "RefundedAlready";
   detail: string;
 };
 
-export class RefundedAlready extends PolarError {
+export class RefundedAlready extends SpaireError {
   error: "RefundedAlready";
   detail: string;
 

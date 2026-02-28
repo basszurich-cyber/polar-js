@@ -10,7 +10,7 @@ For payment failures that can still be recovered, see `subscription.past_due`.
 ## Example Usage
 
 ```typescript
-import { WebhookSubscriptionRevokedPayload } from "@polar-sh/sdk/models/components/webhooksubscriptionrevokedpayload.js";
+import { WebhookSubscriptionRevokedPayload } from "@spaire/sdk/models/components/webhooksubscriptionrevokedpayload.js";
 
 let value: WebhookSubscriptionRevokedPayload = {
   type: "subscription.revoked",

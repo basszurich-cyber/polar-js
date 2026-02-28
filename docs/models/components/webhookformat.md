@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { WebhookFormat } from "@polar-sh/sdk/models/components/webhookformat.js";
+import { WebhookFormat } from "@spaire/sdk/models/components/webhookformat.js";
 
 let value: WebhookFormat = "slack";
 ```

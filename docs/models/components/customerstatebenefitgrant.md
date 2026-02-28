@@ -5,7 +5,7 @@ An active benefit grant for a customer.
 ## Example Usage
 
 ```typescript
-import { CustomerStateBenefitGrant } from "@polar-sh/sdk/models/components/customerstatebenefitgrant.js";
+import { CustomerStateBenefitGrant } from "@spaire/sdk/models/components/customerstatebenefitgrant.js";
 
 let value: CustomerStateBenefitGrant = {
   id: "d322132c-a9d0-4e0d-b8d3-d81ad021a3a9",

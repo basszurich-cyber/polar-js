@@ -5,7 +5,7 @@ Properties to create a benefit of type `discord`.
 ## Example Usage
 
 ```typescript
-import { BenefitDiscordCreateProperties } from "@polar-sh/sdk/models/components/benefitdiscordcreateproperties.js";
+import { BenefitDiscordCreateProperties } from "@spaire/sdk/models/components/benefitdiscordcreateproperties.js";
 
 let value: BenefitDiscordCreateProperties = {
   guildToken: "<value>",

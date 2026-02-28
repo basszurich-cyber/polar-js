@@ -5,7 +5,7 @@ A fixed price for a product.
 ## Example Usage
 
 ```typescript
-import { ProductPriceFixed } from "@polar-sh/sdk/models/components/productpricefixed.js";
+import { ProductPriceFixed } from "@spaire/sdk/models/components/productpricefixed.js";
 
 let value: ProductPriceFixed = {
   createdAt: new Date("2026-12-26T12:23:44.317Z"),

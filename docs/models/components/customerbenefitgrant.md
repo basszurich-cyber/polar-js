@@ -133,7 +133,7 @@ const value: components.CustomerBenefitGrantGitHubRepository = {
       allowCustomerUpdates: true,
     },
     properties: {
-      repositoryOwner: "polarsource",
+      repositoryOwner: "spairesource",
       repositoryName: "private_repo",
     },
   },

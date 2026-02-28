@@ -6,7 +6,7 @@ for a certain number of months.
 ## Example Usage
 
 ```typescript
-import { CheckoutDiscountFixedRepeatDuration } from "@polar-sh/sdk/models/components/checkoutdiscountfixedrepeatduration.js";
+import { CheckoutDiscountFixedRepeatDuration } from "@spaire/sdk/models/components/checkoutdiscountfixedrepeatduration.js";
 
 let value: CheckoutDiscountFixedRepeatDuration = {
   duration: "once",

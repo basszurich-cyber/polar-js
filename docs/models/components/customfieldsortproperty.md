@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomFieldSortProperty } from "@polar-sh/sdk/models/components/customfieldsortproperty.js";
+import { CustomFieldSortProperty } from "@spaire/sdk/models/components/customfieldsortproperty.js";
 
 let value: CustomFieldSortProperty = "name";
 ```

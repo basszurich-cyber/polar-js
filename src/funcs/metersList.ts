@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { dlv } from "../lib/dlv.js";
 import {
   encodeDeepObjectQuery,
@@ -27,7 +27,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import {
@@ -54,7 +54,7 @@ import {
  * **Scopes**: `meters:read` `meters:write`
  */
 export function metersList(
-  client: PolarCore,
+  client: SpaireCore,
   request: MetersListRequest,
   options?: RequestOptions,
 ): APIPromise<
@@ -62,7 +62,7 @@ export function metersList(
     Result<
       MetersListResponse,
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -82,7 +82,7 @@ export function metersList(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   request: MetersListRequest,
   options?: RequestOptions,
 ): Promise<
@@ -91,7 +91,7 @@ async function $do(
       Result<
         MetersListResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError
@@ -189,7 +189,7 @@ async function $do(
   const [result, raw] = await M.match<
     MetersListResponse,
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -218,7 +218,7 @@ async function $do(
       Result<
         MetersListResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError

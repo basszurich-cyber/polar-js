@@ -9,7 +9,7 @@ When this event occurs, the subscription `status` might not be `active` yet, as 
 ## Example Usage
 
 ```typescript
-import { WebhookSubscriptionCreatedPayload } from "@polar-sh/sdk/models/components/webhooksubscriptioncreatedpayload.js";
+import { WebhookSubscriptionCreatedPayload } from "@spaire/sdk/models/components/webhooksubscriptioncreatedpayload.js";
 
 let value: WebhookSubscriptionCreatedPayload = {
   type: "subscription.created",

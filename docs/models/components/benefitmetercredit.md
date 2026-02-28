@@ -7,7 +7,7 @@ Use it to grant a number of units on a specific meter.
 ## Example Usage
 
 ```typescript
-import { BenefitMeterCredit } from "@polar-sh/sdk/models/components/benefitmetercredit.js";
+import { BenefitMeterCredit } from "@spaire/sdk/models/components/benefitmetercredit.js";
 
 let value: BenefitMeterCredit = {
   id: "<value>",

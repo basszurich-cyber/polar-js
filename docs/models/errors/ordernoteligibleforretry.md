@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { OrderNotEligibleForRetry } from "@polar-sh/sdk/models/errors/ordernoteligibleforretry.js";
+import { OrderNotEligibleForRetry } from "@spaire/sdk/models/errors/ordernoteligibleforretry.js";
 
 // No examples available for this model
 ```

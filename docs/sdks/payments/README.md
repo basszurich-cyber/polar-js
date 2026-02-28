@@ -17,14 +17,14 @@ List payments.
 
 <!-- UsageSnippet language="typescript" operationID="payments:list" method="get" path="/v1/payments/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.payments.list({
+  const result = await spaire.payments.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -41,17 +41,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { paymentsList } from "@polar-sh/sdk/funcs/paymentsList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { paymentsList } from "@spaire/sdk/funcs/paymentsList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await paymentsList(polar, {
+  const res = await paymentsList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -97,14 +97,14 @@ Get a payment by ID.
 
 <!-- UsageSnippet language="typescript" operationID="payments:get" method="get" path="/v1/payments/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.payments.get({
+  const result = await spaire.payments.get({
     id: "<value>",
   });
 
@@ -119,17 +119,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { paymentsGet } from "@polar-sh/sdk/funcs/paymentsGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { paymentsGet } from "@spaire/sdk/funcs/paymentsGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await paymentsGet(polar, {
+  const res = await paymentsGet(spaire, {
     id: "<value>",
   });
   if (res.ok) {

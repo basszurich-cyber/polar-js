@@ -19,14 +19,14 @@ List organization access tokens.
 
 <!-- UsageSnippet language="typescript" operationID="organization_access_tokens:list" method="get" path="/v1/organization-access-tokens/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizationAccessTokens.list({
+  const result = await spaire.organizationAccessTokens.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -43,17 +43,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { organizationAccessTokensList } from "@polar-sh/sdk/funcs/organizationAccessTokensList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { organizationAccessTokensList } from "@spaire/sdk/funcs/organizationAccessTokensList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await organizationAccessTokensList(polar, {
+  const res = await organizationAccessTokensList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -97,14 +97,14 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="organization_access_tokens:create" method="post" path="/v1/organization-access-tokens/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizationAccessTokens.create({
+  const result = await spaire.organizationAccessTokens.create({
     comment: "The Football Is Good For Training And Recreational Purposes",
     scopes: [],
   });
@@ -120,17 +120,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { organizationAccessTokensCreate } from "@polar-sh/sdk/funcs/organizationAccessTokensCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { organizationAccessTokensCreate } from "@spaire/sdk/funcs/organizationAccessTokensCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await organizationAccessTokensCreate(polar, {
+  const res = await organizationAccessTokensCreate(spaire, {
     comment: "The Football Is Good For Training And Recreational Purposes",
     scopes: [],
   });
@@ -173,14 +173,14 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="organization_access_tokens:delete" method="delete" path="/v1/organization-access-tokens/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  await polar.organizationAccessTokens.delete({
+  await spaire.organizationAccessTokens.delete({
     id: "<value>",
   });
 
@@ -195,17 +195,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { organizationAccessTokensDelete } from "@polar-sh/sdk/funcs/organizationAccessTokensDelete.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { organizationAccessTokensDelete } from "@spaire/sdk/funcs/organizationAccessTokensDelete.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await organizationAccessTokensDelete(polar, {
+  const res = await organizationAccessTokensDelete(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -247,14 +247,14 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="organization_access_tokens:update" method="patch" path="/v1/organization-access-tokens/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizationAccessTokens.update({
+  const result = await spaire.organizationAccessTokens.update({
     id: "<value>",
     organizationAccessTokenUpdate: {},
   });
@@ -270,17 +270,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { organizationAccessTokensUpdate } from "@polar-sh/sdk/funcs/organizationAccessTokensUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { organizationAccessTokensUpdate } from "@spaire/sdk/funcs/organizationAccessTokensUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await organizationAccessTokensUpdate(polar, {
+  const res = await organizationAccessTokensUpdate(spaire, {
     id: "<value>",
     organizationAccessTokenUpdate: {},
   });

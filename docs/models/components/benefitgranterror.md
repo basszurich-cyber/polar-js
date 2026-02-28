@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BenefitGrantError } from "@polar-sh/sdk/models/components/benefitgranterror.js";
+import { BenefitGrantError } from "@spaire/sdk/models/components/benefitgranterror.js";
 
 let value: BenefitGrantError = {
   message: "<value>",

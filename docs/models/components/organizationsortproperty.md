@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { OrganizationSortProperty } from "@polar-sh/sdk/models/components/organizationsortproperty.js";
+import { OrganizationSortProperty } from "@spaire/sdk/models/components/organizationsortproperty.js";
 
 let value: OrganizationSortProperty = "-next_review_threshold";
 ```

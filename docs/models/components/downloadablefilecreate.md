@@ -5,7 +5,7 @@ Schema to create a file to be associated with the downloadables benefit.
 ## Example Usage
 
 ```typescript
-import { DownloadableFileCreate } from "@polar-sh/sdk/models/components/downloadablefilecreate.js";
+import { DownloadableFileCreate } from "@spaire/sdk/models/components/downloadablefilecreate.js";
 
 let value: DownloadableFileCreate = {
   organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",

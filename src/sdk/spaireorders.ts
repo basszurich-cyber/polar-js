@@ -46,7 +46,7 @@ import {
 import { unwrapAsync } from "../types/fp.js";
 import { PageIterator, unwrapResultIterator } from "../types/operations.js";
 
-export class PolarOrders extends ClientSDK {
+export class SpaireOrders extends ClientSDK {
   /**
    * List Orders
    *

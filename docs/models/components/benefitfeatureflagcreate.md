@@ -5,7 +5,7 @@ Schema to create a benefit of type `feature_flag`.
 ## Example Usage
 
 ```typescript
-import { BenefitFeatureFlagCreate } from "@polar-sh/sdk/models/components/benefitfeatureflagcreate.js";
+import { BenefitFeatureFlagCreate } from "@spaire/sdk/models/components/benefitfeatureflagcreate.js";
 
 let value: BenefitFeatureFlagCreate = {
   type: "feature_flag",

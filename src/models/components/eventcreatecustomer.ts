@@ -28,12 +28,12 @@ export type EventCreateCustomer = {
    */
   externalId?: string | null | undefined;
   /**
-   * The ID of the parent event. Can be either a Polar event ID (UUID) or an external event ID.
+   * The ID of the parent event. Can be either a Spaire event ID (UUID) or an external event ID.
    */
   parentId?: string | null | undefined;
   metadata?: { [k: string]: EventMetadataInput } | undefined;
   /**
-   * ID of the customer in your Polar organization associated with the event.
+   * ID of the customer in your Spaire organization associated with the event.
    */
   customerId: string;
   /**

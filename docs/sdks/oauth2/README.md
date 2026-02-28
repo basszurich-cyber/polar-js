@@ -18,14 +18,14 @@ Authorize
 
 <!-- UsageSnippet language="typescript" operationID="oauth2:authorize" method="get" path="/v1/oauth2/authorize" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.oauth2.authorize();
+  const result = await spaire.oauth2.authorize();
 
   console.log(result);
 }
@@ -38,17 +38,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { oauth2Authorize } from "@polar-sh/sdk/funcs/oauth2Authorize.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { oauth2Authorize } from "@spaire/sdk/funcs/oauth2Authorize.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await oauth2Authorize(polar);
+  const res = await oauth2Authorize(spaire);
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
@@ -86,12 +86,12 @@ Request an access token using a valid grant.
 
 <!-- UsageSnippet language="typescript" operationID="oauth2:request_token" method="post" path="/v1/oauth2/token" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.oauth2.token({
+  const result = await spaire.oauth2.token({
     grantType: "authorization_code",
     clientId: "<id>",
     clientSecret: "<value>",
@@ -110,15 +110,15 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { oauth2Token } from "@polar-sh/sdk/funcs/oauth2Token.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { oauth2Token } from "@spaire/sdk/funcs/oauth2Token.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await oauth2Token(polar, {
+  const res = await oauth2Token(spaire, {
     grantType: "authorization_code",
     clientId: "<id>",
     clientSecret: "<value>",
@@ -163,12 +163,12 @@ Revoke an access token or a refresh token.
 
 <!-- UsageSnippet language="typescript" operationID="oauth2:revoke_token" method="post" path="/v1/oauth2/revoke" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.oauth2.revoke({
+  const result = await spaire.oauth2.revoke({
     token: "<value>",
     clientId: "<id>",
     clientSecret: "<value>",
@@ -185,15 +185,15 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { oauth2Revoke } from "@polar-sh/sdk/funcs/oauth2Revoke.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { oauth2Revoke } from "@spaire/sdk/funcs/oauth2Revoke.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await oauth2Revoke(polar, {
+  const res = await oauth2Revoke(spaire, {
     token: "<value>",
     clientId: "<id>",
     clientSecret: "<value>",
@@ -236,12 +236,12 @@ Get information about an access token.
 
 <!-- UsageSnippet language="typescript" operationID="oauth2:introspect_token" method="post" path="/v1/oauth2/introspect" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.oauth2.introspect({
+  const result = await spaire.oauth2.introspect({
     token: "<value>",
     clientId: "<id>",
     clientSecret: "<value>",
@@ -258,15 +258,15 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { oauth2Introspect } from "@polar-sh/sdk/funcs/oauth2Introspect.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { oauth2Introspect } from "@spaire/sdk/funcs/oauth2Introspect.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await oauth2Introspect(polar, {
+  const res = await oauth2Introspect(spaire, {
     token: "<value>",
     clientId: "<id>",
     clientSecret: "<value>",
@@ -309,14 +309,14 @@ Get information about the authenticated user.
 
 <!-- UsageSnippet language="typescript" operationID="oauth2:userinfo" method="get" path="/v1/oauth2/userinfo" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.oauth2.userinfo();
+  const result = await spaire.oauth2.userinfo();
 
   console.log(result);
 }
@@ -329,17 +329,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { oauth2Userinfo } from "@polar-sh/sdk/funcs/oauth2Userinfo.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { oauth2Userinfo } from "@spaire/sdk/funcs/oauth2Userinfo.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await oauth2Userinfo(polar);
+  const res = await oauth2Userinfo(spaire);
   if (res.ok) {
     const { value: result } = res;
     console.log(result);

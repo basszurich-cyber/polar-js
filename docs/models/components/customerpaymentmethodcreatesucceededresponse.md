@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomerPaymentMethodCreateSucceededResponse } from "@polar-sh/sdk/models/components/customerpaymentmethodcreatesucceededresponse.js";
+import { CustomerPaymentMethodCreateSucceededResponse } from "@spaire/sdk/models/components/customerpaymentmethodcreatesucceededresponse.js";
 
 let value: CustomerPaymentMethodCreateSucceededResponse = {
   status: "succeeded",

@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { encodeJSON, encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
@@ -38,7 +38,7 @@ import {
   PaymentError,
   PaymentError$inboundSchema,
 } from "../models/errors/paymenterror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import {
   ResourceNotFound,
   ResourceNotFound$inboundSchema,
@@ -61,7 +61,7 @@ import { Result } from "../types/fp.js";
  * Orders and subscriptions will be processed.
  */
 export function checkoutsClientConfirm(
-  client: PolarCore,
+  client: SpaireCore,
   request: CheckoutsClientConfirmRequest,
   options?: RequestOptions,
 ): APIPromise<
@@ -72,7 +72,7 @@ export function checkoutsClientConfirm(
     | ResourceNotFound
     | ExpiredCheckoutError
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -90,7 +90,7 @@ export function checkoutsClientConfirm(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   request: CheckoutsClientConfirmRequest,
   options?: RequestOptions,
 ): Promise<
@@ -102,7 +102,7 @@ async function $do(
       | ResourceNotFound
       | ExpiredCheckoutError
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -199,7 +199,7 @@ async function $do(
     | ResourceNotFound
     | ExpiredCheckoutError
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

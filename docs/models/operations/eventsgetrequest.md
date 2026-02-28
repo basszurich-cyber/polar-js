@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { EventsGetRequest } from "@polar-sh/sdk/models/operations/eventsget.js";
+import { EventsGetRequest } from "@spaire/sdk/models/operations/eventsget.js";
 
 let value: EventsGetRequest = {
   id: "<value>",

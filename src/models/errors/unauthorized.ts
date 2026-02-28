@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type UnauthorizedData = {
   error: "Unauthorized";
   detail: string;
 };
 
-export class Unauthorized extends PolarError {
+export class Unauthorized extends SpaireError {
   error: "Unauthorized";
   detail: string;
 

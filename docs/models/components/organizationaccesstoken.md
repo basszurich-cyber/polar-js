@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { OrganizationAccessToken } from "@polar-sh/sdk/models/components/organizationaccesstoken.js";
+import { OrganizationAccessToken } from "@spaire/sdk/models/components/organizationaccesstoken.js";
 
 let value: OrganizationAccessToken = {
   createdAt: new Date("2024-11-18T18:18:04.925Z"),

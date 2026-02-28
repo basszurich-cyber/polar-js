@@ -5,7 +5,7 @@ Properties for creating a benefit of type `meter_unit`.
 ## Example Usage
 
 ```typescript
-import { BenefitMeterCreditCreateProperties } from "@polar-sh/sdk/models/components/benefitmetercreditcreateproperties.js";
+import { BenefitMeterCreditCreateProperties } from "@spaire/sdk/models/components/benefitmetercreditcreateproperties.js";
 
 let value: BenefitMeterCreditCreateProperties = {
   units: 311092,

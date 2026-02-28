@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { encodeJSON, encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
@@ -30,7 +30,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import {
   ResourceNotFound,
   ResourceNotFound$inboundSchema,
@@ -52,7 +52,7 @@ import { Result } from "../types/fp.js";
  * Update a subscription of the authenticated customer.
  */
 export function customerPortalSubscriptionsUpdate(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalSubscriptionsUpdateSecurity,
   request: CustomerPortalSubscriptionsUpdateRequest,
   options?: RequestOptions,
@@ -62,7 +62,7 @@ export function customerPortalSubscriptionsUpdate(
     | AlreadyCanceledSubscription
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -81,7 +81,7 @@ export function customerPortalSubscriptionsUpdate(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalSubscriptionsUpdateSecurity,
   request: CustomerPortalSubscriptionsUpdateRequest,
   options?: RequestOptions,
@@ -92,7 +92,7 @@ async function $do(
       | AlreadyCanceledSubscription
       | ResourceNotFound
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -199,7 +199,7 @@ async function $do(
     | AlreadyCanceledSubscription
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

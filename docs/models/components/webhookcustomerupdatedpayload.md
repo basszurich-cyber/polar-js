@@ -11,7 +11,7 @@ If you want to be notified when a customer subscription or benefit state changes
 ## Example Usage
 
 ```typescript
-import { WebhookCustomerUpdatedPayload } from "@polar-sh/sdk/models/components/webhookcustomerupdatedpayload.js";
+import { WebhookCustomerUpdatedPayload } from "@spaire/sdk/models/components/webhookcustomerupdatedpayload.js";
 
 let value: WebhookCustomerUpdatedPayload = {
   type: "customer.updated",

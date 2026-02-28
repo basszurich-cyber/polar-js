@@ -13,7 +13,7 @@ It's triggered when:
 ## Example Usage
 
 ```typescript
-import { WebhookCustomerStateChangedPayload } from "@polar-sh/sdk/models/components/webhookcustomerstatechangedpayload.js";
+import { WebhookCustomerStateChangedPayload } from "@spaire/sdk/models/components/webhookcustomerstatechangedpayload.js";
 
 let value: WebhookCustomerStateChangedPayload = {
   type: "customer.state_changed",

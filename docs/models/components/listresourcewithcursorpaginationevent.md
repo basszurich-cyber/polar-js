@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ListResourceWithCursorPaginationEvent } from "@polar-sh/sdk/models/components/listresourcewithcursorpaginationevent.js";
+import { ListResourceWithCursorPaginationEvent } from "@spaire/sdk/models/components/listresourcewithcursorpaginationevent.js";
 
 let value: ListResourceWithCursorPaginationEvent = {
   items: [

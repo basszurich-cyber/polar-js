@@ -5,7 +5,7 @@ Schema to update a webhook endpoint.
 ## Example Usage
 
 ```typescript
-import { WebhookEndpointUpdate } from "@polar-sh/sdk/models/components/webhookendpointupdate.js";
+import { WebhookEndpointUpdate } from "@spaire/sdk/models/components/webhookendpointupdate.js";
 
 let value: WebhookEndpointUpdate = {
   url: "https://webhook.site/cb791d80-f26e-4f8c-be88-6e56054192b0",

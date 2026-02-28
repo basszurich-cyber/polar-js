@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BenefitGrantGitHubRepositoryWebhook } from "@polar-sh/sdk/models/components/benefitgrantgithubrepositorywebhook.js";
+import { BenefitGrantGitHubRepositoryWebhook } from "@spaire/sdk/models/components/benefitgrantgithubrepositorywebhook.js";
 
 let value: BenefitGrantGitHubRepositoryWebhook = {
   createdAt: new Date("2025-03-08T15:32:24.757Z"),
@@ -61,7 +61,7 @@ let value: BenefitGrantGitHubRepositoryWebhook = {
       "key": false,
     },
     properties: {
-      repositoryOwner: "polarsource",
+      repositoryOwner: "spairesource",
       repositoryName: "private_repo",
       permission: "admin",
     },
