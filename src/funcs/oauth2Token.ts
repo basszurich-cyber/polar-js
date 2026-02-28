@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { encodeBodyForm } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
@@ -21,7 +21,7 @@ import {
   RequestTimeoutError,
   UnexpectedClientError,
 } from "../models/errors/httpclienterrors.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import {
@@ -38,13 +38,13 @@ import { Result } from "../types/fp.js";
  * Request an access token using a valid grant.
  */
 export function oauth2Token(
-  client: PolarCore,
+  client: SpaireCore,
   request: Oauth2RequestTokenRequestBody,
   options?: RequestOptions,
 ): APIPromise<
   Result<
     TokenResponse,
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -62,14 +62,14 @@ export function oauth2Token(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   request: Oauth2RequestTokenRequestBody,
   options?: RequestOptions,
 ): Promise<
   [
     Result<
       TokenResponse,
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -144,7 +144,7 @@ async function $do(
 
   const [result] = await M.match<
     TokenResponse,
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

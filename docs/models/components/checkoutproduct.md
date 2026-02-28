@@ -5,7 +5,7 @@ Product data for a checkout session.
 ## Example Usage
 
 ```typescript
-import { CheckoutProduct } from "@polar-sh/sdk/models/components/checkoutproduct.js";
+import { CheckoutProduct } from "@spaire/sdk/models/components/checkoutproduct.js";
 
 let value: CheckoutProduct = {
   id: "<value>",

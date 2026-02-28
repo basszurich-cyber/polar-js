@@ -61,7 +61,7 @@ export type OrganizationCreate = {
    */
   socials?: Array<OrganizationSocialLink> | null | undefined;
   /**
-   * Additional, private, business details Polar needs about active organizations for compliance (KYC).
+   * Additional, private, business details Spaire needs about active organizations for compliance (KYC).
    */
   details?: OrganizationDetails | null | undefined;
   featureSettings?: OrganizationFeatureSettings | null | undefined;

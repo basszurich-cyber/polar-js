@@ -26,7 +26,7 @@ import {
 import { unwrapAsync } from "../types/fp.js";
 import { PageIterator, unwrapResultIterator } from "../types/operations.js";
 
-export class PolarLicenseKeys extends ClientSDK {
+export class SpaireLicenseKeys extends ClientSDK {
   /**
    * List License Keys
    *

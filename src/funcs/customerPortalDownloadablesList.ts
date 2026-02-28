@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { dlv } from "../lib/dlv.js";
 import { encodeFormQuery } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
@@ -23,7 +23,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import {
@@ -49,7 +49,7 @@ import {
  * **Scopes**: `customer_portal:read` `customer_portal:write`
  */
 export function customerPortalDownloadablesList(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalDownloadablesListSecurity,
   request: CustomerPortalDownloadablesListRequest,
   options?: RequestOptions,
@@ -58,7 +58,7 @@ export function customerPortalDownloadablesList(
     Result<
       CustomerPortalDownloadablesListResponse,
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -79,7 +79,7 @@ export function customerPortalDownloadablesList(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalDownloadablesListSecurity,
   request: CustomerPortalDownloadablesListRequest,
   options?: RequestOptions,
@@ -89,7 +89,7 @@ async function $do(
       Result<
         CustomerPortalDownloadablesListResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError
@@ -193,7 +193,7 @@ async function $do(
   const [result, raw] = await M.match<
     CustomerPortalDownloadablesListResponse,
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -224,7 +224,7 @@ async function $do(
       Result<
         CustomerPortalDownloadablesListResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError

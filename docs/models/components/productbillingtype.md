@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ProductBillingType } from "@polar-sh/sdk/models/components/productbillingtype.js";
+import { ProductBillingType } from "@spaire/sdk/models/components/productbillingtype.js";
 
 let value: ProductBillingType = "recurring";
 ```

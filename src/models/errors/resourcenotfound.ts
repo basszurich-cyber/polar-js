@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type ResourceNotFoundData = {
   error: "ResourceNotFound";
   detail: string;
 };
 
-export class ResourceNotFound extends PolarError {
+export class ResourceNotFound extends SpaireError {
   error: "ResourceNotFound";
   detail: string;
 

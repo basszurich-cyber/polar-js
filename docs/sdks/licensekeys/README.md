@@ -22,14 +22,14 @@ Get license keys connected to the given organization & filters.
 
 <!-- UsageSnippet language="typescript" operationID="license_keys:list" method="get" path="/v1/license-keys/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.licenseKeys.list({
+  const result = await spaire.licenseKeys.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -46,17 +46,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { licenseKeysList } from "@polar-sh/sdk/funcs/licenseKeysList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { licenseKeysList } from "@spaire/sdk/funcs/licenseKeysList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await licenseKeysList(polar, {
+  const res = await licenseKeysList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -104,14 +104,14 @@ Get a license key.
 
 <!-- UsageSnippet language="typescript" operationID="license_keys:get" method="get" path="/v1/license-keys/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.licenseKeys.get({
+  const result = await spaire.licenseKeys.get({
     id: "<value>",
   });
 
@@ -126,17 +126,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { licenseKeysGet } from "@polar-sh/sdk/funcs/licenseKeysGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { licenseKeysGet } from "@spaire/sdk/funcs/licenseKeysGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await licenseKeysGet(polar, {
+  const res = await licenseKeysGet(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -182,14 +182,14 @@ Update a license key.
 
 <!-- UsageSnippet language="typescript" operationID="license_keys:update" method="patch" path="/v1/license-keys/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.licenseKeys.update({
+  const result = await spaire.licenseKeys.update({
     id: "<value>",
     licenseKeyUpdate: {},
   });
@@ -205,17 +205,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { licenseKeysUpdate } from "@polar-sh/sdk/funcs/licenseKeysUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { licenseKeysUpdate } from "@spaire/sdk/funcs/licenseKeysUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await licenseKeysUpdate(polar, {
+  const res = await licenseKeysUpdate(spaire, {
     id: "<value>",
     licenseKeyUpdate: {},
   });
@@ -262,14 +262,14 @@ Get a license key activation.
 
 <!-- UsageSnippet language="typescript" operationID="license_keys:get_activation" method="get" path="/v1/license-keys/{id}/activations/{activation_id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.licenseKeys.getActivation({
+  const result = await spaire.licenseKeys.getActivation({
     id: "<value>",
     activationId: "<value>",
   });
@@ -285,17 +285,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { licenseKeysGetActivation } from "@polar-sh/sdk/funcs/licenseKeysGetActivation.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { licenseKeysGetActivation } from "@spaire/sdk/funcs/licenseKeysGetActivation.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await licenseKeysGetActivation(polar, {
+  const res = await licenseKeysGetActivation(spaire, {
     id: "<value>",
     activationId: "<value>",
   });
@@ -342,14 +342,14 @@ Validate a license key.
 
 <!-- UsageSnippet language="typescript" operationID="license_keys:validate" method="post" path="/v1/license-keys/validate" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.licenseKeys.validate({
+  const result = await spaire.licenseKeys.validate({
     key: "<key>",
     organizationId: "<value>",
   });
@@ -365,17 +365,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { licenseKeysValidate } from "@polar-sh/sdk/funcs/licenseKeysValidate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { licenseKeysValidate } from "@spaire/sdk/funcs/licenseKeysValidate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await licenseKeysValidate(polar, {
+  const res = await licenseKeysValidate(spaire, {
     key: "<key>",
     organizationId: "<value>",
   });
@@ -421,14 +421,14 @@ Activate a license key instance.
 
 <!-- UsageSnippet language="typescript" operationID="license_keys:activate" method="post" path="/v1/license-keys/activate" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.licenseKeys.activate({
+  const result = await spaire.licenseKeys.activate({
     key: "<key>",
     organizationId: "<value>",
     label: "<value>",
@@ -445,17 +445,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { licenseKeysActivate } from "@polar-sh/sdk/funcs/licenseKeysActivate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { licenseKeysActivate } from "@spaire/sdk/funcs/licenseKeysActivate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await licenseKeysActivate(polar, {
+  const res = await licenseKeysActivate(spaire, {
     key: "<key>",
     organizationId: "<value>",
     label: "<value>",
@@ -503,14 +503,14 @@ Deactivate a license key instance.
 
 <!-- UsageSnippet language="typescript" operationID="license_keys:deactivate" method="post" path="/v1/license-keys/deactivate" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  await polar.licenseKeys.deactivate({
+  await spaire.licenseKeys.deactivate({
     key: "<key>",
     organizationId: "<value>",
     activationId: "<value>",
@@ -527,17 +527,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { licenseKeysDeactivate } from "@polar-sh/sdk/funcs/licenseKeysDeactivate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { licenseKeysDeactivate } from "@spaire/sdk/funcs/licenseKeysDeactivate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await licenseKeysDeactivate(polar, {
+  const res = await licenseKeysDeactivate(spaire, {
     key: "<key>",
     organizationId: "<value>",
     activationId: "<value>",

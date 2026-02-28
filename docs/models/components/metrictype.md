@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { MetricType } from "@polar-sh/sdk/models/components/metrictype.js";
+import { MetricType } from "@spaire/sdk/models/components/metrictype.js";
 
 let value: MetricType = "currency_sub_cent";
 ```

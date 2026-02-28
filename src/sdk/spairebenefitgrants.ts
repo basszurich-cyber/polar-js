@@ -23,7 +23,7 @@ import {
 import { unwrapAsync } from "../types/fp.js";
 import { PageIterator, unwrapResultIterator } from "../types/operations.js";
 
-export class PolarBenefitGrants extends ClientSDK {
+export class SpaireBenefitGrants extends ClientSDK {
   /**
    * List Benefit Grants
    *

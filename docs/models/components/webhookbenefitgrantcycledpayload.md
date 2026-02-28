@@ -8,7 +8,7 @@ meaning the related subscription has been renewed for another period.
 ## Example Usage
 
 ```typescript
-import { WebhookBenefitGrantCycledPayload } from "@polar-sh/sdk/models/components/webhookbenefitgrantcycledpayload.js";
+import { WebhookBenefitGrantCycledPayload } from "@spaire/sdk/models/components/webhookbenefitgrantcycledpayload.js";
 
 let value: WebhookBenefitGrantCycledPayload = {
   type: "benefit_grant.cycled",
@@ -60,7 +60,7 @@ let value: WebhookBenefitGrantCycledPayload = {
         "key": false,
       },
       properties: {
-        repositoryOwner: "polarsource",
+        repositoryOwner: "spairesource",
         repositoryName: "private_repo",
         permission: "admin",
       },

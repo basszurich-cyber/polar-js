@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { TrialInterval } from "@polar-sh/sdk/models/components/trialinterval.js";
+import { TrialInterval } from "@spaire/sdk/models/components/trialinterval.js";
 
 let value: TrialInterval = "day";
 ```

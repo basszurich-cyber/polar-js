@@ -247,7 +247,7 @@ export function resolveGlobalSecurity(
       {
         fieldName: "Authorization",
         type: "http:bearer",
-        value: security?.accessToken ?? env().POLAR_ACCESS_TOKEN,
+        value: security?.accessToken ?? env().SPAIRE_ACCESS_TOKEN,
       },
     ],
   );

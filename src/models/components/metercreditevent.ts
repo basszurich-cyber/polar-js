@@ -14,7 +14,7 @@ import {
 } from "./metercreditedmetadata.js";
 
 /**
- * An event created by Polar when credits are added to a customer meter.
+ * An event created by Spaire when credits are added to a customer meter.
  */
 export type MeterCreditEvent = {
   /**
@@ -30,7 +30,7 @@ export type MeterCreditEvent = {
    */
   organizationId: string;
   /**
-   * ID of the customer in your Polar organization associated with the event.
+   * ID of the customer in your Spaire organization associated with the event.
    */
   customerId: string | null;
   /**
@@ -62,7 +62,7 @@ export type MeterCreditEvent = {
    */
   label: string;
   /**
-   * The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
+   * The source of the event. `system` events are created by Spaire. `user` events are the one you create through our ingestion API.
    */
   source: "system";
   /**

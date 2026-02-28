@@ -11,7 +11,7 @@ undo the cancellation. This event is triggered when they do so.
 ## Example Usage
 
 ```typescript
-import { WebhookSubscriptionUncanceledPayload } from "@polar-sh/sdk/models/components/webhooksubscriptionuncanceledpayload.js";
+import { WebhookSubscriptionUncanceledPayload } from "@spaire/sdk/models/components/webhooksubscriptionuncanceledpayload.js";
 
 let value: WebhookSubscriptionUncanceledPayload = {
   type: "subscription.uncanceled",

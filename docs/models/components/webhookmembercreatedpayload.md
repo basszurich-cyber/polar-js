@@ -12,7 +12,7 @@ created for a new customer.
 ## Example Usage
 
 ```typescript
-import { WebhookMemberCreatedPayload } from "@polar-sh/sdk/models/components/webhookmembercreatedpayload.js";
+import { WebhookMemberCreatedPayload } from "@spaire/sdk/models/components/webhookmembercreatedpayload.js";
 
 let value: WebhookMemberCreatedPayload = {
   type: "member.created",

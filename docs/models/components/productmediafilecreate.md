@@ -5,7 +5,7 @@ Schema to create a file to be used as a product media file.
 ## Example Usage
 
 ```typescript
-import { ProductMediaFileCreate } from "@polar-sh/sdk/models/components/productmediafilecreate.js";
+import { ProductMediaFileCreate } from "@spaire/sdk/models/components/productmediafilecreate.js";
 
 let value: ProductMediaFileCreate = {
   organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",

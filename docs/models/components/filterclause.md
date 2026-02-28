@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { FilterClause } from "@polar-sh/sdk/models/components/filterclause.js";
+import { FilterClause } from "@spaire/sdk/models/components/filterclause.js";
 
 let value: FilterClause = {
   property: "<value>",

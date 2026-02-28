@@ -5,7 +5,7 @@ Schema for updating a member.
 ## Example Usage
 
 ```typescript
-import { MemberUpdate } from "@polar-sh/sdk/models/components/memberupdate.js";
+import { MemberUpdate } from "@spaire/sdk/models/components/memberupdate.js";
 
 let value: MemberUpdate = {
   name: "Jane Doe",

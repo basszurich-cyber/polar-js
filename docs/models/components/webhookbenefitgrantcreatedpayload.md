@@ -7,7 +7,7 @@ Sent when a new benefit grant is created.
 ## Example Usage
 
 ```typescript
-import { WebhookBenefitGrantCreatedPayload } from "@polar-sh/sdk/models/components/webhookbenefitgrantcreatedpayload.js";
+import { WebhookBenefitGrantCreatedPayload } from "@spaire/sdk/models/components/webhookbenefitgrantcreatedpayload.js";
 
 let value: WebhookBenefitGrantCreatedPayload = {
   type: "benefit_grant.created",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { TokenEndpointAuthMethod } from "@polar-sh/sdk/models/components/oauth2clientconfiguration.js";
+import { TokenEndpointAuthMethod } from "@spaire/sdk/models/components/oauth2clientconfiguration.js";
 
 let value: TokenEndpointAuthMethod = "client_secret_basic";
 ```

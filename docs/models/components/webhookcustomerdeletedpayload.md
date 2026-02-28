@@ -7,7 +7,7 @@ Sent when a customer is deleted.
 ## Example Usage
 
 ```typescript
-import { WebhookCustomerDeletedPayload } from "@polar-sh/sdk/models/components/webhookcustomerdeletedpayload.js";
+import { WebhookCustomerDeletedPayload } from "@spaire/sdk/models/components/webhookcustomerdeletedpayload.js";
 
 let value: WebhookCustomerDeletedPayload = {
   type: "customer.deleted",

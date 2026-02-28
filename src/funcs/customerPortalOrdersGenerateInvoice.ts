@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
@@ -22,7 +22,7 @@ import {
   RequestTimeoutError,
   UnexpectedClientError,
 } from "../models/errors/httpclienterrors.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import {
@@ -40,7 +40,7 @@ import { Result } from "../types/fp.js";
  * Trigger generation of an order's invoice.
  */
 export function customerPortalOrdersGenerateInvoice(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalOrdersGenerateInvoiceSecurity,
   request: CustomerPortalOrdersGenerateInvoiceRequest,
   options?: RequestOptions,
@@ -48,7 +48,7 @@ export function customerPortalOrdersGenerateInvoice(
   Result<
     any,
     | CustomerPortalOrdersGenerateInvoiceResponse422CustomerPortalOrdersGenerateInvoice
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -67,7 +67,7 @@ export function customerPortalOrdersGenerateInvoice(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalOrdersGenerateInvoiceSecurity,
   request: CustomerPortalOrdersGenerateInvoiceRequest,
   options?: RequestOptions,
@@ -76,7 +76,7 @@ async function $do(
     Result<
       any,
       | CustomerPortalOrdersGenerateInvoiceResponse422CustomerPortalOrdersGenerateInvoice
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -180,7 +180,7 @@ async function $do(
   const [result] = await M.match<
     any,
     | CustomerPortalOrdersGenerateInvoiceResponse422CustomerPortalOrdersGenerateInvoice
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

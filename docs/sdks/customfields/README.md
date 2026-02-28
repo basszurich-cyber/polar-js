@@ -20,14 +20,14 @@ List custom fields.
 
 <!-- UsageSnippet language="typescript" operationID="custom-fields:list" method="get" path="/v1/custom-fields/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.customFields.list({
+  const result = await spaire.customFields.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -44,17 +44,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customFieldsList } from "@polar-sh/sdk/funcs/customFieldsList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customFieldsList } from "@spaire/sdk/funcs/customFieldsList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await customFieldsList(polar, {
+  const res = await customFieldsList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -100,14 +100,14 @@ Create a custom field.
 
 <!-- UsageSnippet language="typescript" operationID="custom-fields:create" method="post" path="/v1/custom-fields/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.customFields.create({
+  const result = await spaire.customFields.create({
     type: "select",
     slug: "<value>",
     name: "<value>",
@@ -128,17 +128,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customFieldsCreate } from "@polar-sh/sdk/funcs/customFieldsCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customFieldsCreate } from "@spaire/sdk/funcs/customFieldsCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await customFieldsCreate(polar, {
+  const res = await customFieldsCreate(spaire, {
     type: "select",
     slug: "<value>",
     name: "<value>",
@@ -188,14 +188,14 @@ Get a custom field by ID.
 
 <!-- UsageSnippet language="typescript" operationID="custom-fields:get" method="get" path="/v1/custom-fields/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.customFields.get({
+  const result = await spaire.customFields.get({
     id: "<value>",
   });
 
@@ -210,17 +210,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customFieldsGet } from "@polar-sh/sdk/funcs/customFieldsGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customFieldsGet } from "@spaire/sdk/funcs/customFieldsGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await customFieldsGet(polar, {
+  const res = await customFieldsGet(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -265,14 +265,14 @@ Delete a custom field.
 
 <!-- UsageSnippet language="typescript" operationID="custom-fields:delete" method="delete" path="/v1/custom-fields/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  await polar.customFields.delete({
+  await spaire.customFields.delete({
     id: "<value>",
   });
 
@@ -287,17 +287,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customFieldsDelete } from "@polar-sh/sdk/funcs/customFieldsDelete.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customFieldsDelete } from "@spaire/sdk/funcs/customFieldsDelete.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await customFieldsDelete(polar, {
+  const res = await customFieldsDelete(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -342,14 +342,14 @@ Update a custom field.
 
 <!-- UsageSnippet language="typescript" operationID="custom-fields:update" method="patch" path="/v1/custom-fields/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.customFields.update({
+  const result = await spaire.customFields.update({
     id: "<value>",
     customFieldUpdate: {
       type: "date",
@@ -367,17 +367,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customFieldsUpdate } from "@polar-sh/sdk/funcs/customFieldsUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customFieldsUpdate } from "@spaire/sdk/funcs/customFieldsUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await customFieldsUpdate(polar, {
+  const res = await customFieldsUpdate(spaire, {
     id: "<value>",
     customFieldUpdate: {
       type: "date",

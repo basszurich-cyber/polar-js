@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { EventTypeUpdate } from "@polar-sh/sdk/models/components/eventtypeupdate.js";
+import { EventTypeUpdate } from "@spaire/sdk/models/components/eventtypeupdate.js";
 
 let value: EventTypeUpdate = {
   label: "<value>",

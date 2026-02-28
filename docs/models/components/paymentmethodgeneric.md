@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PaymentMethodGeneric } from "@polar-sh/sdk/models/components/paymentmethodgeneric.js";
+import { PaymentMethodGeneric } from "@spaire/sdk/models/components/paymentmethodgeneric.js";
 
 let value: PaymentMethodGeneric = {
   id: "<value>",

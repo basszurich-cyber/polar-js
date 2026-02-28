@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PresentmentCurrency } from "@polar-sh/sdk/models/components/presentmentcurrency.js";
+import { PresentmentCurrency } from "@spaire/sdk/models/components/presentmentcurrency.js";
 
 let value: PresentmentCurrency = "jpy";
 ```

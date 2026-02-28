@@ -7,7 +7,7 @@ Sent when an order is fully or partially refunded.
 ## Example Usage
 
 ```typescript
-import { WebhookOrderRefundedPayload } from "@polar-sh/sdk/models/components/webhookorderrefundedpayload.js";
+import { WebhookOrderRefundedPayload } from "@spaire/sdk/models/components/webhookorderrefundedpayload.js";
 
 let value: WebhookOrderRefundedPayload = {
   type: "order.refunded",

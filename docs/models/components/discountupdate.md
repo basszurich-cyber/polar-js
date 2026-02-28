@@ -5,7 +5,7 @@ Schema to update a discount.
 ## Example Usage
 
 ```typescript
-import { DiscountUpdate } from "@polar-sh/sdk/models/components/discountupdate.js";
+import { DiscountUpdate } from "@spaire/sdk/models/components/discountupdate.js";
 
 let value: DiscountUpdate = {};
 ```

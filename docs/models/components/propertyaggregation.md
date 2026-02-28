@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PropertyAggregation } from "@polar-sh/sdk/models/components/propertyaggregation.js";
+import { PropertyAggregation } from "@spaire/sdk/models/components/propertyaggregation.js";
 
 let value: PropertyAggregation = {
   func: "max",

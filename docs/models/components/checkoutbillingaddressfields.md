@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CheckoutBillingAddressFields } from "@polar-sh/sdk/models/components/checkoutbillingaddressfields.js";
+import { CheckoutBillingAddressFields } from "@spaire/sdk/models/components/checkoutbillingaddressfields.js";
 
 let value: CheckoutBillingAddressFields = {
   country: "required",

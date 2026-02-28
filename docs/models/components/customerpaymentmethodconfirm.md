@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomerPaymentMethodConfirm } from "@polar-sh/sdk/models/components/customerpaymentmethodconfirm.js";
+import { CustomerPaymentMethodConfirm } from "@spaire/sdk/models/components/customerpaymentmethodconfirm.js";
 
 let value: CustomerPaymentMethodConfirm = {
   setupIntentId: "<id>",

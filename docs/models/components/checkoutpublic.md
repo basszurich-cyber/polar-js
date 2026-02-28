@@ -5,7 +5,7 @@ Checkout session data retrieved using the client secret.
 ## Example Usage
 
 ```typescript
-import { CheckoutPublic } from "@polar-sh/sdk/models/components/checkoutpublic.js";
+import { CheckoutPublic } from "@spaire/sdk/models/components/checkoutpublic.js";
 
 let value: CheckoutPublic = {
   id: "<value>",

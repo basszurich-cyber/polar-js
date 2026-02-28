@@ -3,12 +3,12 @@
 ## Example Usage
 
 ```typescript
-import { BenefitGitHubRepositoryUpdate } from "@polar-sh/sdk/models/components/benefitgithubrepositoryupdate.js";
+import { BenefitGitHubRepositoryUpdate } from "@spaire/sdk/models/components/benefitgithubrepositoryupdate.js";
 
 let value: BenefitGitHubRepositoryUpdate = {
   type: "github_repository",
   properties: {
-    repositoryOwner: "polarsource",
+    repositoryOwner: "spairesource",
     repositoryName: "private_repo",
     permission: "admin",
   },

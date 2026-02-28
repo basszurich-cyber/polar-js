@@ -6,7 +6,7 @@ Safe for email scanners - no side effects when fetched.
 ## Example Usage
 
 ```typescript
-import { SeatClaimInfo } from "@polar-sh/sdk/models/components/seatclaiminfo.js";
+import { SeatClaimInfo } from "@spaire/sdk/models/components/seatclaiminfo.js";
 
 let value: SeatClaimInfo = {
   productName: "<value>",

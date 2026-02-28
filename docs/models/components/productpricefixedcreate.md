@@ -5,7 +5,7 @@ Schema to create a fixed price.
 ## Example Usage
 
 ```typescript
-import { ProductPriceFixedCreate } from "@polar-sh/sdk/models/components/productpricefixedcreate.js";
+import { ProductPriceFixedCreate } from "@spaire/sdk/models/components/productpricefixedcreate.js";
 
 let value: ProductPriceFixedCreate = {
   amountType: "fixed",

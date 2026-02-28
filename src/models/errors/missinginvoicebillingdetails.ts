@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type MissingInvoiceBillingDetailsData = {
   error: "MissingInvoiceBillingDetails";
   detail: string;
 };
 
-export class MissingInvoiceBillingDetails extends PolarError {
+export class MissingInvoiceBillingDetails extends SpaireError {
   error: "MissingInvoiceBillingDetails";
   detail: string;
 

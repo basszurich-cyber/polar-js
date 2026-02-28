@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { OAuth2ClientPublic } from "@polar-sh/sdk/models/components/oauth2clientpublic.js";
+import { OAuth2ClientPublic } from "@spaire/sdk/models/components/oauth2clientpublic.js";
 
 let value: OAuth2ClientPublic = {
   createdAt: new Date("2025-07-21T06:12:06.220Z"),

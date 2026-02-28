@@ -11,7 +11,7 @@ each one creating a new delivery.
 ## Example Usage
 
 ```typescript
-import { WebhookEvent } from "@polar-sh/sdk/models/components/webhookevent.js";
+import { WebhookEvent } from "@spaire/sdk/models/components/webhookevent.js";
 
 let value: WebhookEvent = {
   createdAt: new Date("2026-11-22T22:13:57.512Z"),

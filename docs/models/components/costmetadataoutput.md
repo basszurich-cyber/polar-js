@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CostMetadataOutput } from "@polar-sh/sdk/models/components/costmetadataoutput.js";
+import { CostMetadataOutput } from "@spaire/sdk/models/components/costmetadataoutput.js";
 
 let value: CostMetadataOutput = {
   amount: "531.10",

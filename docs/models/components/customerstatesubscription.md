@@ -5,7 +5,7 @@ An active customer subscription.
 ## Example Usage
 
 ```typescript
-import { CustomerStateSubscription } from "@polar-sh/sdk/models/components/customerstatesubscription.js";
+import { CustomerStateSubscription } from "@spaire/sdk/models/components/customerstatesubscription.js";
 
 let value: CustomerStateSubscription = {
   id: "e5149aae-e521-42b9-b24c-abb3d71eea2e",

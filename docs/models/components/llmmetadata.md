@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { LLMMetadata } from "@polar-sh/sdk/models/components/llmmetadata.js";
+import { LLMMetadata } from "@spaire/sdk/models/components/llmmetadata.js";
 
 let value: LLMMetadata = {
   vendor: "<value>",

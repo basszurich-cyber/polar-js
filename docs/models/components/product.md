@@ -5,7 +5,7 @@ A product.
 ## Example Usage
 
 ```typescript
-import { Product } from "@polar-sh/sdk/models/components/product.js";
+import { Product } from "@spaire/sdk/models/components/product.js";
 
 let value: Product = {
   id: "<value>",

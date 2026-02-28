@@ -5,7 +5,7 @@ An active customer meter, with current consumed and credited units.
 ## Example Usage
 
 ```typescript
-import { CustomerMeter } from "@polar-sh/sdk/models/components/customermeter.js";
+import { CustomerMeter } from "@spaire/sdk/models/components/customermeter.js";
 
 let value: CustomerMeter = {
   id: "<value>",

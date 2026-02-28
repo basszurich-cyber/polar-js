@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { AddressDict } from "@polar-sh/sdk/models/components/addressdict.js";
+import { AddressDict } from "@spaire/sdk/models/components/addressdict.js";
 
 let value: AddressDict = {
   country: "Oman",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ListResourceWebhookEndpoint } from "@polar-sh/sdk/models/components/listresourcewebhookendpoint.js";
+import { ListResourceWebhookEndpoint } from "@spaire/sdk/models/components/listresourcewebhookendpoint.js";
 
 let value: ListResourceWebhookEndpoint = {
   items: [],

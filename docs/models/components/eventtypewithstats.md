@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { EventTypeWithStats } from "@polar-sh/sdk/models/components/eventtypewithstats.js";
+import { EventTypeWithStats } from "@spaire/sdk/models/components/eventtypewithstats.js";
 
 let value: EventTypeWithStats = {
   createdAt: new Date("2025-04-11T05:11:49.806Z"),

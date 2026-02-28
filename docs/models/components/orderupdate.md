@@ -5,7 +5,7 @@ Schema to update an order.
 ## Example Usage
 
 ```typescript
-import { OrderUpdate } from "@polar-sh/sdk/models/components/orderupdate.js";
+import { OrderUpdate } from "@spaire/sdk/models/components/orderupdate.js";
 
 let value: OrderUpdate = {
   billingAddress: null,

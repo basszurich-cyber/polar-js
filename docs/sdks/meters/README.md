@@ -20,14 +20,14 @@ List meters.
 
 <!-- UsageSnippet language="typescript" operationID="meters:list" method="get" path="/v1/meters/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.meters.list({
+  const result = await spaire.meters.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -44,17 +44,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { metersList } from "@polar-sh/sdk/funcs/metersList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { metersList } from "@spaire/sdk/funcs/metersList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await metersList(polar, {
+  const res = await metersList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -100,14 +100,14 @@ Create a meter.
 
 <!-- UsageSnippet language="typescript" operationID="meters:create" method="post" path="/v1/meters/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.meters.create({
+  const result = await spaire.meters.create({
     name: "<value>",
     filter: {
       conjunction: "or",
@@ -137,17 +137,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { metersCreate } from "@polar-sh/sdk/funcs/metersCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { metersCreate } from "@spaire/sdk/funcs/metersCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await metersCreate(polar, {
+  const res = await metersCreate(spaire, {
     name: "<value>",
     filter: {
       conjunction: "or",
@@ -206,14 +206,14 @@ Get a meter by ID.
 
 <!-- UsageSnippet language="typescript" operationID="meters:get" method="get" path="/v1/meters/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.meters.get({
+  const result = await spaire.meters.get({
     id: "<value>",
   });
 
@@ -228,17 +228,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { metersGet } from "@polar-sh/sdk/funcs/metersGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { metersGet } from "@spaire/sdk/funcs/metersGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await metersGet(polar, {
+  const res = await metersGet(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -283,14 +283,14 @@ Update a meter.
 
 <!-- UsageSnippet language="typescript" operationID="meters:update" method="patch" path="/v1/meters/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.meters.update({
+  const result = await spaire.meters.update({
     id: "<value>",
     meterUpdate: {},
   });
@@ -306,17 +306,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { metersUpdate } from "@polar-sh/sdk/funcs/metersUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { metersUpdate } from "@spaire/sdk/funcs/metersUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await metersUpdate(polar, {
+  const res = await metersUpdate(spaire, {
     id: "<value>",
     meterUpdate: {},
   });
@@ -362,14 +362,14 @@ Get quantities of a meter over a time period.
 
 <!-- UsageSnippet language="typescript" operationID="meters:quantities" method="get" path="/v1/meters/{id}/quantities" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.meters.quantities({
+  const result = await spaire.meters.quantities({
     id: "<value>",
     startTimestamp: new Date("2025-11-25T04:37:16.823Z"),
     endTimestamp: new Date("2025-11-26T17:06:00.727Z"),
@@ -387,17 +387,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { metersQuantities } from "@polar-sh/sdk/funcs/metersQuantities.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { metersQuantities } from "@spaire/sdk/funcs/metersQuantities.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await metersQuantities(polar, {
+  const res = await metersQuantities(spaire, {
     id: "<value>",
     startTimestamp: new Date("2025-11-25T04:37:16.823Z"),
     endTimestamp: new Date("2025-11-26T17:06:00.727Z"),

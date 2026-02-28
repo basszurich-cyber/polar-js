@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SubscriptionUncanceledMetadata } from "@polar-sh/sdk/models/components/subscriptionuncanceledmetadata.js";
+import { SubscriptionUncanceledMetadata } from "@spaire/sdk/models/components/subscriptionuncanceledmetadata.js";
 
 let value: SubscriptionUncanceledMetadata = {
   subscriptionId: "<id>",

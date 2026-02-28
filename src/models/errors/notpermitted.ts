@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type NotPermittedData = {
   error: "NotPermitted";
   detail: string;
 };
 
-export class NotPermitted extends PolarError {
+export class NotPermitted extends SpaireError {
   error: "NotPermitted";
   detail: string;
 

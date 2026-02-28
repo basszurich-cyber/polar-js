@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { FilterOperator } from "@polar-sh/sdk/models/components/filteroperator.js";
+import { FilterOperator } from "@spaire/sdk/models/components/filteroperator.js";
 
 let value: FilterOperator = "gte";
 ```

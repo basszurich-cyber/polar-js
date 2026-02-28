@@ -5,7 +5,7 @@ Schema for a custom field of type select.
 ## Example Usage
 
 ```typescript
-import { CustomFieldSelect } from "@polar-sh/sdk/models/components/customfieldselect.js";
+import { CustomFieldSelect } from "@spaire/sdk/models/components/customfieldselect.js";
 
 let value: CustomFieldSelect = {
   createdAt: new Date("2025-07-07T06:15:52.159Z"),

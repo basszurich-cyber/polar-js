@@ -5,7 +5,7 @@ Response after successfully claiming a seat.
 ## Example Usage
 
 ```typescript
-import { CustomerSeatClaimResponse } from "@polar-sh/sdk/models/components/customerseatclaimresponse.js";
+import { CustomerSeatClaimResponse } from "@spaire/sdk/models/components/customerseatclaimresponse.js";
 
 let value: CustomerSeatClaimResponse = {
   seat: {

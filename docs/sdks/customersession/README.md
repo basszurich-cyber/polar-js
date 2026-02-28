@@ -17,13 +17,13 @@ Introspect the current session and return its information.
 
 <!-- UsageSnippet language="typescript" operationID="customer_portal:customer-session:introspect" method="get" path="/v1/customer-portal/customer-session/introspect" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.customerPortal.customerSession.introspect({
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
+  const result = await spaire.customerPortal.customerSession.introspect({
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
   });
 
   console.log(result);
@@ -37,16 +37,16 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalCustomerSessionIntrospect } from "@polar-sh/sdk/funcs/customerPortalCustomerSessionIntrospect.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalCustomerSessionIntrospect } from "@spaire/sdk/funcs/customerPortalCustomerSessionIntrospect.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await customerPortalCustomerSessionIntrospect(polar, {
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
+  const res = await customerPortalCustomerSessionIntrospect(spaire, {
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
   });
   if (res.ok) {
     const { value: result } = res;
@@ -88,13 +88,13 @@ Get information about the currently authenticated portal user.
 
 <!-- UsageSnippet language="typescript" operationID="customer_portal:customer-session:get_authenticated_user" method="get" path="/v1/customer-portal/customer-session/user" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.customerPortal.customerSession.getAuthenticatedUser({
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
+  const result = await spaire.customerPortal.customerSession.getAuthenticatedUser({
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
   });
 
   console.log(result);
@@ -108,16 +108,16 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { customerPortalCustomerSessionGetAuthenticatedUser } from "@polar-sh/sdk/funcs/customerPortalCustomerSessionGetAuthenticatedUser.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { customerPortalCustomerSessionGetAuthenticatedUser } from "@spaire/sdk/funcs/customerPortalCustomerSessionGetAuthenticatedUser.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await customerPortalCustomerSessionGetAuthenticatedUser(polar, {
-    customerSession: process.env["POLAR_CUSTOMER_SESSION"] ?? "",
+  const res = await customerPortalCustomerSessionGetAuthenticatedUser(spaire, {
+    customerSession: process.env["SPAIRE_CUSTOMER_SESSION"] ?? "",
   });
   if (res.ok) {
     const { value: result } = res;

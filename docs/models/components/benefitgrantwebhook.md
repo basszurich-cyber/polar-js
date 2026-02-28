@@ -193,7 +193,7 @@ const value: components.BenefitGrantGitHubRepositoryWebhook = {
       "key": false,
     },
     properties: {
-      repositoryOwner: "polarsource",
+      repositoryOwner: "spairesource",
       repositoryName: "private_repo",
       permission: "admin",
     },

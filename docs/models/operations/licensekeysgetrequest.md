@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { LicenseKeysGetRequest } from "@polar-sh/sdk/models/operations/licensekeysget.js";
+import { LicenseKeysGetRequest } from "@spaire/sdk/models/operations/licensekeysget.js";
 
 let value: LicenseKeysGetRequest = {
   id: "<value>",

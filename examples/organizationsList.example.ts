@@ -5,20 +5,20 @@
 import dotenv from "dotenv";
 dotenv.config();
 /**
- * Example usage of the @polar-sh/sdk SDK
+ * Example usage of the @spaire/sdk SDK
  *
  * To run this example from the examples directory:
  * npm run build && npx tsx organizationsList.example.ts
  */
 
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function main() {
-  const result = await polar.organizations.list({});
+  const result = await spaire.organizations.list({});
 
   for await (const page of result) {
     console.log(page);

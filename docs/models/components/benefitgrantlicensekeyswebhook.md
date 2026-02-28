@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BenefitGrantLicenseKeysWebhook } from "@polar-sh/sdk/models/components/benefitgrantlicensekeyswebhook.js";
+import { BenefitGrantLicenseKeysWebhook } from "@spaire/sdk/models/components/benefitgrantlicensekeyswebhook.js";
 
 let value: BenefitGrantLicenseKeysWebhook = {
   createdAt: new Date("2024-03-27T04:10:14.057Z"),

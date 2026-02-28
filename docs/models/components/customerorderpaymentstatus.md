@@ -5,7 +5,7 @@ Payment status for an order.
 ## Example Usage
 
 ```typescript
-import { CustomerOrderPaymentStatus } from "@polar-sh/sdk/models/components/customerorderpaymentstatus.js";
+import { CustomerOrderPaymentStatus } from "@spaire/sdk/models/components/customerorderpaymentstatus.js";
 
 let value: CustomerOrderPaymentStatus = {
   status: "<value>",

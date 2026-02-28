@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { WebhooksListWebhookEndpointsResponse } from "@polar-sh/sdk/models/operations/webhookslistwebhookendpoints.js";
+import { WebhooksListWebhookEndpointsResponse } from "@spaire/sdk/models/operations/webhookslistwebhookendpoints.js";
 
 let value: WebhooksListWebhookEndpointsResponse = {
   result: {
@@ -14,7 +14,7 @@ let value: WebhooksListWebhookEndpointsResponse = {
         id: "<value>",
         url: "https://webhook.site/cb791d80-f26e-4f8c-be88-6e56054192b0",
         format: "slack",
-        secret: "polar_whs_ovyN6cPrTv56AApvzCaJno08SSmGJmgbWilb33N2JuK",
+        secret: "spaire_whs_ovyN6cPrTv56AApvzCaJno08SSmGJmgbWilb33N2JuK",
         organizationId: "<value>",
         events: [],
         enabled: false,

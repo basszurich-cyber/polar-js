@@ -5,7 +5,7 @@ Schema of a product for customer portal.
 ## Example Usage
 
 ```typescript
-import { CustomerProduct } from "@polar-sh/sdk/models/components/customerproduct.js";
+import { CustomerProduct } from "@spaire/sdk/models/components/customerproduct.js";
 
 let value: CustomerProduct = {
   id: "<value>",

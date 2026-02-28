@@ -6,15 +6,15 @@ import * as z from "zod/v4-mini";
 import { dlv } from "./dlv.js";
 
 export interface Env {
-  POLAR_ACCESS_TOKEN?: string | undefined;
+  SPAIRE_ACCESS_TOKEN?: string | undefined;
 
-  POLAR_DEBUG?: boolean | undefined;
+  SPAIRE_DEBUG?: boolean | undefined;
 }
 
 export const envSchema: z.ZodMiniType<Env, unknown> = z.object({
-  POLAR_ACCESS_TOKEN: z.optional(z.string()),
+  SPAIRE_ACCESS_TOKEN: z.optional(z.string()),
 
-  POLAR_DEBUG: z.optional(z.coerce.boolean()),
+  SPAIRE_DEBUG: z.optional(z.coerce.boolean()),
 });
 
 /**

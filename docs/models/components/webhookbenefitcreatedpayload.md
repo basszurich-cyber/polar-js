@@ -7,7 +7,7 @@ Sent when a new benefit is created.
 ## Example Usage
 
 ```typescript
-import { WebhookBenefitCreatedPayload } from "@polar-sh/sdk/models/components/webhookbenefitcreatedpayload.js";
+import { WebhookBenefitCreatedPayload } from "@spaire/sdk/models/components/webhookbenefitcreatedpayload.js";
 
 let value: WebhookBenefitCreatedPayload = {
   type: "benefit.created",
@@ -24,7 +24,7 @@ let value: WebhookBenefitCreatedPayload = {
     organizationId: "<value>",
     metadata: {},
     properties: {
-      repositoryOwner: "polarsource",
+      repositoryOwner: "spairesource",
       repositoryName: "private_repo",
       permission: "admin",
     },

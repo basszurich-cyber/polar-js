@@ -5,7 +5,7 @@ Schema for creating a customer session using a customer ID.
 ## Example Usage
 
 ```typescript
-import { CustomerSessionCustomerIDCreate } from "@polar-sh/sdk/models/components/customersessioncustomeridcreate.js";
+import { CustomerSessionCustomerIDCreate } from "@spaire/sdk/models/components/customersessioncustomeridcreate.js";
 
 let value: CustomerSessionCustomerIDCreate = {
   returnUrl: "https://example.com/account",

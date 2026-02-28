@@ -7,7 +7,7 @@ This event is triggered when access to a seat is revoked, either manually by the
 ## Example Usage
 
 ```typescript
-import { WebhookCustomerSeatRevokedPayload } from "@polar-sh/sdk/models/components/webhookcustomerseatrevokedpayload.js";
+import { WebhookCustomerSeatRevokedPayload } from "@spaire/sdk/models/components/webhookcustomerseatrevokedpayload.js";
 
 let value: WebhookCustomerSeatRevokedPayload = {
   type: "customer_seat.revoked",

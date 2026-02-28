@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { dlv } from "../lib/dlv.js";
 import { encodeFormQuery } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
@@ -23,7 +23,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import {
@@ -49,7 +49,7 @@ import {
  * List orders of the authenticated customer.
  */
 export function customerPortalOrdersList(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalOrdersListSecurity,
   request: CustomerPortalOrdersListRequest,
   options?: RequestOptions,
@@ -58,7 +58,7 @@ export function customerPortalOrdersList(
     Result<
       CustomerPortalOrdersListResponse,
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -79,7 +79,7 @@ export function customerPortalOrdersList(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalOrdersListSecurity,
   request: CustomerPortalOrdersListRequest,
   options?: RequestOptions,
@@ -89,7 +89,7 @@ async function $do(
       Result<
         CustomerPortalOrdersListResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError
@@ -196,7 +196,7 @@ async function $do(
   const [result, raw] = await M.match<
     CustomerPortalOrdersListResponse,
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -227,7 +227,7 @@ async function $do(
       Result<
         CustomerPortalOrdersListResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError

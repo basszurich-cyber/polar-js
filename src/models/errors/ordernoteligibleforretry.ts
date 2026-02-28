@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type OrderNotEligibleForRetryData = {
   error: "OrderNotEligibleForRetry";
   detail: string;
 };
 
-export class OrderNotEligibleForRetry extends PolarError {
+export class OrderNotEligibleForRetry extends SpaireError {
   error: "OrderNotEligibleForRetry";
   detail: string;
 

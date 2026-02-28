@@ -5,7 +5,7 @@ Schema to create a pay-what-you-want price.
 ## Example Usage
 
 ```typescript
-import { ProductPriceCustomCreate } from "@polar-sh/sdk/models/components/productpricecustomcreate.js";
+import { ProductPriceCustomCreate } from "@spaire/sdk/models/components/productpricecustomcreate.js";
 
 let value: ProductPriceCustomCreate = {
   amountType: "custom",

@@ -1,6 +1,6 @@
-# @polar-sh/sdk Examples
+# @spaire/sdk Examples
 
-This directory contains example scripts demonstrating how to use the @polar-sh/sdk SDK.
+This directory contains example scripts demonstrating how to use the @spaire/sdk SDK.
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomerNotReady } from "@polar-sh/sdk/models/errors/customernotready.js";
+import { CustomerNotReady } from "@spaire/sdk/models/errors/customernotready.js";
 
 // No examples available for this model
 ```

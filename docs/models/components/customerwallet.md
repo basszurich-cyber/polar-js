@@ -7,7 +7,7 @@ You can top-up your wallet and use the balance to pay for usage.
 ## Example Usage
 
 ```typescript
-import { CustomerWallet } from "@polar-sh/sdk/models/components/customerwallet.js";
+import { CustomerWallet } from "@spaire/sdk/models/components/customerwallet.js";
 
 let value: CustomerWallet = {
   id: "<value>",

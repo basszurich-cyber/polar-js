@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { WebhooksDeleteWebhookEndpointRequest } from "@polar-sh/sdk/models/operations/webhooksdeletewebhookendpoint.js";
+import { WebhooksDeleteWebhookEndpointRequest } from "@spaire/sdk/models/operations/webhooksdeletewebhookendpoint.js";
 
 let value: WebhooksDeleteWebhookEndpointRequest = {
   id: "<value>",

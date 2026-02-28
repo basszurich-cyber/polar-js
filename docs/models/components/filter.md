@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Filter } from "@polar-sh/sdk/models/components/filter.js";
+import { Filter } from "@spaire/sdk/models/components/filter.js";
 
 let value: Filter = {
   conjunction: "or",

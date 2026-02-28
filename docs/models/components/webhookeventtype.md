@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { WebhookEventType } from "@polar-sh/sdk/models/components/webhookeventtype.js";
+import { WebhookEventType } from "@spaire/sdk/models/components/webhookeventtype.js";
 
 let value: WebhookEventType = "customer_seat.revoked";
 ```

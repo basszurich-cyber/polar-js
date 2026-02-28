@@ -7,7 +7,7 @@ This event is triggered when a customer accepts the seat invitation and claims t
 ## Example Usage
 
 ```typescript
-import { WebhookCustomerSeatClaimedPayload } from "@polar-sh/sdk/models/components/webhookcustomerseatclaimedpayload.js";
+import { WebhookCustomerSeatClaimedPayload } from "@spaire/sdk/models/components/webhookcustomerseatclaimedpayload.js";
 
 let value: WebhookCustomerSeatClaimedPayload = {
   type: "customer_seat.claimed",

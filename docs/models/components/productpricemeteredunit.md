@@ -5,7 +5,7 @@ A metered, usage-based, price for a product, with a fixed unit price.
 ## Example Usage
 
 ```typescript
-import { ProductPriceMeteredUnit } from "@polar-sh/sdk/models/components/productpricemeteredunit.js";
+import { ProductPriceMeteredUnit } from "@spaire/sdk/models/components/productpricemeteredunit.js";
 
 let value: ProductPriceMeteredUnit = {
   createdAt: new Date("2024-10-21T15:18:33.510Z"),

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomerSubscriptionMeter } from "@polar-sh/sdk/models/components/customersubscriptionmeter.js";
+import { CustomerSubscriptionMeter } from "@spaire/sdk/models/components/customersubscriptionmeter.js";
 
 let value: CustomerSubscriptionMeter = {
   createdAt: new Date("2024-05-30T13:00:37.766Z"),

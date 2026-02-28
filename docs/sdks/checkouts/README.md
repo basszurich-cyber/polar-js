@@ -22,14 +22,14 @@ List checkout sessions.
 
 <!-- UsageSnippet language="typescript" operationID="checkouts:list" method="get" path="/v1/checkouts/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.checkouts.list({
+  const result = await spaire.checkouts.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -46,17 +46,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutsList } from "@polar-sh/sdk/funcs/checkoutsList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutsList } from "@spaire/sdk/funcs/checkoutsList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await checkoutsList(polar, {
+  const res = await checkoutsList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -102,14 +102,14 @@ Create a checkout session.
 
 <!-- UsageSnippet language="typescript" operationID="checkouts:create" method="post" path="/v1/checkouts/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.checkouts.create({
+  const result = await spaire.checkouts.create({
     customerName: "John Doe",
     customerBillingAddress: {
       country: "US",
@@ -133,17 +133,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutsCreate } from "@polar-sh/sdk/funcs/checkoutsCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutsCreate } from "@spaire/sdk/funcs/checkoutsCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await checkoutsCreate(polar, {
+  const res = await checkoutsCreate(spaire, {
     customerName: "John Doe",
     customerBillingAddress: {
       country: "US",
@@ -196,14 +196,14 @@ Get a checkout session by ID.
 
 <!-- UsageSnippet language="typescript" operationID="checkouts:get" method="get" path="/v1/checkouts/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.checkouts.get({
+  const result = await spaire.checkouts.get({
     id: "<value>",
   });
 
@@ -218,17 +218,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutsGet } from "@polar-sh/sdk/funcs/checkoutsGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutsGet } from "@spaire/sdk/funcs/checkoutsGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await checkoutsGet(polar, {
+  const res = await checkoutsGet(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -273,14 +273,14 @@ Update a checkout session.
 
 <!-- UsageSnippet language="typescript" operationID="checkouts:update" method="patch" path="/v1/checkouts/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.checkouts.update({
+  const result = await spaire.checkouts.update({
     id: "<value>",
     checkoutUpdate: {
       customerName: "John Doe",
@@ -302,17 +302,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutsUpdate } from "@polar-sh/sdk/funcs/checkoutsUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutsUpdate } from "@spaire/sdk/funcs/checkoutsUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await checkoutsUpdate(polar, {
+  const res = await checkoutsUpdate(spaire, {
     id: "<value>",
     checkoutUpdate: {
       customerName: "John Doe",
@@ -366,12 +366,12 @@ Get a checkout session by client secret.
 
 <!-- UsageSnippet language="typescript" operationID="checkouts:client_get" method="get" path="/v1/checkouts/client/{client_secret}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.checkouts.clientGet({
+  const result = await spaire.checkouts.clientGet({
     clientSecret: "<value>",
   });
 
@@ -386,15 +386,15 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutsClientGet } from "@polar-sh/sdk/funcs/checkoutsClientGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutsClientGet } from "@spaire/sdk/funcs/checkoutsClientGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await checkoutsClientGet(polar, {
+  const res = await checkoutsClientGet(spaire, {
     clientSecret: "<value>",
   });
   if (res.ok) {
@@ -438,12 +438,12 @@ Update a checkout session by client secret.
 
 <!-- UsageSnippet language="typescript" operationID="checkouts:client_update" method="patch" path="/v1/checkouts/client/{client_secret}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.checkouts.clientUpdate({
+  const result = await spaire.checkouts.clientUpdate({
     clientSecret: "<value>",
     checkoutUpdatePublic: {
       customerName: "John Doe",
@@ -465,15 +465,15 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutsClientUpdate } from "@polar-sh/sdk/funcs/checkoutsClientUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutsClientUpdate } from "@spaire/sdk/funcs/checkoutsClientUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore();
+const spaire = new SpaireCore();
 
 async function run() {
-  const res = await checkoutsClientUpdate(polar, {
+  const res = await checkoutsClientUpdate(spaire, {
     clientSecret: "<value>",
     checkoutUpdatePublic: {
       customerName: "John Doe",
@@ -530,14 +530,14 @@ Orders and subscriptions will be processed.
 
 <!-- UsageSnippet language="typescript" operationID="checkouts:client_confirm" method="post" path="/v1/checkouts/client/{client_secret}/confirm" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.checkouts.clientConfirm({
+  const result = await spaire.checkouts.clientConfirm({
     clientSecret: "<value>",
     checkoutConfirmStripe: {
       customerName: "John Doe",
@@ -559,17 +559,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { checkoutsClientConfirm } from "@polar-sh/sdk/funcs/checkoutsClientConfirm.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { checkoutsClientConfirm } from "@spaire/sdk/funcs/checkoutsClientConfirm.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await checkoutsClientConfirm(polar, {
+  const res = await checkoutsClientConfirm(spaire, {
     clientSecret: "<value>",
     checkoutConfirmStripe: {
       customerName: "John Doe",

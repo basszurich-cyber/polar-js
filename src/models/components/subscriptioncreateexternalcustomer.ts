@@ -37,7 +37,7 @@ export type SubscriptionCreateExternalCustomer = {
    */
   productId: string;
   /**
-   * The ID of the customer in your system to create the subscription for. It must already exist in Polar.
+   * The ID of the customer in your system to create the subscription for. It must already exist in Spaire.
    */
   externalCustomerId: string;
 };

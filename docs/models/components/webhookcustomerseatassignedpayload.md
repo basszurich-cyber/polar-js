@@ -8,7 +8,7 @@ The customer will receive an invitation email to claim the seat.
 ## Example Usage
 
 ```typescript
-import { WebhookCustomerSeatAssignedPayload } from "@polar-sh/sdk/models/components/webhookcustomerseatassignedpayload.js";
+import { WebhookCustomerSeatAssignedPayload } from "@spaire/sdk/models/components/webhookcustomerseatassignedpayload.js";
 
 let value: WebhookCustomerSeatAssignedPayload = {
   type: "customer_seat.assigned",

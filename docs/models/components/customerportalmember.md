@@ -5,7 +5,7 @@ A member of the customer's team as seen in the customer portal.
 ## Example Usage
 
 ```typescript
-import { CustomerPortalMember } from "@polar-sh/sdk/models/components/customerportalmember.js";
+import { CustomerPortalMember } from "@spaire/sdk/models/components/customerportalmember.js";
 
 let value: CustomerPortalMember = {
   createdAt: new Date("2024-07-08T08:06:52.701Z"),

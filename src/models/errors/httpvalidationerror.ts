@@ -9,13 +9,13 @@ import {
   ValidationError$Outbound,
   ValidationError$outboundSchema,
 } from "../components/validationerror.js";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type HTTPValidationErrorData = {
   detail?: Array<ValidationError> | undefined;
 };
 
-export class HTTPValidationError extends PolarError {
+export class HTTPValidationError extends SpaireError {
   detail?: Array<ValidationError> | undefined;
 
   /** The original data that was passed to this error instance. */

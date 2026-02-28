@@ -17,14 +17,14 @@ List event types with aggregated statistics.
 
 <!-- UsageSnippet language="typescript" operationID="event-types:list" method="get" path="/v1/event-types/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.eventTypes.list({
+  const result = await spaire.eventTypes.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -41,17 +41,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { eventTypesList } from "@polar-sh/sdk/funcs/eventTypesList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { eventTypesList } from "@spaire/sdk/funcs/eventTypesList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await eventTypesList(polar, {
+  const res = await eventTypesList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -95,14 +95,14 @@ Update an event type's label.
 
 <!-- UsageSnippet language="typescript" operationID="event-types:update" method="patch" path="/v1/event-types/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.eventTypes.update({
+  const result = await spaire.eventTypes.update({
     id: "<value>",
     eventTypeUpdate: {
       label: "<value>",
@@ -120,17 +120,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { eventTypesUpdate } from "@polar-sh/sdk/funcs/eventTypesUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { eventTypesUpdate } from "@spaire/sdk/funcs/eventTypesUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await eventTypesUpdate(polar, {
+  const res = await eventTypesUpdate(spaire, {
     id: "<value>",
     eventTypeUpdate: {
       label: "<value>",

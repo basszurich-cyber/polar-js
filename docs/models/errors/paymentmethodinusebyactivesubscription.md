@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PaymentMethodInUseByActiveSubscription } from "@polar-sh/sdk/models/errors/paymentmethodinusebyactivesubscription.js";
+import { PaymentMethodInUseByActiveSubscription } from "@spaire/sdk/models/errors/paymentmethodinusebyactivesubscription.js";
 
 // No examples available for this model
 ```

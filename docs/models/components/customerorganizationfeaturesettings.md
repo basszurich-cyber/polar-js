@@ -5,7 +5,7 @@ Feature flags exposed to the customer portal.
 ## Example Usage
 
 ```typescript
-import { CustomerOrganizationFeatureSettings } from "@polar-sh/sdk/models/components/customerorganizationfeaturesettings.js";
+import { CustomerOrganizationFeatureSettings } from "@spaire/sdk/models/components/customerorganizationfeaturesettings.js";
 
 let value: CustomerOrganizationFeatureSettings = {};
 ```

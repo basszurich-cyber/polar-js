@@ -65,7 +65,7 @@ const value: components.BenefitGitHubRepositoryCreate = {
     "amidst psst broadcast huzzah consequently tentacle idealistic ack hard-to-find boohoo",
   organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   properties: {
-    repositoryOwner: "polarsource",
+    repositoryOwner: "spairesource",
     repositoryName: "private_repo",
     permission: "admin",
   },

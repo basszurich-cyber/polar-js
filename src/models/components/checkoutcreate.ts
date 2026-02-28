@@ -127,7 +127,7 @@ export type CheckoutCreate = {
    */
   isBusinessCustomer?: boolean | undefined;
   /**
-   * ID of the customer in your system. If a matching customer exists on Polar, the resulting order will be linked to this customer. Otherwise, a new customer will be created with this external ID set.
+   * ID of the customer in your system. If a matching customer exists on Spaire, the resulting order will be linked to this customer. Otherwise, a new customer will be created with this external ID set.
    */
   externalCustomerId?: string | null | undefined;
   customerName?: string | null | undefined;
@@ -167,7 +167,7 @@ export type CheckoutCreate = {
    */
   returnUrl?: string | null | undefined;
   /**
-   * If you plan to embed the checkout session, set this to the Origin of the embedding page. It'll allow the Polar iframe to communicate with the parent page.
+   * If you plan to embed the checkout session, set this to the Origin of the embedding page. It'll allow the Spaire iframe to communicate with the parent page.
    */
   embedOrigin?: string | null | undefined;
   locale?: string | null | undefined;

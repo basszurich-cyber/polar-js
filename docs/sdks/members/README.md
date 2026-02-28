@@ -20,14 +20,14 @@ List members with optional customer ID filter.
 
 <!-- UsageSnippet language="typescript" operationID="members:list_members" method="get" path="/v1/members/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.members.listMembers({});
+  const result = await spaire.members.listMembers({});
 
   for await (const page of result) {
     console.log(page);
@@ -42,17 +42,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { membersListMembers } from "@polar-sh/sdk/funcs/membersListMembers.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { membersListMembers } from "@spaire/sdk/funcs/membersListMembers.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await membersListMembers(polar, {});
+  const res = await membersListMembers(spaire, {});
   if (res.ok) {
     const { value: result } = res;
     for await (const page of result) {
@@ -99,14 +99,14 @@ The authenticated user or organization must have access to the customer's organi
 
 <!-- UsageSnippet language="typescript" operationID="members:create_member" method="post" path="/v1/members/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.members.createMember({
+  const result = await spaire.members.createMember({
     customerId: "<value>",
     email: "member@example.com",
     name: "Jane Doe",
@@ -124,17 +124,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { membersCreateMember } from "@polar-sh/sdk/funcs/membersCreateMember.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { membersCreateMember } from "@spaire/sdk/funcs/membersCreateMember.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await membersCreateMember(polar, {
+  const res = await membersCreateMember(spaire, {
     customerId: "<value>",
     email: "member@example.com",
     name: "Jane Doe",
@@ -184,14 +184,14 @@ The authenticated user or organization must have access to the member's organiza
 
 <!-- UsageSnippet language="typescript" operationID="members:get_member" method="get" path="/v1/members/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.members.getMember({
+  const result = await spaire.members.getMember({
     id: "572bebad-ee17-4d04-a50f-6596a7d92cf3",
   });
 
@@ -206,17 +206,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { membersGetMember } from "@polar-sh/sdk/funcs/membersGetMember.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { membersGetMember } from "@spaire/sdk/funcs/membersGetMember.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await membersGetMember(polar, {
+  const res = await membersGetMember(spaire, {
     id: "572bebad-ee17-4d04-a50f-6596a7d92cf3",
   });
   if (res.ok) {
@@ -263,14 +263,14 @@ The authenticated user or organization must have access to the member's organiza
 
 <!-- UsageSnippet language="typescript" operationID="members:delete_member" method="delete" path="/v1/members/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  await polar.members.deleteMember({
+  await spaire.members.deleteMember({
     id: "913247e9-8f2b-4bd1-a47e-9842d173a7cb",
   });
 
@@ -285,17 +285,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { membersDeleteMember } from "@polar-sh/sdk/funcs/membersDeleteMember.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { membersDeleteMember } from "@spaire/sdk/funcs/membersDeleteMember.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await membersDeleteMember(polar, {
+  const res = await membersDeleteMember(spaire, {
     id: "913247e9-8f2b-4bd1-a47e-9842d173a7cb",
   });
   if (res.ok) {
@@ -343,14 +343,14 @@ The authenticated user or organization must have access to the member's organiza
 
 <!-- UsageSnippet language="typescript" operationID="members:update_member" method="patch" path="/v1/members/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.members.updateMember({
+  const result = await spaire.members.updateMember({
     id: "ab9b628a-6dbd-4f07-bcd6-163a8b5b7de4",
     memberUpdate: {
       name: "Jane Doe",
@@ -368,17 +368,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { membersUpdateMember } from "@polar-sh/sdk/funcs/membersUpdateMember.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { membersUpdateMember } from "@spaire/sdk/funcs/membersUpdateMember.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await membersUpdateMember(polar, {
+  const res = await membersUpdateMember(spaire, {
     id: "ab9b628a-6dbd-4f07-bcd6-163a8b5b7de4",
     memberUpdate: {
       name: "Jane Doe",

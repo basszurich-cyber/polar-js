@@ -8,7 +8,7 @@ whether because it's a new paid subscription or because payment was recovered.
 ## Example Usage
 
 ```typescript
-import { WebhookSubscriptionActivePayload } from "@polar-sh/sdk/models/components/webhooksubscriptionactivepayload.js";
+import { WebhookSubscriptionActivePayload } from "@spaire/sdk/models/components/webhooksubscriptionactivepayload.js";
 
 let value: WebhookSubscriptionActivePayload = {
   type: "subscription.active",

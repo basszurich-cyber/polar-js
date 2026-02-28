@@ -14,7 +14,7 @@ import {
 import { Customer, Customer$inboundSchema } from "./customer.js";
 
 /**
- * An event created by Polar when an order is refunded.
+ * An event created by Spaire when an order is refunded.
  */
 export type BalanceRefundEvent = {
   /**
@@ -30,7 +30,7 @@ export type BalanceRefundEvent = {
    */
   organizationId: string;
   /**
-   * ID of the customer in your Polar organization associated with the event.
+   * ID of the customer in your Spaire organization associated with the event.
    */
   customerId: string | null;
   /**
@@ -62,7 +62,7 @@ export type BalanceRefundEvent = {
    */
   label: string;
   /**
-   * The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
+   * The source of the event. `system` events are created by Spaire. `user` events are the one you create through our ingestion API.
    */
   source: "system";
   /**

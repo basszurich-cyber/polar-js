@@ -23,14 +23,14 @@ List webhook endpoints.
 
 <!-- UsageSnippet language="typescript" operationID="webhooks:list_webhook_endpoints" method="get" path="/v1/webhooks/endpoints" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.webhooks.listWebhookEndpoints({
+  const result = await spaire.webhooks.listWebhookEndpoints({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -47,17 +47,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { webhooksListWebhookEndpoints } from "@polar-sh/sdk/funcs/webhooksListWebhookEndpoints.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { webhooksListWebhookEndpoints } from "@spaire/sdk/funcs/webhooksListWebhookEndpoints.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await webhooksListWebhookEndpoints(polar, {
+  const res = await webhooksListWebhookEndpoints(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -103,14 +103,14 @@ Create a webhook endpoint.
 
 <!-- UsageSnippet language="typescript" operationID="webhooks:create_webhook_endpoint" method="post" path="/v1/webhooks/endpoints" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.webhooks.createWebhookEndpoint({
+  const result = await spaire.webhooks.createWebhookEndpoint({
     url: "https://webhook.site/cb791d80-f26e-4f8c-be88-6e56054192b0",
     format: "slack",
     events: [
@@ -130,17 +130,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { webhooksCreateWebhookEndpoint } from "@polar-sh/sdk/funcs/webhooksCreateWebhookEndpoint.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { webhooksCreateWebhookEndpoint } from "@spaire/sdk/funcs/webhooksCreateWebhookEndpoint.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await webhooksCreateWebhookEndpoint(polar, {
+  const res = await webhooksCreateWebhookEndpoint(spaire, {
     url: "https://webhook.site/cb791d80-f26e-4f8c-be88-6e56054192b0",
     format: "slack",
     events: [
@@ -189,14 +189,14 @@ Get a webhook endpoint by ID.
 
 <!-- UsageSnippet language="typescript" operationID="webhooks:get_webhook_endpoint" method="get" path="/v1/webhooks/endpoints/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.webhooks.getWebhookEndpoint({
+  const result = await spaire.webhooks.getWebhookEndpoint({
     id: "<value>",
   });
 
@@ -211,17 +211,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { webhooksGetWebhookEndpoint } from "@polar-sh/sdk/funcs/webhooksGetWebhookEndpoint.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { webhooksGetWebhookEndpoint } from "@spaire/sdk/funcs/webhooksGetWebhookEndpoint.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await webhooksGetWebhookEndpoint(polar, {
+  const res = await webhooksGetWebhookEndpoint(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -266,14 +266,14 @@ Delete a webhook endpoint.
 
 <!-- UsageSnippet language="typescript" operationID="webhooks:delete_webhook_endpoint" method="delete" path="/v1/webhooks/endpoints/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  await polar.webhooks.deleteWebhookEndpoint({
+  await spaire.webhooks.deleteWebhookEndpoint({
     id: "<value>",
   });
 
@@ -288,17 +288,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { webhooksDeleteWebhookEndpoint } from "@polar-sh/sdk/funcs/webhooksDeleteWebhookEndpoint.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { webhooksDeleteWebhookEndpoint } from "@spaire/sdk/funcs/webhooksDeleteWebhookEndpoint.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await webhooksDeleteWebhookEndpoint(polar, {
+  const res = await webhooksDeleteWebhookEndpoint(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -343,14 +343,14 @@ Update a webhook endpoint.
 
 <!-- UsageSnippet language="typescript" operationID="webhooks:update_webhook_endpoint" method="patch" path="/v1/webhooks/endpoints/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.webhooks.updateWebhookEndpoint({
+  const result = await spaire.webhooks.updateWebhookEndpoint({
     id: "<value>",
     webhookEndpointUpdate: {
       url: "https://webhook.site/cb791d80-f26e-4f8c-be88-6e56054192b0",
@@ -368,17 +368,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { webhooksUpdateWebhookEndpoint } from "@polar-sh/sdk/funcs/webhooksUpdateWebhookEndpoint.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { webhooksUpdateWebhookEndpoint } from "@spaire/sdk/funcs/webhooksUpdateWebhookEndpoint.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await webhooksUpdateWebhookEndpoint(polar, {
+  const res = await webhooksUpdateWebhookEndpoint(spaire, {
     id: "<value>",
     webhookEndpointUpdate: {
       url: "https://webhook.site/cb791d80-f26e-4f8c-be88-6e56054192b0",
@@ -426,14 +426,14 @@ Regenerate a webhook endpoint secret.
 
 <!-- UsageSnippet language="typescript" operationID="webhooks:reset_webhook_endpoint_secret" method="patch" path="/v1/webhooks/endpoints/{id}/secret" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.webhooks.resetWebhookEndpointSecret({
+  const result = await spaire.webhooks.resetWebhookEndpointSecret({
     id: "<value>",
   });
 
@@ -448,17 +448,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { webhooksResetWebhookEndpointSecret } from "@polar-sh/sdk/funcs/webhooksResetWebhookEndpointSecret.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { webhooksResetWebhookEndpointSecret } from "@spaire/sdk/funcs/webhooksResetWebhookEndpointSecret.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await webhooksResetWebhookEndpointSecret(polar, {
+  const res = await webhooksResetWebhookEndpointSecret(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -505,14 +505,14 @@ Deliveries are all the attempts to deliver a webhook event to an endpoint.
 
 <!-- UsageSnippet language="typescript" operationID="webhooks:list_webhook_deliveries" method="get" path="/v1/webhooks/deliveries" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.webhooks.listWebhookDeliveries({});
+  const result = await spaire.webhooks.listWebhookDeliveries({});
 
   for await (const page of result) {
     console.log(page);
@@ -527,17 +527,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { webhooksListWebhookDeliveries } from "@polar-sh/sdk/funcs/webhooksListWebhookDeliveries.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { webhooksListWebhookDeliveries } from "@spaire/sdk/funcs/webhooksListWebhookDeliveries.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await webhooksListWebhookDeliveries(polar, {});
+  const res = await webhooksListWebhookDeliveries(spaire, {});
   if (res.ok) {
     const { value: result } = res;
     for await (const page of result) {
@@ -581,14 +581,14 @@ Schedule the re-delivery of a webhook event.
 
 <!-- UsageSnippet language="typescript" operationID="webhooks:redeliver_webhook_event" method="post" path="/v1/webhooks/events/{id}/redeliver" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.webhooks.redeliverWebhookEvent({
+  const result = await spaire.webhooks.redeliverWebhookEvent({
     id: "<value>",
   });
 
@@ -603,17 +603,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { webhooksRedeliverWebhookEvent } from "@polar-sh/sdk/funcs/webhooksRedeliverWebhookEvent.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { webhooksRedeliverWebhookEvent } from "@spaire/sdk/funcs/webhooksRedeliverWebhookEvent.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await webhooksRedeliverWebhookEvent(polar, {
+  const res = await webhooksRedeliverWebhookEvent(spaire, {
     id: "<value>",
   });
   if (res.ok) {

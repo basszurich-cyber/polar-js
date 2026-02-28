@@ -8,7 +8,7 @@ right after the checkout.
 ## Example Usage
 
 ```typescript
-import { CheckoutPublicConfirmed } from "@polar-sh/sdk/models/components/checkoutpublicconfirmed.js";
+import { CheckoutPublicConfirmed } from "@spaire/sdk/models/components/checkoutpublicconfirmed.js";
 
 let value: CheckoutPublicConfirmed = {
   id: "<value>",

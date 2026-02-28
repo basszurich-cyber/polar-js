@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { OrganizationAccessTokenSortProperty } from "@polar-sh/sdk/models/components/organizationaccesstokensortproperty.js";
+import { OrganizationAccessTokenSortProperty } from "@spaire/sdk/models/components/organizationaccesstokensortproperty.js";
 
 let value: OrganizationAccessTokenSortProperty = "created_at";
 ```

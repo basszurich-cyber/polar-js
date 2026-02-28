@@ -3,14 +3,14 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarError } from "./polarerror.js";
+import { SpaireError } from "./spaireerror.js";
 
 export type PaymentNotReadyData = {
   error: "PaymentNotReady";
   detail: string;
 };
 
-export class PaymentNotReady extends PolarError {
+export class PaymentNotReady extends SpaireError {
   error: "PaymentNotReady";
   detail: string;
 

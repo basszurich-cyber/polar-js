@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomersGetStateExternalRequest } from "@polar-sh/sdk/models/operations/customersgetstateexternal.js";
+import { CustomersGetStateExternalRequest } from "@spaire/sdk/models/operations/customersgetstateexternal.js";
 
 let value: CustomersGetStateExternalRequest = {
   externalId: "<id>",

@@ -5,7 +5,7 @@ A product that a discount can be applied to.
 ## Example Usage
 
 ```typescript
-import { DiscountProduct } from "@polar-sh/sdk/models/components/discountproduct.js";
+import { DiscountProduct } from "@spaire/sdk/models/components/discountproduct.js";
 
 let value: DiscountProduct = {
   metadata: {

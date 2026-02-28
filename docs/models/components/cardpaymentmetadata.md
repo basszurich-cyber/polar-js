@@ -5,7 +5,7 @@ Additional metadata for a card payment method.
 ## Example Usage
 
 ```typescript
-import { CardPaymentMetadata } from "@polar-sh/sdk/models/components/cardpaymentmetadata.js";
+import { CardPaymentMetadata } from "@spaire/sdk/models/components/cardpaymentmetadata.js";
 
 let value: CardPaymentMetadata = {
   brand: "visa",

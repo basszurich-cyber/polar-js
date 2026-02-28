@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { AggregationFunction } from "@polar-sh/sdk/models/components/aggregationfunction.js";
+import { AggregationFunction } from "@spaire/sdk/models/components/aggregationfunction.js";
 
 let value: AggregationFunction = "max";
 ```

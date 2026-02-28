@@ -19,8 +19,8 @@ export const ServerSandbox = "sandbox";
  * Contains the list of servers available to the SDK
  */
 export const ServerList = {
-  [ServerProduction]: "https://api.polar.sh",
-  [ServerSandbox]: "https://sandbox-api.polar.sh",
+  [ServerProduction]: "https://api.spaire.sh",
+  [ServerSandbox]: "https://sandbox-api.spaire.sh",
 } as const;
 
 export type SDKOptions = {
@@ -66,5 +66,5 @@ export const SDK_METADATA = {
   openapiDocVersion: "0.1.0",
   sdkVersion: "0.45.1",
   genVersion: "2.845.1",
-  userAgent: "speakeasy-sdk/typescript 0.45.1 2.845.1 0.1.0 @polar-sh/sdk",
+  userAgent: "speakeasy-sdk/typescript 0.45.1 2.845.1 0.1.0 @spaire/sdk",
 } as const;

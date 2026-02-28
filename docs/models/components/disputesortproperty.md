@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DisputeSortProperty } from "@polar-sh/sdk/models/components/disputesortproperty.js";
+import { DisputeSortProperty } from "@spaire/sdk/models/components/disputesortproperty.js";
 
 let value: DisputeSortProperty = "-amount";
 ```

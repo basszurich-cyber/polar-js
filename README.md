@@ -1,9 +1,9 @@
-# @polar-sh/sdk
+# @spaire/sdk
 
-Developer-friendly & type-safe Typescript SDK specifically catered to leverage [Polar](https://polar.sh) API.
+Developer-friendly & type-safe Typescript SDK specifically catered to leverage [Spaire](https://spaire.sh) API.
 
 <div align="left">
-    <a href="https://www.speakeasy.com/?utm_source=@polar-sh/sdk&utm_campaign=typescript"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
+    <a href="https://www.speakeasy.com/?utm_source=@spaire/sdk&utm_campaign=typescript"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
     <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="width: 100px; height: 28px;" />
     </a>
@@ -15,15 +15,15 @@ Developer-friendly & type-safe Typescript SDK specifically catered to leverage [
 <!-- Start Summary [summary] -->
 ## Summary
 
-Polar API: Polar HTTP and Webhooks API
+Spaire API: Spaire HTTP and Webhooks API
 
-Read the docs at https://polar.sh/docs/api-reference
+Read the docs at https://spaire.sh/docs/api-reference
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [@polar-sh/sdk](#polar-shsdk)
+* [@spaire/sdk](#spairesdk)
   * [SDK Installation](#sdk-installation)
   * [Requirements](#requirements)
   * [SDK Example Usage](#sdk-example-usage)
@@ -50,25 +50,25 @@ The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https
 ### NPM
 
 ```bash
-npm add @polar-sh/sdk
+npm add @spaire/sdk
 ```
 
 ### PNPM
 
 ```bash
-pnpm add @polar-sh/sdk
+pnpm add @spaire/sdk
 ```
 
 ### Bun
 
 ```bash
-bun add @polar-sh/sdk
+bun add @spaire/sdk
 ```
 
 ### Yarn
 
 ```bash
-yarn add @polar-sh/sdk
+yarn add @spaire/sdk
 ```
 
 > [!NOTE]
@@ -87,14 +87,14 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 ### Example
 
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizations.list({});
+  const result = await spaire.organizations.list({});
 
   for await (const page of result) {
     console.log(page);
@@ -112,13 +112,13 @@ The SDK has built-in support to validate webhook events. Here is an example with
 
 ```ts
 import express, { Request, Response } from "express";
-import { validateEvent, WebhookVerificationError } from "@polar-sh/sdk/webhooks";
+import { validateEvent, WebhookVerificationError } from "@spaire/sdk/webhooks";
 
 const app = express();
 
 app.post("/webhook", express.raw({ type: "application/json" }), (req: Request, res: Response) => {
   try {
-    const event = validateEvent(req.body, req.headers, process.env["POLAR_WEBHOOK_SECRET"] ?? "");
+    const event = validateEvent(req.body, req.headers, process.env["SPAIRE_WEBHOOK_SECRET"] ?? "");
 
     // Process the event
 
@@ -182,63 +182,63 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req: Request, r
 * [list](docs/sdks/customermeters/README.md#list) - List Customer Meters
 * [get](docs/sdks/customermeters/README.md#get) - Get Customer Meter
 
-### [CustomerPortal.BenefitGrants](docs/sdks/polarbenefitgrants/README.md)
+### [CustomerPortal.BenefitGrants](docs/sdks/spairebenefitgrants/README.md)
 
-* [list](docs/sdks/polarbenefitgrants/README.md#list) - List Benefit Grants
-* [get](docs/sdks/polarbenefitgrants/README.md#get) - Get Benefit Grant
-* [update](docs/sdks/polarbenefitgrants/README.md#update) - Update Benefit Grant
+* [list](docs/sdks/spairebenefitgrants/README.md#list) - List Benefit Grants
+* [get](docs/sdks/spairebenefitgrants/README.md#get) - Get Benefit Grant
+* [update](docs/sdks/spairebenefitgrants/README.md#update) - Update Benefit Grant
 
-### [CustomerPortal.CustomerMeters](docs/sdks/polarcustomermeters/README.md)
+### [CustomerPortal.CustomerMeters](docs/sdks/spairecustomermeters/README.md)
 
-* [list](docs/sdks/polarcustomermeters/README.md#list) - List Meters
-* [get](docs/sdks/polarcustomermeters/README.md#get) - Get Customer Meter
+* [list](docs/sdks/spairecustomermeters/README.md#list) - List Meters
+* [get](docs/sdks/spairecustomermeters/README.md#get) - Get Customer Meter
 
 ### [CustomerPortal.CustomerSession](docs/sdks/customersession/README.md)
 
 * [introspect](docs/sdks/customersession/README.md#introspect) - Introspect Customer Session
 * [getAuthenticatedUser](docs/sdks/customersession/README.md#getauthenticateduser) - Get Authenticated Portal User
 
-### [CustomerPortal.Customers](docs/sdks/polarcustomers/README.md)
+### [CustomerPortal.Customers](docs/sdks/spairecustomers/README.md)
 
-* [get](docs/sdks/polarcustomers/README.md#get) - Get Customer
-* [update](docs/sdks/polarcustomers/README.md#update) - Update Customer
-* [listPaymentMethods](docs/sdks/polarcustomers/README.md#listpaymentmethods) - List Customer Payment Methods
-* [addPaymentMethod](docs/sdks/polarcustomers/README.md#addpaymentmethod) - Add Customer Payment Method
-* [confirmPaymentMethod](docs/sdks/polarcustomers/README.md#confirmpaymentmethod) - Confirm Customer Payment Method
-* [deletePaymentMethod](docs/sdks/polarcustomers/README.md#deletepaymentmethod) - Delete Customer Payment Method
+* [get](docs/sdks/spairecustomers/README.md#get) - Get Customer
+* [update](docs/sdks/spairecustomers/README.md#update) - Update Customer
+* [listPaymentMethods](docs/sdks/spairecustomers/README.md#listpaymentmethods) - List Customer Payment Methods
+* [addPaymentMethod](docs/sdks/spairecustomers/README.md#addpaymentmethod) - Add Customer Payment Method
+* [confirmPaymentMethod](docs/sdks/spairecustomers/README.md#confirmpaymentmethod) - Confirm Customer Payment Method
+* [deletePaymentMethod](docs/sdks/spairecustomers/README.md#deletepaymentmethod) - Delete Customer Payment Method
 
 ### [CustomerPortal.Downloadables](docs/sdks/downloadables/README.md)
 
 * [list](docs/sdks/downloadables/README.md#list) - List Downloadables
 
-### [CustomerPortal.LicenseKeys](docs/sdks/polarlicensekeys/README.md)
+### [CustomerPortal.LicenseKeys](docs/sdks/spairelicensekeys/README.md)
 
-* [list](docs/sdks/polarlicensekeys/README.md#list) - List License Keys
-* [get](docs/sdks/polarlicensekeys/README.md#get) - Get License Key
-* [validate](docs/sdks/polarlicensekeys/README.md#validate) - Validate License Key
-* [activate](docs/sdks/polarlicensekeys/README.md#activate) - Activate License Key
-* [deactivate](docs/sdks/polarlicensekeys/README.md#deactivate) - Deactivate License Key
+* [list](docs/sdks/spairelicensekeys/README.md#list) - List License Keys
+* [get](docs/sdks/spairelicensekeys/README.md#get) - Get License Key
+* [validate](docs/sdks/spairelicensekeys/README.md#validate) - Validate License Key
+* [activate](docs/sdks/spairelicensekeys/README.md#activate) - Activate License Key
+* [deactivate](docs/sdks/spairelicensekeys/README.md#deactivate) - Deactivate License Key
 
-### [CustomerPortal.Members](docs/sdks/polarmembers/README.md)
+### [CustomerPortal.Members](docs/sdks/spairemembers/README.md)
 
-* [listMembers](docs/sdks/polarmembers/README.md#listmembers) - List Members
-* [addMember](docs/sdks/polarmembers/README.md#addmember) - Add Member
-* [removeMember](docs/sdks/polarmembers/README.md#removemember) - Remove Member
-* [updateMember](docs/sdks/polarmembers/README.md#updatemember) - Update Member
+* [listMembers](docs/sdks/spairemembers/README.md#listmembers) - List Members
+* [addMember](docs/sdks/spairemembers/README.md#addmember) - Add Member
+* [removeMember](docs/sdks/spairemembers/README.md#removemember) - Remove Member
+* [updateMember](docs/sdks/spairemembers/README.md#updatemember) - Update Member
 
-### [CustomerPortal.Orders](docs/sdks/polarorders/README.md)
+### [CustomerPortal.Orders](docs/sdks/spaireorders/README.md)
 
-* [list](docs/sdks/polarorders/README.md#list) - List Orders
-* [get](docs/sdks/polarorders/README.md#get) - Get Order
-* [update](docs/sdks/polarorders/README.md#update) - Update Order
-* [invoice](docs/sdks/polarorders/README.md#invoice) - Get Order Invoice
-* [generateInvoice](docs/sdks/polarorders/README.md#generateinvoice) - Generate Order Invoice
-* [getPaymentStatus](docs/sdks/polarorders/README.md#getpaymentstatus) - Get Order Payment Status
-* [confirmRetryPayment](docs/sdks/polarorders/README.md#confirmretrypayment) - Confirm Retry Payment
+* [list](docs/sdks/spaireorders/README.md#list) - List Orders
+* [get](docs/sdks/spaireorders/README.md#get) - Get Order
+* [update](docs/sdks/spaireorders/README.md#update) - Update Order
+* [invoice](docs/sdks/spaireorders/README.md#invoice) - Get Order Invoice
+* [generateInvoice](docs/sdks/spaireorders/README.md#generateinvoice) - Generate Order Invoice
+* [getPaymentStatus](docs/sdks/spaireorders/README.md#getpaymentstatus) - Get Order Payment Status
+* [confirmRetryPayment](docs/sdks/spaireorders/README.md#confirmretrypayment) - Confirm Retry Payment
 
-### [CustomerPortal.Organizations](docs/sdks/polarorganizations/README.md)
+### [CustomerPortal.Organizations](docs/sdks/spaireorganizations/README.md)
 
-* [get](docs/sdks/polarorganizations/README.md#get) - Get Organization
+* [get](docs/sdks/spaireorganizations/README.md#get) - Get Organization
 
 ### [CustomerPortal.Seats](docs/sdks/seats/README.md)
 
@@ -248,12 +248,12 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req: Request, r
 * [resendInvitation](docs/sdks/seats/README.md#resendinvitation) - Resend Invitation
 * [listClaimedSubscriptions](docs/sdks/seats/README.md#listclaimedsubscriptions) - List Claimed Subscriptions
 
-### [CustomerPortal.Subscriptions](docs/sdks/polarsubscriptions/README.md)
+### [CustomerPortal.Subscriptions](docs/sdks/spairesubscriptions/README.md)
 
-* [list](docs/sdks/polarsubscriptions/README.md#list) - List Subscriptions
-* [get](docs/sdks/polarsubscriptions/README.md#get) - Get Subscription
-* [cancel](docs/sdks/polarsubscriptions/README.md#cancel) - Cancel Subscription
-* [update](docs/sdks/polarsubscriptions/README.md#update) - Update Subscription
+* [list](docs/sdks/spairesubscriptions/README.md#list) - List Subscriptions
+* [get](docs/sdks/spairesubscriptions/README.md#get) - Get Subscription
+* [cancel](docs/sdks/spairesubscriptions/README.md#cancel) - Cancel Subscription
+* [update](docs/sdks/spairesubscriptions/README.md#update) - Update Subscription
 
 ### [CustomerPortal.Wallets](docs/sdks/wallets/README.md)
 
@@ -470,46 +470,46 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`checkoutsUpdate`](docs/sdks/checkouts/README.md#update) - Update Checkout Session
 - [`customerMetersGet`](docs/sdks/customermeters/README.md#get) - Get Customer Meter
 - [`customerMetersList`](docs/sdks/customermeters/README.md#list) - List Customer Meters
-- [`customerPortalBenefitGrantsGet`](docs/sdks/polarbenefitgrants/README.md#get) - Get Benefit Grant
-- [`customerPortalBenefitGrantsList`](docs/sdks/polarbenefitgrants/README.md#list) - List Benefit Grants
-- [`customerPortalBenefitGrantsUpdate`](docs/sdks/polarbenefitgrants/README.md#update) - Update Benefit Grant
-- [`customerPortalCustomerMetersGet`](docs/sdks/polarcustomermeters/README.md#get) - Get Customer Meter
-- [`customerPortalCustomerMetersList`](docs/sdks/polarcustomermeters/README.md#list) - List Meters
-- [`customerPortalCustomersAddPaymentMethod`](docs/sdks/polarcustomers/README.md#addpaymentmethod) - Add Customer Payment Method
-- [`customerPortalCustomersConfirmPaymentMethod`](docs/sdks/polarcustomers/README.md#confirmpaymentmethod) - Confirm Customer Payment Method
-- [`customerPortalCustomersDeletePaymentMethod`](docs/sdks/polarcustomers/README.md#deletepaymentmethod) - Delete Customer Payment Method
+- [`customerPortalBenefitGrantsGet`](docs/sdks/spairebenefitgrants/README.md#get) - Get Benefit Grant
+- [`customerPortalBenefitGrantsList`](docs/sdks/spairebenefitgrants/README.md#list) - List Benefit Grants
+- [`customerPortalBenefitGrantsUpdate`](docs/sdks/spairebenefitgrants/README.md#update) - Update Benefit Grant
+- [`customerPortalCustomerMetersGet`](docs/sdks/spairecustomermeters/README.md#get) - Get Customer Meter
+- [`customerPortalCustomerMetersList`](docs/sdks/spairecustomermeters/README.md#list) - List Meters
+- [`customerPortalCustomersAddPaymentMethod`](docs/sdks/spairecustomers/README.md#addpaymentmethod) - Add Customer Payment Method
+- [`customerPortalCustomersConfirmPaymentMethod`](docs/sdks/spairecustomers/README.md#confirmpaymentmethod) - Confirm Customer Payment Method
+- [`customerPortalCustomersDeletePaymentMethod`](docs/sdks/spairecustomers/README.md#deletepaymentmethod) - Delete Customer Payment Method
 - [`customerPortalCustomerSessionGetAuthenticatedUser`](docs/sdks/customersession/README.md#getauthenticateduser) - Get Authenticated Portal User
 - [`customerPortalCustomerSessionIntrospect`](docs/sdks/customersession/README.md#introspect) - Introspect Customer Session
-- [`customerPortalCustomersGet`](docs/sdks/polarcustomers/README.md#get) - Get Customer
-- [`customerPortalCustomersListPaymentMethods`](docs/sdks/polarcustomers/README.md#listpaymentmethods) - List Customer Payment Methods
-- [`customerPortalCustomersUpdate`](docs/sdks/polarcustomers/README.md#update) - Update Customer
+- [`customerPortalCustomersGet`](docs/sdks/spairecustomers/README.md#get) - Get Customer
+- [`customerPortalCustomersListPaymentMethods`](docs/sdks/spairecustomers/README.md#listpaymentmethods) - List Customer Payment Methods
+- [`customerPortalCustomersUpdate`](docs/sdks/spairecustomers/README.md#update) - Update Customer
 - [`customerPortalDownloadablesList`](docs/sdks/downloadables/README.md#list) - List Downloadables
-- [`customerPortalLicenseKeysActivate`](docs/sdks/polarlicensekeys/README.md#activate) - Activate License Key
-- [`customerPortalLicenseKeysDeactivate`](docs/sdks/polarlicensekeys/README.md#deactivate) - Deactivate License Key
-- [`customerPortalLicenseKeysGet`](docs/sdks/polarlicensekeys/README.md#get) - Get License Key
-- [`customerPortalLicenseKeysList`](docs/sdks/polarlicensekeys/README.md#list) - List License Keys
-- [`customerPortalLicenseKeysValidate`](docs/sdks/polarlicensekeys/README.md#validate) - Validate License Key
-- [`customerPortalMembersAddMember`](docs/sdks/polarmembers/README.md#addmember) - Add Member
-- [`customerPortalMembersListMembers`](docs/sdks/polarmembers/README.md#listmembers) - List Members
-- [`customerPortalMembersRemoveMember`](docs/sdks/polarmembers/README.md#removemember) - Remove Member
-- [`customerPortalMembersUpdateMember`](docs/sdks/polarmembers/README.md#updatemember) - Update Member
-- [`customerPortalOrdersConfirmRetryPayment`](docs/sdks/polarorders/README.md#confirmretrypayment) - Confirm Retry Payment
-- [`customerPortalOrdersGenerateInvoice`](docs/sdks/polarorders/README.md#generateinvoice) - Generate Order Invoice
-- [`customerPortalOrdersGet`](docs/sdks/polarorders/README.md#get) - Get Order
-- [`customerPortalOrdersGetPaymentStatus`](docs/sdks/polarorders/README.md#getpaymentstatus) - Get Order Payment Status
-- [`customerPortalOrdersInvoice`](docs/sdks/polarorders/README.md#invoice) - Get Order Invoice
-- [`customerPortalOrdersList`](docs/sdks/polarorders/README.md#list) - List Orders
-- [`customerPortalOrdersUpdate`](docs/sdks/polarorders/README.md#update) - Update Order
-- [`customerPortalOrganizationsGet`](docs/sdks/polarorganizations/README.md#get) - Get Organization
+- [`customerPortalLicenseKeysActivate`](docs/sdks/spairelicensekeys/README.md#activate) - Activate License Key
+- [`customerPortalLicenseKeysDeactivate`](docs/sdks/spairelicensekeys/README.md#deactivate) - Deactivate License Key
+- [`customerPortalLicenseKeysGet`](docs/sdks/spairelicensekeys/README.md#get) - Get License Key
+- [`customerPortalLicenseKeysList`](docs/sdks/spairelicensekeys/README.md#list) - List License Keys
+- [`customerPortalLicenseKeysValidate`](docs/sdks/spairelicensekeys/README.md#validate) - Validate License Key
+- [`customerPortalMembersAddMember`](docs/sdks/spairemembers/README.md#addmember) - Add Member
+- [`customerPortalMembersListMembers`](docs/sdks/spairemembers/README.md#listmembers) - List Members
+- [`customerPortalMembersRemoveMember`](docs/sdks/spairemembers/README.md#removemember) - Remove Member
+- [`customerPortalMembersUpdateMember`](docs/sdks/spairemembers/README.md#updatemember) - Update Member
+- [`customerPortalOrdersConfirmRetryPayment`](docs/sdks/spaireorders/README.md#confirmretrypayment) - Confirm Retry Payment
+- [`customerPortalOrdersGenerateInvoice`](docs/sdks/spaireorders/README.md#generateinvoice) - Generate Order Invoice
+- [`customerPortalOrdersGet`](docs/sdks/spaireorders/README.md#get) - Get Order
+- [`customerPortalOrdersGetPaymentStatus`](docs/sdks/spaireorders/README.md#getpaymentstatus) - Get Order Payment Status
+- [`customerPortalOrdersInvoice`](docs/sdks/spaireorders/README.md#invoice) - Get Order Invoice
+- [`customerPortalOrdersList`](docs/sdks/spaireorders/README.md#list) - List Orders
+- [`customerPortalOrdersUpdate`](docs/sdks/spaireorders/README.md#update) - Update Order
+- [`customerPortalOrganizationsGet`](docs/sdks/spaireorganizations/README.md#get) - Get Organization
 - [`customerPortalSeatsAssignSeat`](docs/sdks/seats/README.md#assignseat) - Assign Seat
 - [`customerPortalSeatsListClaimedSubscriptions`](docs/sdks/seats/README.md#listclaimedsubscriptions) - List Claimed Subscriptions
 - [`customerPortalSeatsListSeats`](docs/sdks/seats/README.md#listseats) - List Seats
 - [`customerPortalSeatsResendInvitation`](docs/sdks/seats/README.md#resendinvitation) - Resend Invitation
 - [`customerPortalSeatsRevokeSeat`](docs/sdks/seats/README.md#revokeseat) - Revoke Seat
-- [`customerPortalSubscriptionsCancel`](docs/sdks/polarsubscriptions/README.md#cancel) - Cancel Subscription
-- [`customerPortalSubscriptionsGet`](docs/sdks/polarsubscriptions/README.md#get) - Get Subscription
-- [`customerPortalSubscriptionsList`](docs/sdks/polarsubscriptions/README.md#list) - List Subscriptions
-- [`customerPortalSubscriptionsUpdate`](docs/sdks/polarsubscriptions/README.md#update) - Update Subscription
+- [`customerPortalSubscriptionsCancel`](docs/sdks/spairesubscriptions/README.md#cancel) - Cancel Subscription
+- [`customerPortalSubscriptionsGet`](docs/sdks/spairesubscriptions/README.md#get) - Get Subscription
+- [`customerPortalSubscriptionsList`](docs/sdks/spairesubscriptions/README.md#list) - List Subscriptions
+- [`customerPortalSubscriptionsUpdate`](docs/sdks/spairesubscriptions/README.md#update) - Update Subscription
 - [`customerPortalWalletsGet`](docs/sdks/wallets/README.md#get) - Get Wallet
 - [`customerPortalWalletsList`](docs/sdks/wallets/README.md#list) - List Wallets
 - [`customersCreate`](docs/sdks/customers/README.md#create) - Create Customer
@@ -636,14 +636,14 @@ syntax.
 Here's an example of one such pagination call:
 
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizations.list({});
+  const result = await spaire.organizations.list({});
 
   for await (const page of result) {
     console.log(page);
@@ -662,14 +662,14 @@ Some of the endpoints in this SDK support retries.  If you use the SDK without a
 
 To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizations.list({}, {
+  const result = await spaire.organizations.list({}, {
     retries: {
       strategy: "backoff",
       backoff: {
@@ -693,9 +693,9 @@ run();
 
 If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
+const spaire = new Spaire({
   retryConfig: {
     strategy: "backoff",
     backoff: {
@@ -706,11 +706,11 @@ const polar = new Polar({
     },
     retryConnectionErrors: false,
   },
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizations.list({});
+  const result = await spaire.organizations.list({});
 
   for await (const page of result) {
     console.log(page);
@@ -725,7 +725,7 @@ run();
 <!-- Start Error Handling [errors] -->
 ## Error Handling
 
-[`PolarError`](./src/models/errors/polarerror.ts) is the base class for all HTTP error responses. It has the following properties:
+[`SpaireError`](./src/models/errors/spaireerror.ts) is the base class for all HTTP error responses. It has the following properties:
 
 | Property            | Type       | Description                                                                             |
 | ------------------- | ---------- | --------------------------------------------------------------------------------------- |
@@ -738,24 +738,24 @@ run();
 
 ### Example
 ```typescript
-import { Polar } from "@polar-sh/sdk";
-import { HTTPValidationError } from "@polar-sh/sdk/models/errors/httpvalidationerror.js";
-import { PolarError } from "@polar-sh/sdk/models/errors/polarerror.js.js";
+import { Spaire } from "@spaire/sdk";
+import { HTTPValidationError } from "@spaire/sdk/models/errors/httpvalidationerror.js";
+import { SpaireError } from "@spaire/sdk/models/errors/spaireerror.js.js";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
   try {
-    const result = await polar.organizations.list({});
+    const result = await spaire.organizations.list({});
 
     for await (const page of result) {
       console.log(page);
     }
   } catch (error) {
     // The base class for HTTP error responses
-    if (error instanceof PolarError) {
+    if (error instanceof SpaireError) {
       console.log(error.message);
       console.log(error.statusCode);
       console.log(error.body);
@@ -775,7 +775,7 @@ run();
 
 ### Error Classes
 **Primary errors:**
-* [`PolarError`](./src/models/errors/polarerror.ts): The base class for HTTP error responses.
+* [`SpaireError`](./src/models/errors/spaireerror.ts): The base class for HTTP error responses.
   * [`HTTPValidationError`](./src/models/errors/httpvalidationerror.ts): Validation Error. Status code `422`. *
 
 <details><summary>Less common errors (24)</summary>
@@ -790,7 +790,7 @@ run();
 * [`UnexpectedClientError`](./src/models/errors/httpclienterrors.ts): Unrecognised or unexpected error.
 
 
-**Inherit from [`PolarError`](./src/models/errors/polarerror.ts)**:
+**Inherit from [`SpaireError`](./src/models/errors/spaireerror.ts)**:
 * [`ResourceNotFound`](./src/models/errors/resourcenotfound.ts): Status code `404`. Applicable to 82 of 170 methods.*
 * [`NotPermitted`](./src/models/errors/notpermitted.ts): Status code `403`. Applicable to 10 of 170 methods.*
 * [`Unauthorized`](./src/models/errors/unauthorized.ts): Not authorized to manage license key. Status code `401`. Applicable to 5 of 170 methods.*
@@ -825,21 +825,21 @@ You can override the default server globally by passing a server name to the `se
 
 | Name         | Server                         | Description            |
 | ------------ | ------------------------------ | ---------------------- |
-| `production` | `https://api.polar.sh`         | Production environment |
-| `sandbox`    | `https://sandbox-api.polar.sh` | Sandbox environment    |
+| `production` | `https://api.spaire.sh`         | Production environment |
+| `sandbox`    | `https://sandbox-api.spaire.sh` | Sandbox environment    |
 
 #### Example
 
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
+const spaire = new Spaire({
   server: "production",
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizations.list({});
+  const result = await spaire.organizations.list({});
 
   for await (const page of result) {
     console.log(page);
@@ -854,15 +854,15 @@ run();
 
 The default server can also be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  serverURL: "https://api.polar.sh",
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  serverURL: "https://api.spaire.sh",
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizations.list({});
+  const result = await spaire.organizations.list({});
 
   for await (const page of result) {
     console.log(page);
@@ -893,9 +893,9 @@ The following example shows how to:
 - use the `"requestError"` hook to log errors
 
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 import { ProxyAgent } from "undici";
-import { HTTPClient } from "@polar-sh/sdk/lib/http";
+import { HTTPClient } from "@spaire/sdk/lib/http";
 
 const dispatcher = new ProxyAgent("http://proxy.example.com:8080");
 
@@ -923,7 +923,7 @@ httpClient.addHook("requestError", (error, request) => {
   console.groupEnd();
 });
 
-const sdk = new Polar({ httpClient: httpClient });
+const sdk = new Spaire({ httpClient: httpClient });
 ```
 <!-- End Custom HTTP Client [http-client] -->
 
@@ -936,18 +936,18 @@ This SDK supports the following security scheme globally:
 
 | Name          | Type | Scheme      | Environment Variable |
 | ------------- | ---- | ----------- | -------------------- |
-| `accessToken` | http | HTTP Bearer | `POLAR_ACCESS_TOKEN` |
+| `accessToken` | http | HTTP Bearer | `SPAIRE_ACCESS_TOKEN` |
 
 To authenticate with the API the `accessToken` parameter must be set when initializing the SDK client instance. For example:
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.organizations.list({});
+  const result = await spaire.organizations.list({});
 
   for await (const page of result) {
     console.log(page);
@@ -962,12 +962,12 @@ run();
 
 Some operations in this SDK require the security scheme to be specified at the request level. For example:
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar();
+const spaire = new Spaire();
 
 async function run() {
-  const result = await polar.customerPortal.benefitGrants.list({}, {});
+  const result = await spaire.customerPortal.benefitGrants.list({}, {});
 
   for await (const page of result) {
     console.log(page);
@@ -990,12 +990,12 @@ You can pass a logger that matches `console`'s interface as an SDK option.
 > Beware that debug logging will reveal secrets, like API tokens in headers, in log messages printed to a console or files. It's recommended to use this feature only during local development and not in production.
 
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const sdk = new Polar({ debugLogger: console });
+const sdk = new Spaire({ debugLogger: console });
 ```
 
-You can also enable a default debug logger by setting an environment variable `POLAR_DEBUG` to true.
+You can also enable a default debug logger by setting an environment variable `SPAIRE_DEBUG` to true.
 <!-- End Debugging [debug] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
@@ -1013,4 +1013,4 @@ looking for the latest version.
 While we value open-source contributions to this SDK, this library is generated programmatically. Any manual changes added to internal files will be overwritten on the next generation. 
 We look forward to hearing your feedback. Feel free to open a PR or an issue with a proof of concept and we'll do our best to include it in a future release. 
 
-### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=@polar-sh/sdk&utm_campaign=typescript)
+### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=@spaire/sdk&utm_campaign=typescript)

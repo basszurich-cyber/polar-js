@@ -30,7 +30,7 @@ import { CustomerPortalCustomersUpdateSecurity } from "../models/operations/cust
 import { unwrapAsync } from "../types/fp.js";
 import { PageIterator, unwrapResultIterator } from "../types/operations.js";
 
-export class PolarCustomers extends ClientSDK {
+export class SpaireCustomers extends ClientSDK {
   /**
    * Get Customer
    *

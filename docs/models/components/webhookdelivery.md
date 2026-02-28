@@ -5,7 +5,7 @@ A webhook delivery for a webhook event.
 ## Example Usage
 
 ```typescript
-import { WebhookDelivery } from "@polar-sh/sdk/models/components/webhookdelivery.js";
+import { WebhookDelivery } from "@spaire/sdk/models/components/webhookdelivery.js";
 
 let value: WebhookDelivery = {
   createdAt: new Date("2026-01-19T14:34:17.866Z"),

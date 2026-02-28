@@ -5,7 +5,7 @@ Schema to create a seat-based price with volume-based tiers.
 ## Example Usage
 
 ```typescript
-import { ProductPriceSeatBasedCreate } from "@polar-sh/sdk/models/components/productpriceseatbasedcreate.js";
+import { ProductPriceSeatBasedCreate } from "@spaire/sdk/models/components/productpriceseatbasedcreate.js";
 
 let value: ProductPriceSeatBasedCreate = {
   amountType: "seat_based",

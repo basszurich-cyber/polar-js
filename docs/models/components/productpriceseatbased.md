@@ -5,7 +5,7 @@ A seat-based price for a product.
 ## Example Usage
 
 ```typescript
-import { ProductPriceSeatBased } from "@polar-sh/sdk/models/components/productpriceseatbased.js";
+import { ProductPriceSeatBased } from "@spaire/sdk/models/components/productpriceseatbased.js";
 
 let value: ProductPriceSeatBased = {
   createdAt: new Date("2024-09-17T05:03:38.369Z"),

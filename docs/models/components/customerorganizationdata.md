@@ -5,7 +5,7 @@ Schema of an organization and related data for customer portal.
 ## Example Usage
 
 ```typescript
-import { CustomerOrganizationData } from "@polar-sh/sdk/models/components/customerorganizationdata.js";
+import { CustomerOrganizationData } from "@spaire/sdk/models/components/customerorganizationdata.js";
 
 let value: CustomerOrganizationData = {
   organization: {

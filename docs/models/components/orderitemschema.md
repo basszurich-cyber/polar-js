@@ -5,7 +5,7 @@ An order line item.
 ## Example Usage
 
 ```typescript
-import { OrderItemSchema } from "@polar-sh/sdk/models/components/orderitemschema.js";
+import { OrderItemSchema } from "@spaire/sdk/models/components/orderitemschema.js";
 
 let value: OrderItemSchema = {
   createdAt: new Date("2025-07-10T10:44:08.434Z"),

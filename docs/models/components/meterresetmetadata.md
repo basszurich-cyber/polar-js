@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { MeterResetMetadata } from "@polar-sh/sdk/models/components/meterresetmetadata.js";
+import { MeterResetMetadata } from "@spaire/sdk/models/components/meterresetmetadata.js";
 
 let value: MeterResetMetadata = {
   meterId: "<id>",

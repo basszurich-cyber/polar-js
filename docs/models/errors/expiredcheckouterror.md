@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ExpiredCheckoutError } from "@polar-sh/sdk/models/errors/expiredcheckouterror.js";
+import { ExpiredCheckoutError } from "@spaire/sdk/models/errors/expiredcheckouterror.js";
 
 // No examples available for this model
 ```

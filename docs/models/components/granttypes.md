@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GrantTypes } from "@polar-sh/sdk/models/components/oauth2clientconfiguration.js";
+import { GrantTypes } from "@spaire/sdk/models/components/oauth2clientconfiguration.js";
 
 let value: GrantTypes = "refresh_token";
 ```

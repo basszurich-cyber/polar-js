@@ -6,7 +6,7 @@ in case we prevented a dispute by issuing a refund.
 ## Example Usage
 
 ```typescript
-import { RefundDispute } from "@polar-sh/sdk/models/components/refunddispute.js";
+import { RefundDispute } from "@spaire/sdk/models/components/refunddispute.js";
 
 let value: RefundDispute = {
   createdAt: new Date("2026-09-28T07:01:00.127Z"),

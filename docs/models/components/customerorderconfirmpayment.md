@@ -5,7 +5,7 @@ Schema to confirm a retry payment using either a saved payment method or a new c
 ## Example Usage
 
 ```typescript
-import { CustomerOrderConfirmPayment } from "@polar-sh/sdk/models/components/customerorderconfirmpayment.js";
+import { CustomerOrderConfirmPayment } from "@spaire/sdk/models/components/customerorderconfirmpayment.js";
 
 let value: CustomerOrderConfirmPayment = {};
 ```

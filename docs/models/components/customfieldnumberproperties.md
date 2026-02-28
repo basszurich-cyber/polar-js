@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomFieldNumberProperties } from "@polar-sh/sdk/models/components/customfieldnumberproperties.js";
+import { CustomFieldNumberProperties } from "@spaire/sdk/models/components/customfieldnumberproperties.js";
 
 let value: CustomFieldNumberProperties = {};
 ```

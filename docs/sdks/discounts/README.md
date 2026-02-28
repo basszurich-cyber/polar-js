@@ -20,14 +20,14 @@ List discounts.
 
 <!-- UsageSnippet language="typescript" operationID="discounts:list" method="get" path="/v1/discounts/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.discounts.list({
+  const result = await spaire.discounts.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -44,17 +44,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { discountsList } from "@polar-sh/sdk/funcs/discountsList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { discountsList } from "@spaire/sdk/funcs/discountsList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await discountsList(polar, {
+  const res = await discountsList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -100,14 +100,14 @@ Create a discount.
 
 <!-- UsageSnippet language="typescript" operationID="discounts:create" method="post" path="/v1/discounts/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.discounts.create({
+  const result = await spaire.discounts.create({
     duration: "once",
     type: "fixed",
     basisPoints: 449604,
@@ -126,17 +126,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { discountsCreate } from "@polar-sh/sdk/funcs/discountsCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { discountsCreate } from "@spaire/sdk/funcs/discountsCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await discountsCreate(polar, {
+  const res = await discountsCreate(spaire, {
     duration: "once",
     type: "fixed",
     basisPoints: 449604,
@@ -184,14 +184,14 @@ Get a discount by ID.
 
 <!-- UsageSnippet language="typescript" operationID="discounts:get" method="get" path="/v1/discounts/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.discounts.get({
+  const result = await spaire.discounts.get({
     id: "<value>",
   });
 
@@ -206,17 +206,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { discountsGet } from "@polar-sh/sdk/funcs/discountsGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { discountsGet } from "@spaire/sdk/funcs/discountsGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await discountsGet(polar, {
+  const res = await discountsGet(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -261,14 +261,14 @@ Delete a discount.
 
 <!-- UsageSnippet language="typescript" operationID="discounts:delete" method="delete" path="/v1/discounts/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  await polar.discounts.delete({
+  await spaire.discounts.delete({
     id: "<value>",
   });
 
@@ -283,17 +283,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { discountsDelete } from "@polar-sh/sdk/funcs/discountsDelete.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { discountsDelete } from "@spaire/sdk/funcs/discountsDelete.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await discountsDelete(polar, {
+  const res = await discountsDelete(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -338,14 +338,14 @@ Update a discount.
 
 <!-- UsageSnippet language="typescript" operationID="discounts:update" method="patch" path="/v1/discounts/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.discounts.update({
+  const result = await spaire.discounts.update({
     id: "<value>",
     discountUpdate: {},
   });
@@ -361,17 +361,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { discountsUpdate } from "@polar-sh/sdk/funcs/discountsUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { discountsUpdate } from "@spaire/sdk/funcs/discountsUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await discountsUpdate(polar, {
+  const res = await discountsUpdate(spaire, {
     id: "<value>",
     discountUpdate: {},
   });

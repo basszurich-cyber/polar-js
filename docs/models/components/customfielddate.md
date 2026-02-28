@@ -5,7 +5,7 @@ Schema for a custom field of type date.
 ## Example Usage
 
 ```typescript
-import { CustomFieldDate } from "@polar-sh/sdk/models/components/customfielddate.js";
+import { CustomFieldDate } from "@spaire/sdk/models/components/customfielddate.js";
 
 let value: CustomFieldDate = {
   createdAt: new Date("2024-02-13T09:39:00.718Z"),

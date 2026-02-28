@@ -5,7 +5,7 @@ A member session that can be used to authenticate as a member in the customer po
 ## Example Usage
 
 ```typescript
-import { MemberSession } from "@polar-sh/sdk/models/components/membersession.js";
+import { MemberSession } from "@spaire/sdk/models/components/membersession.js";
 
 let value: MemberSession = {
   createdAt: new Date("2026-02-26T15:52:36.774Z"),

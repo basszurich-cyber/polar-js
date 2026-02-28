@@ -9,7 +9,7 @@ A customer along with additional state information:
 ## Example Usage
 
 ```typescript
-import { CustomerState } from "@polar-sh/sdk/models/components/customerstate.js";
+import { CustomerState } from "@spaire/sdk/models/components/customerstate.js";
 
 let value: CustomerState = {
   id: "992fae2a-2a17-4b7a-8d9e-e287cf90131b",

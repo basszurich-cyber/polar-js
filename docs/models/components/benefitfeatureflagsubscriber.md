@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BenefitFeatureFlagSubscriber } from "@polar-sh/sdk/models/components/benefitfeatureflagsubscriber.js";
+import { BenefitFeatureFlagSubscriber } from "@spaire/sdk/models/components/benefitfeatureflagsubscriber.js";
 
 let value: BenefitFeatureFlagSubscriber = {
   id: "<value>",

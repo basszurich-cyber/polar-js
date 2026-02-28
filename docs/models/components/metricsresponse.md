@@ -5,7 +5,7 @@ Metrics response schema.
 ## Example Usage
 
 ```typescript
-import { MetricsResponse } from "@polar-sh/sdk/models/components/metricsresponse.js";
+import { MetricsResponse } from "@spaire/sdk/models/components/metricsresponse.js";
 
 let value: MetricsResponse = {
   periods: [],

@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
@@ -26,7 +26,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import {
   ResourceNotFound,
   ResourceNotFound$inboundSchema,
@@ -48,7 +48,7 @@ import { Result } from "../types/fp.js";
  * Get a wallet by ID for the authenticated customer.
  */
 export function customerPortalWalletsGet(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalWalletsGetSecurity,
   request: CustomerPortalWalletsGetRequest,
   options?: RequestOptions,
@@ -57,7 +57,7 @@ export function customerPortalWalletsGet(
     CustomerWallet,
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -76,7 +76,7 @@ export function customerPortalWalletsGet(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   security: CustomerPortalWalletsGetSecurity,
   request: CustomerPortalWalletsGetRequest,
   options?: RequestOptions,
@@ -86,7 +86,7 @@ async function $do(
       CustomerWallet,
       | ResourceNotFound
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -188,7 +188,7 @@ async function $do(
     CustomerWallet,
     | ResourceNotFound
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError

@@ -7,7 +7,7 @@ Sent when a organization is updated.
 ## Example Usage
 
 ```typescript
-import { WebhookOrganizationUpdatedPayload } from "@polar-sh/sdk/models/components/webhookorganizationupdatedpayload.js";
+import { WebhookOrganizationUpdatedPayload } from "@spaire/sdk/models/components/webhookorganizationupdatedpayload.js";
 
 let value: WebhookOrganizationUpdatedPayload = {
   type: "organization.updated",

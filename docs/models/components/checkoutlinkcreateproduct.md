@@ -7,7 +7,7 @@ Schema to create a new checkout link from a a single product.
 ## Example Usage
 
 ```typescript
-import { CheckoutLinkCreateProduct } from "@polar-sh/sdk/models/components/checkoutlinkcreateproduct.js";
+import { CheckoutLinkCreateProduct } from "@spaire/sdk/models/components/checkoutlinkcreateproduct.js";
 
 let value: CheckoutLinkCreateProduct = {
   paymentProcessor: "stripe",

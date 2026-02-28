@@ -5,7 +5,7 @@ Information about the authenticated portal user.
 ## Example Usage
 
 ```typescript
-import { PortalAuthenticatedUser } from "@polar-sh/sdk/models/components/portalauthenticateduser.js";
+import { PortalAuthenticatedUser } from "@spaire/sdk/models/components/portalauthenticateduser.js";
 
 let value: PortalAuthenticatedUser = {
   type: "<value>",

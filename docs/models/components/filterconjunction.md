@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { FilterConjunction } from "@polar-sh/sdk/models/components/filterconjunction.js";
+import { FilterConjunction } from "@spaire/sdk/models/components/filterconjunction.js";
 
 let value: FilterConjunction = "and";
 ```

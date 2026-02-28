@@ -5,7 +5,7 @@ Confirm a checkout session using a Stripe confirmation token.
 ## Example Usage
 
 ```typescript
-import { CheckoutConfirmStripe } from "@polar-sh/sdk/models/components/checkoutconfirmstripe.js";
+import { CheckoutConfirmStripe } from "@spaire/sdk/models/components/checkoutconfirmstripe.js";
 
 let value: CheckoutConfirmStripe = {
   customerName: "John Doe",

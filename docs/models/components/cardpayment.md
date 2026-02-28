@@ -5,7 +5,7 @@ Schema of a payment with a card payment method.
 ## Example Usage
 
 ```typescript
-import { CardPayment } from "@polar-sh/sdk/models/components/cardpayment.js";
+import { CardPayment } from "@spaire/sdk/models/components/cardpayment.js";
 
 let value: CardPayment = {
   createdAt: new Date("2025-08-19T22:20:52.095Z"),

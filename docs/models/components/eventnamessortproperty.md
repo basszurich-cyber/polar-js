@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { EventNamesSortProperty } from "@polar-sh/sdk/models/components/eventnamessortproperty.js";
+import { EventNamesSortProperty } from "@spaire/sdk/models/components/eventnamessortproperty.js";
 
 let value: EventNamesSortProperty = "-name";
 ```

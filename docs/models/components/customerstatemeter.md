@@ -5,7 +5,7 @@ An active meter for a customer, with latest consumed and credited units.
 ## Example Usage
 
 ```typescript
-import { CustomerStateMeter } from "@polar-sh/sdk/models/components/customerstatemeter.js";
+import { CustomerStateMeter } from "@spaire/sdk/models/components/customerstatemeter.js";
 
 let value: CustomerStateMeter = {
   id: "<value>",

@@ -5,7 +5,7 @@ Schema for creating an owner member during customer creation.
 ## Example Usage
 
 ```typescript
-import { OwnerCreate } from "@polar-sh/sdk/models/components/ownercreate.js";
+import { OwnerCreate } from "@spaire/sdk/models/components/ownercreate.js";
 
 let value: OwnerCreate = {
   email: "member@example.com",

@@ -9,7 +9,7 @@ When you receive this event, the order is fully processed and payment has been r
 ## Example Usage
 
 ```typescript
-import { WebhookOrderPaidPayload } from "@polar-sh/sdk/models/components/webhookorderpaidpayload.js";
+import { WebhookOrderPaidPayload } from "@spaire/sdk/models/components/webhookorderpaidpayload.js";
 
 let value: WebhookOrderPaidPayload = {
   type: "order.paid",

@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { dlv } from "../lib/dlv.js";
 import { encodeFormQuery } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
@@ -23,7 +23,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import {
@@ -50,7 +50,7 @@ import {
  * **Scopes**: `members:read` `members:write`
  */
 export function membersListMembers(
-  client: PolarCore,
+  client: SpaireCore,
   request: MembersListMembersRequest,
   options?: RequestOptions,
 ): APIPromise<
@@ -58,7 +58,7 @@ export function membersListMembers(
     Result<
       MembersListMembersResponse,
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -78,7 +78,7 @@ export function membersListMembers(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   request: MembersListMembersRequest,
   options?: RequestOptions,
 ): Promise<
@@ -87,7 +87,7 @@ async function $do(
       Result<
         MembersListMembersResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError
@@ -179,7 +179,7 @@ async function $do(
   const [result, raw] = await M.match<
     MembersListMembersResponse,
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -208,7 +208,7 @@ async function $do(
       Result<
         MembersListMembersResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CustomerBenefitGrantGitHubRepository } from "@polar-sh/sdk/models/components/customerbenefitgrantgithubrepository.js";
+import { CustomerBenefitGrantGitHubRepository } from "@spaire/sdk/models/components/customerbenefitgrantgithubrepository.js";
 
 let value: CustomerBenefitGrantGitHubRepository = {
   createdAt: new Date("2025-09-05T14:33:30.256Z"),
@@ -63,7 +63,7 @@ let value: CustomerBenefitGrantGitHubRepository = {
       allowCustomerUpdates: true,
     },
     properties: {
-      repositoryOwner: "polarsource",
+      repositoryOwner: "spairesource",
       repositoryName: "private_repo",
     },
   },

@@ -5,7 +5,7 @@ Schema for creating a member session using a member ID.
 ## Example Usage
 
 ```typescript
-import { MemberSessionCreate } from "@polar-sh/sdk/models/components/membersessioncreate.js";
+import { MemberSessionCreate } from "@spaire/sdk/models/components/membersessioncreate.js";
 
 let value: MemberSessionCreate = {
   memberId: "<value>",

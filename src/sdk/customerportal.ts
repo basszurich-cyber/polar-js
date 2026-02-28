@@ -5,31 +5,31 @@
 import { ClientSDK } from "../lib/sdks.js";
 import { CustomerSession } from "./customersession.js";
 import { Downloadables } from "./downloadables.js";
-import { PolarBenefitGrants } from "./polarbenefitgrants.js";
-import { PolarCustomerMeters } from "./polarcustomermeters.js";
-import { PolarCustomers } from "./polarcustomers.js";
-import { PolarLicenseKeys } from "./polarlicensekeys.js";
-import { PolarMembers } from "./polarmembers.js";
-import { PolarOrders } from "./polarorders.js";
-import { PolarOrganizations } from "./polarorganizations.js";
-import { PolarSubscriptions } from "./polarsubscriptions.js";
+import { SpaireBenefitGrants } from "./spairebenefitgrants.js";
+import { SpaireCustomerMeters } from "./spairecustomermeters.js";
+import { SpaireCustomers } from "./spairecustomers.js";
+import { SpaireLicenseKeys } from "./spairelicensekeys.js";
+import { SpaireMembers } from "./spairemembers.js";
+import { SpaireOrders } from "./spaireorders.js";
+import { SpaireOrganizations } from "./spaireorganizations.js";
+import { SpaireSubscriptions } from "./spairesubscriptions.js";
 import { Seats } from "./seats.js";
 import { Wallets } from "./wallets.js";
 
 export class CustomerPortal extends ClientSDK {
-  private _benefitGrants?: PolarBenefitGrants;
-  get benefitGrants(): PolarBenefitGrants {
-    return (this._benefitGrants ??= new PolarBenefitGrants(this._options));
+  private _benefitGrants?: SpaireBenefitGrants;
+  get benefitGrants(): SpaireBenefitGrants {
+    return (this._benefitGrants ??= new SpaireBenefitGrants(this._options));
   }
 
-  private _customers?: PolarCustomers;
-  get customers(): PolarCustomers {
-    return (this._customers ??= new PolarCustomers(this._options));
+  private _customers?: SpaireCustomers;
+  get customers(): SpaireCustomers {
+    return (this._customers ??= new SpaireCustomers(this._options));
   }
 
-  private _customerMeters?: PolarCustomerMeters;
-  get customerMeters(): PolarCustomerMeters {
-    return (this._customerMeters ??= new PolarCustomerMeters(this._options));
+  private _customerMeters?: SpaireCustomerMeters;
+  get customerMeters(): SpaireCustomerMeters {
+    return (this._customerMeters ??= new SpaireCustomerMeters(this._options));
   }
 
   private _seats?: Seats;
@@ -47,29 +47,29 @@ export class CustomerPortal extends ClientSDK {
     return (this._downloadables ??= new Downloadables(this._options));
   }
 
-  private _licenseKeys?: PolarLicenseKeys;
-  get licenseKeys(): PolarLicenseKeys {
-    return (this._licenseKeys ??= new PolarLicenseKeys(this._options));
+  private _licenseKeys?: SpaireLicenseKeys;
+  get licenseKeys(): SpaireLicenseKeys {
+    return (this._licenseKeys ??= new SpaireLicenseKeys(this._options));
   }
 
-  private _members?: PolarMembers;
-  get members(): PolarMembers {
-    return (this._members ??= new PolarMembers(this._options));
+  private _members?: SpaireMembers;
+  get members(): SpaireMembers {
+    return (this._members ??= new SpaireMembers(this._options));
   }
 
-  private _orders?: PolarOrders;
-  get orders(): PolarOrders {
-    return (this._orders ??= new PolarOrders(this._options));
+  private _orders?: SpaireOrders;
+  get orders(): SpaireOrders {
+    return (this._orders ??= new SpaireOrders(this._options));
   }
 
-  private _organizations?: PolarOrganizations;
-  get organizations(): PolarOrganizations {
-    return (this._organizations ??= new PolarOrganizations(this._options));
+  private _organizations?: SpaireOrganizations;
+  get organizations(): SpaireOrganizations {
+    return (this._organizations ??= new SpaireOrganizations(this._options));
   }
 
-  private _subscriptions?: PolarSubscriptions;
-  get subscriptions(): PolarSubscriptions {
-    return (this._subscriptions ??= new PolarSubscriptions(this._options));
+  private _subscriptions?: SpaireSubscriptions;
+  get subscriptions(): SpaireSubscriptions {
+    return (this._subscriptions ??= new SpaireSubscriptions(this._options));
   }
 
   private _wallets?: Wallets;

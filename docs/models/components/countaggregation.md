@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CountAggregation } from "@polar-sh/sdk/models/components/countaggregation.js";
+import { CountAggregation } from "@spaire/sdk/models/components/countaggregation.js";
 
 let value: CountAggregation = {
   func: "count",

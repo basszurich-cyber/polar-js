@@ -21,14 +21,14 @@ List subscriptions.
 
 <!-- UsageSnippet language="typescript" operationID="subscriptions:list" method="get" path="/v1/subscriptions/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.subscriptions.list({
+  const result = await spaire.subscriptions.list({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -45,17 +45,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { subscriptionsList } from "@polar-sh/sdk/funcs/subscriptionsList.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { subscriptionsList } from "@spaire/sdk/funcs/subscriptionsList.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await subscriptionsList(polar, {
+  const res = await subscriptionsList(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -106,14 +106,14 @@ No initial order will be created and no confirmation email will be sent.
 
 <!-- UsageSnippet language="typescript" operationID="subscriptions:create" method="post" path="/v1/subscriptions/" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.subscriptions.create({
+  const result = await spaire.subscriptions.create({
     productId: "d8dd2de1-21b7-4a41-8bc3-ce909c0cfe23",
     customerId: "992fae2a-2a17-4b7a-8d9e-e287cf90131b",
   });
@@ -129,17 +129,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { subscriptionsCreate } from "@polar-sh/sdk/funcs/subscriptionsCreate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { subscriptionsCreate } from "@spaire/sdk/funcs/subscriptionsCreate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await subscriptionsCreate(polar, {
+  const res = await subscriptionsCreate(spaire, {
     productId: "d8dd2de1-21b7-4a41-8bc3-ce909c0cfe23",
     customerId: "992fae2a-2a17-4b7a-8d9e-e287cf90131b",
   });
@@ -184,14 +184,14 @@ Export subscriptions as a CSV file.
 
 <!-- UsageSnippet language="typescript" operationID="subscriptions:export" method="get" path="/v1/subscriptions/export" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.subscriptions.export({
+  const result = await spaire.subscriptions.export({
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
 
@@ -206,17 +206,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { subscriptionsExport } from "@polar-sh/sdk/funcs/subscriptionsExport.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { subscriptionsExport } from "@spaire/sdk/funcs/subscriptionsExport.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await subscriptionsExport(polar, {
+  const res = await subscriptionsExport(spaire, {
     organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
   });
   if (res.ok) {
@@ -260,14 +260,14 @@ Get a subscription by ID.
 
 <!-- UsageSnippet language="typescript" operationID="subscriptions:get" method="get" path="/v1/subscriptions/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.subscriptions.get({
+  const result = await spaire.subscriptions.get({
     id: "<value>",
   });
 
@@ -282,17 +282,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { subscriptionsGet } from "@polar-sh/sdk/funcs/subscriptionsGet.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { subscriptionsGet } from "@spaire/sdk/funcs/subscriptionsGet.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await subscriptionsGet(polar, {
+  const res = await subscriptionsGet(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -337,14 +337,14 @@ Revoke a subscription, i.e cancel immediately.
 
 <!-- UsageSnippet language="typescript" operationID="subscriptions:revoke" method="delete" path="/v1/subscriptions/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.subscriptions.revoke({
+  const result = await spaire.subscriptions.revoke({
     id: "<value>",
   });
 
@@ -359,17 +359,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { subscriptionsRevoke } from "@polar-sh/sdk/funcs/subscriptionsRevoke.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { subscriptionsRevoke } from "@spaire/sdk/funcs/subscriptionsRevoke.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await subscriptionsRevoke(polar, {
+  const res = await subscriptionsRevoke(spaire, {
     id: "<value>",
   });
   if (res.ok) {
@@ -416,14 +416,14 @@ Update a subscription.
 
 <!-- UsageSnippet language="typescript" operationID="subscriptions:update" method="patch" path="/v1/subscriptions/{id}" -->
 ```typescript
-import { Polar } from "@polar-sh/sdk";
+import { Spaire } from "@spaire/sdk";
 
-const polar = new Polar({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new Spaire({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const result = await polar.subscriptions.update({
+  const result = await spaire.subscriptions.update({
     id: "<value>",
     subscriptionUpdate: {
       productId: "<value>",
@@ -441,17 +441,17 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PolarCore } from "@polar-sh/sdk/core.js";
-import { subscriptionsUpdate } from "@polar-sh/sdk/funcs/subscriptionsUpdate.js";
+import { SpaireCore } from "@spaire/sdk/core.js";
+import { subscriptionsUpdate } from "@spaire/sdk/funcs/subscriptionsUpdate.js";
 
-// Use `PolarCore` for best tree-shaking performance.
+// Use `SpaireCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const polar = new PolarCore({
-  accessToken: process.env["POLAR_ACCESS_TOKEN"] ?? "",
+const spaire = new SpaireCore({
+  accessToken: process.env["SPAIRE_ACCESS_TOKEN"] ?? "",
 });
 
 async function run() {
-  const res = await subscriptionsUpdate(polar, {
+  const res = await subscriptionsUpdate(spaire, {
     id: "<value>",
     subscriptionUpdate: {
       productId: "<value>",

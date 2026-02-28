@@ -3,7 +3,7 @@
  */
 
 import * as z from "zod/v4-mini";
-import { PolarCore } from "../core.js";
+import { SpaireCore } from "../core.js";
 import { dlv } from "../lib/dlv.js";
 import {
   encodeDeepObjectQuery,
@@ -27,7 +27,7 @@ import {
   HTTPValidationError,
   HTTPValidationError$inboundSchema,
 } from "../models/errors/httpvalidationerror.js";
-import { PolarError } from "../models/errors/polarerror.js";
+import { SpaireError } from "../models/errors/spaireerror.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import {
@@ -54,7 +54,7 @@ import {
  * **Scopes**: `subscriptions:read` `subscriptions:write`
  */
 export function subscriptionsList(
-  client: PolarCore,
+  client: SpaireCore,
   request: SubscriptionsListRequest,
   options?: RequestOptions,
 ): APIPromise<
@@ -62,7 +62,7 @@ export function subscriptionsList(
     Result<
       SubscriptionsListResponse,
       | HTTPValidationError
-      | PolarError
+      | SpaireError
       | ResponseValidationError
       | ConnectionError
       | RequestAbortedError
@@ -82,7 +82,7 @@ export function subscriptionsList(
 }
 
 async function $do(
-  client: PolarCore,
+  client: SpaireCore,
   request: SubscriptionsListRequest,
   options?: RequestOptions,
 ): Promise<
@@ -91,7 +91,7 @@ async function $do(
       Result<
         SubscriptionsListResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError
@@ -193,7 +193,7 @@ async function $do(
   const [result, raw] = await M.match<
     SubscriptionsListResponse,
     | HTTPValidationError
-    | PolarError
+    | SpaireError
     | ResponseValidationError
     | ConnectionError
     | RequestAbortedError
@@ -222,7 +222,7 @@ async function $do(
       Result<
         SubscriptionsListResponse,
         | HTTPValidationError
-        | PolarError
+        | SpaireError
         | ResponseValidationError
         | ConnectionError
         | RequestAbortedError

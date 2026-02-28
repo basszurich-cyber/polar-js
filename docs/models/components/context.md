@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Context } from "@polar-sh/sdk/models/components/validationerror.js";
+import { Context } from "@spaire/sdk/models/components/validationerror.js";
 
 let value: Context = {};
 ```
