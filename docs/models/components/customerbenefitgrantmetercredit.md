@@ -38,19 +38,19 @@ let value: CustomerBenefitGrantMeterCredit = {
         accountUsername: "<value>",
       },
     },
+    type: "individual",
   },
   benefit: {
     id: "<value>",
-    createdAt: new Date("2024-10-04T20:32:44.950Z"),
-    modifiedAt: new Date("2025-09-25T16:16:12.273Z"),
+    createdAt: new Date("2024-07-09T03:04:33.155Z"),
+    modifiedAt: new Date("2024-06-25T20:31:24.411Z"),
     type: "meter_credit",
-    description: "considering kiddingly direct or",
+    description:
+      "yowza er dreamily gadzooks eventually outrun playfully mortally",
     selectable: false,
     deletable: true,
     organizationId: "<value>",
-    metadata: {
-      "key": true,
-    },
+    metadata: {},
     organization: {
       createdAt: new Date("2024-02-09T14:46:30.040Z"),
       modifiedAt: new Date("2025-07-28T16:12:54.009Z"),
@@ -62,8 +62,8 @@ let value: CustomerBenefitGrantMeterCredit = {
       allowCustomerUpdates: true,
     },
     properties: {
-      units: 246327,
-      rollover: false,
+      units: 430943,
+      rollover: true,
       meterId: "<value>",
     },
   },
@@ -87,6 +87,7 @@ let value: CustomerBenefitGrantMeterCredit = {
 | `orderId`                                                                                                    | *string*                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
 | `isGranted`                                                                                                  | *boolean*                                                                                                    | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
 | `isRevoked`                                                                                                  | *boolean*                                                                                                    | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `error`                                                                                                      | [components.BenefitGrantError](../../models/components/benefitgranterror.md)                                 | :heavy_minus_sign:                                                                                           | N/A                                                                                                          |
 | `customer`                                                                                                   | [components.CustomerPortalCustomer](../../models/components/customerportalcustomer.md)                       | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
 | `benefit`                                                                                                    | [components.BenefitMeterCreditSubscriber](../../models/components/benefitmetercreditsubscriber.md)           | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
 | `properties`                                                                                                 | [components.BenefitGrantMeterCreditProperties](../../models/components/benefitgrantmetercreditproperties.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |

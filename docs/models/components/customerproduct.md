@@ -15,25 +15,63 @@ let value: CustomerProduct = {
   trialIntervalCount: 275288,
   name: "<value>",
   description: "wherever relative who above speedily",
-  recurringInterval: "day",
-  recurringIntervalCount: 940355,
-  isRecurring: true,
-  isArchived: false,
+  visibility: "public",
+  recurringInterval: "week",
+  recurringIntervalCount: 240276,
+  isRecurring: false,
+  isArchived: true,
   organizationId: "<value>",
-  prices: [],
+  prices: [
+    {
+      createdAt: new Date("2024-06-08T17:45:59.840Z"),
+      modifiedAt: new Date("2025-11-13T21:16:35.629Z"),
+      id: "<value>",
+      source: "catalog",
+      amountType: "custom",
+      priceCurrency: "<value>",
+      isArchived: false,
+      productId: "<value>",
+      type: "recurring",
+      recurringInterval: "year",
+      minimumAmount: 722126,
+      maximumAmount: 935259,
+      presetAmount: 52456,
+      legacy: true,
+    },
+  ],
   benefits: [
     {
       id: "<value>",
-      createdAt: new Date("2024-03-14T00:55:02.549Z"),
-      modifiedAt: new Date("2024-09-16T13:02:40.897Z"),
-      type: "custom",
-      description: "considering speedily for into across extricate",
-      selectable: false,
+      createdAt: new Date("2025-12-27T23:35:38.610Z"),
+      modifiedAt: new Date("2025-09-14T06:36:06.854Z"),
+      type: "meter_credit",
+      description: "content react replacement",
+      selectable: true,
       deletable: false,
       organizationId: "<value>",
     },
   ],
-  medias: [],
+  medias: [
+    {
+      id: "<value>",
+      organizationId: "<value>",
+      name: "<value>",
+      path: "/private/tmp",
+      mimeType: "<value>",
+      size: 16733,
+      storageVersion: "<value>",
+      checksumEtag: "<value>",
+      checksumSha256Base64: "<value>",
+      checksumSha256Hex: "<value>",
+      lastModifiedAt: new Date("2026-12-06T15:49:55.309Z"),
+      version: "<value>",
+      service: "product_media",
+      isUploaded: true,
+      createdAt: new Date("2025-07-11T05:48:37.631Z"),
+      sizeReadable: "<value>",
+      publicUrl: "https://impressionable-viability.com/",
+    },
+  ],
 };
 ```
 
@@ -48,6 +86,7 @@ let value: CustomerProduct = {
 | `trialIntervalCount`                                                                                                                                                                                         | *number*                                                                                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                           | The number of interval units for the trial period.                                                                                                                                                           |
 | `name`                                                                                                                                                                                                       | *string*                                                                                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                           | The name of the product.                                                                                                                                                                                     |
 | `description`                                                                                                                                                                                                | *string*                                                                                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                           | The description of the product.                                                                                                                                                                              |
+| `visibility`                                                                                                                                                                                                 | [components.ProductVisibility](../../models/components/productvisibility.md)                                                                                                                                 | :heavy_check_mark:                                                                                                                                                                                           | N/A                                                                                                                                                                                                          |
 | `recurringInterval`                                                                                                                                                                                          | [components.SubscriptionRecurringInterval](../../models/components/subscriptionrecurringinterval.md)                                                                                                         | :heavy_check_mark:                                                                                                                                                                                           | The recurring interval of the product. If `None`, the product is a one-time purchase.                                                                                                                        |
 | `recurringIntervalCount`                                                                                                                                                                                     | *number*                                                                                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                           | Number of interval units of the subscription. If this is set to 1 the charge will happen every interval (e.g. every month), if set to 2 it will be every other month, and so on. None for one-time products. |
 | `isRecurring`                                                                                                                                                                                                | *boolean*                                                                                                                                                                                                    | :heavy_check_mark:                                                                                                                                                                                           | Whether the product is a subscription.                                                                                                                                                                       |

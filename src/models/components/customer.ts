@@ -53,7 +53,7 @@ export type Customer = {
   /**
    * The ID of the customer in your system. This must be unique within the organization. Once set, it can't be updated.
    */
-  externalId: string | null;
+  externalId?: string | null | undefined;
   /**
    * The email address of the customer. This must be unique within the organization.
    */
@@ -72,6 +72,7 @@ export type Customer = {
   name: string | null;
   billingAddress: Address | null;
   taxId: Array<string | TaxIDFormat | null> | null;
+  locale?: string | null | undefined;
   /**
    * The ID of the organization owning the customer.
    */
@@ -122,7 +123,7 @@ export const Customer$inboundSchema: z.ZodMiniType<Customer, unknown> = z.pipe(
       z.pipe(z.iso.datetime({ offset: true }), z.transform(v => new Date(v))),
     ),
     metadata: z.record(z.string(), MetadataOutputType$inboundSchema),
-    external_id: z.nullable(z.string()),
+    external_id: z.optional(z.nullable(z.string())),
     email: z.string(),
     email_verified: z.boolean(),
     type: z.optional(z.nullable(CustomerType$inboundSchema)),
@@ -131,6 +132,7 @@ export const Customer$inboundSchema: z.ZodMiniType<Customer, unknown> = z.pipe(
     tax_id: z.nullable(
       z.array(z.nullable(smartUnion([z.string(), TaxIDFormat$inboundSchema]))),
     ),
+    locale: z.optional(z.nullable(z.string())),
     organization_id: z.string(),
     deleted_at: z.nullable(
       z.pipe(z.iso.datetime({ offset: true }), z.transform(v => new Date(v))),
@@ -157,13 +159,14 @@ export type Customer$Outbound = {
   created_at: string;
   modified_at: string | null;
   metadata: { [k: string]: MetadataOutputType$Outbound };
-  external_id: string | null;
+  external_id?: string | null | undefined;
   email: string;
   email_verified: boolean;
   type?: string | null | undefined;
   name: string | null;
   billing_address: Address$Outbound | null;
   tax_id: Array<string | string | null> | null;
+  locale?: string | null | undefined;
   organization_id: string;
   deleted_at: string | null;
   avatar_url: string;
@@ -179,7 +182,7 @@ export const Customer$outboundSchema: z.ZodMiniType<
     createdAt: z.pipe(z.date(), z.transform(v => v.toISOString())),
     modifiedAt: z.nullable(z.pipe(z.date(), z.transform(v => v.toISOString()))),
     metadata: z.record(z.string(), MetadataOutputType$outboundSchema),
-    externalId: z.nullable(z.string()),
+    externalId: z.optional(z.nullable(z.string())),
     email: z.string(),
     emailVerified: z.boolean(),
     type: z.optional(z.nullable(CustomerType$outboundSchema)),
@@ -188,6 +191,7 @@ export const Customer$outboundSchema: z.ZodMiniType<
     taxId: z.nullable(
       z.array(z.nullable(smartUnion([z.string(), TaxIDFormat$outboundSchema]))),
     ),
+    locale: z.optional(z.nullable(z.string())),
     organizationId: z.string(),
     deletedAt: z.nullable(z.pipe(z.date(), z.transform(v => v.toISOString()))),
     avatarUrl: z.string(),

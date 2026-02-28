@@ -26,6 +26,7 @@ let value: WebhookOrganizationUpdatedPayload = {
     socials: [],
     status: "denied",
     detailsSubmittedAt: new Date("2026-01-01T23:00:18.176Z"),
+    defaultPresentmentCurrency: "<value>",
     featureSettings: {},
     subscriptionSettings: {
       allowMultipleSubscriptions: true,
@@ -43,18 +44,19 @@ let value: WebhookOrganizationUpdatedPayload = {
       subscriptionCancellation: true,
       subscriptionConfirmation: false,
       subscriptionCycled: false,
+      subscriptionCycledAfterTrial: false,
       subscriptionPastDue: false,
       subscriptionRevoked: false,
-      subscriptionUncanceled: false,
-      subscriptionUpdated: true,
+      subscriptionUncanceled: true,
+      subscriptionUpdated: false,
     },
     customerPortalSettings: {
       usage: {
-        show: true,
+        show: false,
       },
       subscription: {
-        updateSeats: false,
-        updatePlan: true,
+        updateSeats: true,
+        updatePlan: false,
       },
     },
   },

@@ -12,16 +12,6 @@ import {
   ProductPriceSource$inboundSchema,
   ProductPriceSource$outboundSchema,
 } from "./productpricesource.js";
-import {
-  ProductPriceType,
-  ProductPriceType$inboundSchema,
-  ProductPriceType$outboundSchema,
-} from "./productpricetype.js";
-import {
-  SubscriptionRecurringInterval,
-  SubscriptionRecurringInterval$inboundSchema,
-  SubscriptionRecurringInterval$outboundSchema,
-} from "./subscriptionrecurringinterval.js";
 
 /**
  * A free price for a product.
@@ -42,6 +32,10 @@ export type ProductPriceFree = {
   source: ProductPriceSource;
   amountType: "free";
   /**
+   * The currency in which the customer will be charged.
+   */
+  priceCurrency: string;
+  /**
    * Whether the price is archived and no longer available.
    */
   isArchived: boolean;
@@ -49,11 +43,6 @@ export type ProductPriceFree = {
    * The ID of the product owning the price.
    */
   productId: string;
-  type: ProductPriceType;
-  /**
-   * @deprecated field: This will be removed in a future release, please migrate away from it as soon as possible.
-   */
-  recurringInterval: SubscriptionRecurringInterval | null;
 };
 
 /** @internal */
@@ -72,19 +61,18 @@ export const ProductPriceFree$inboundSchema: z.ZodMiniType<
     id: z.string(),
     source: ProductPriceSource$inboundSchema,
     amount_type: z.literal("free"),
+    price_currency: z.string(),
     is_archived: z.boolean(),
     product_id: z.string(),
-    type: ProductPriceType$inboundSchema,
-    recurring_interval: z.nullable(SubscriptionRecurringInterval$inboundSchema),
   }),
   z.transform((v) => {
     return remap$(v, {
       "created_at": "createdAt",
       "modified_at": "modifiedAt",
       "amount_type": "amountType",
+      "price_currency": "priceCurrency",
       "is_archived": "isArchived",
       "product_id": "productId",
-      "recurring_interval": "recurringInterval",
     });
   }),
 );
@@ -95,10 +83,9 @@ export type ProductPriceFree$Outbound = {
   id: string;
   source: string;
   amount_type: "free";
+  price_currency: string;
   is_archived: boolean;
   product_id: string;
-  type: string;
-  recurring_interval: string | null;
 };
 
 /** @internal */
@@ -112,19 +99,18 @@ export const ProductPriceFree$outboundSchema: z.ZodMiniType<
     id: z.string(),
     source: ProductPriceSource$outboundSchema,
     amountType: z.literal("free"),
+    priceCurrency: z.string(),
     isArchived: z.boolean(),
     productId: z.string(),
-    type: ProductPriceType$outboundSchema,
-    recurringInterval: z.nullable(SubscriptionRecurringInterval$outboundSchema),
   }),
   z.transform((v) => {
     return remap$(v, {
       createdAt: "created_at",
       modifiedAt: "modified_at",
       amountType: "amount_type",
+      priceCurrency: "price_currency",
       isArchived: "is_archived",
       productId: "product_id",
-      recurringInterval: "recurring_interval",
     });
   }),
 );

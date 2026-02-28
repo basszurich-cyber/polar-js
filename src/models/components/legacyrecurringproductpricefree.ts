@@ -41,6 +41,10 @@ export type LegacyRecurringProductPriceFree = {
   source: ProductPriceSource;
   amountType: "free";
   /**
+   * The currency in which the customer will be charged.
+   */
+  priceCurrency: string;
+  /**
    * Whether the price is archived and no longer available.
    */
   isArchived: boolean;
@@ -72,6 +76,7 @@ export const LegacyRecurringProductPriceFree$inboundSchema: z.ZodMiniType<
     id: z.string(),
     source: ProductPriceSource$inboundSchema,
     amount_type: z.literal("free"),
+    price_currency: z.string(),
     is_archived: z.boolean(),
     product_id: z.string(),
     type: z.literal("recurring"),
@@ -83,6 +88,7 @@ export const LegacyRecurringProductPriceFree$inboundSchema: z.ZodMiniType<
       "created_at": "createdAt",
       "modified_at": "modifiedAt",
       "amount_type": "amountType",
+      "price_currency": "priceCurrency",
       "is_archived": "isArchived",
       "product_id": "productId",
       "recurring_interval": "recurringInterval",
@@ -96,6 +102,7 @@ export type LegacyRecurringProductPriceFree$Outbound = {
   id: string;
   source: string;
   amount_type: "free";
+  price_currency: string;
   is_archived: boolean;
   product_id: string;
   type: "recurring";
@@ -114,6 +121,7 @@ export const LegacyRecurringProductPriceFree$outboundSchema: z.ZodMiniType<
     id: z.string(),
     source: ProductPriceSource$outboundSchema,
     amountType: z.literal("free"),
+    priceCurrency: z.string(),
     isArchived: z.boolean(),
     productId: z.string(),
     type: z.literal("recurring"),
@@ -125,6 +133,7 @@ export const LegacyRecurringProductPriceFree$outboundSchema: z.ZodMiniType<
       createdAt: "created_at",
       modifiedAt: "modified_at",
       amountType: "amount_type",
+      priceCurrency: "price_currency",
       isArchived: "is_archived",
       productId: "product_id",
       recurringInterval: "recurring_interval",

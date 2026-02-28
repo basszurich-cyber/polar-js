@@ -21,6 +21,7 @@ let value: ListResourceOrganization = {
       socials: [],
       status: "created",
       detailsSubmittedAt: new Date("2026-06-05T05:24:43.996Z"),
+      defaultPresentmentCurrency: "<value>",
       featureSettings: {},
       subscriptionSettings: {
         allowMultipleSubscriptions: true,
@@ -38,18 +39,19 @@ let value: ListResourceOrganization = {
         subscriptionCancellation: true,
         subscriptionConfirmation: false,
         subscriptionCycled: false,
+        subscriptionCycledAfterTrial: false,
         subscriptionPastDue: false,
         subscriptionRevoked: false,
-        subscriptionUncanceled: false,
-        subscriptionUpdated: true,
+        subscriptionUncanceled: true,
+        subscriptionUpdated: false,
       },
       customerPortalSettings: {
         usage: {
-          show: true,
+          show: false,
         },
         subscription: {
-          updateSeats: false,
-          updatePlan: true,
+          updateSeats: true,
+          updatePlan: false,
         },
       },
     },

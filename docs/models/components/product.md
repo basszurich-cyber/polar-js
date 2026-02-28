@@ -15,14 +15,13 @@ let value: Product = {
   trialIntervalCount: 744376,
   name: "<value>",
   description: "awkwardly hopelessly necklace tray crocodile",
+  visibility: "draft",
   recurringInterval: "year",
-  recurringIntervalCount: 411386,
+  recurringIntervalCount: 845304,
   isRecurring: false,
   isArchived: false,
   organizationId: "<value>",
-  metadata: {
-    "key": "<value>",
-  },
+  metadata: {},
   prices: [
     {
       createdAt: new Date("2026-07-19T05:16:33.878Z"),
@@ -30,65 +29,44 @@ let value: Product = {
       id: "<value>",
       source: "catalog",
       amountType: "seat_based",
+      priceCurrency: "<value>",
       isArchived: true,
       productId: "<value>",
-      type: "recurring",
-      recurringInterval: "year",
-      priceCurrency: "<value>",
       seatTiers: {
         tiers: [
           {
-            minSeats: 415895,
-            pricePerSeat: 164973,
+            minSeats: 675666,
+            pricePerSeat: 558084,
           },
         ],
-        minimumSeats: 562315,
-        maximumSeats: 955772,
+        minimumSeats: 922152,
+        maximumSeats: 164973,
       },
     },
   ],
-  benefits: [],
-  medias: [
+  benefits: [
     {
       id: "<value>",
+      createdAt: new Date("2026-09-26T10:37:01.387Z"),
+      modifiedAt: new Date("2026-01-09T18:16:10.566Z"),
+      type: "downloadables",
+      description:
+        "extremely relieve readily solder seagull weary smooth bore yet quaintly",
+      selectable: true,
+      deletable: false,
       organizationId: "<value>",
-      name: "<value>",
-      path: "/opt/bin",
-      mimeType: "<value>",
-      size: 366381,
-      storageVersion: "<value>",
-      checksumEtag: "<value>",
-      checksumSha256Base64: "<value>",
-      checksumSha256Hex: "<value>",
-      lastModifiedAt: new Date("2025-06-28T06:21:21.363Z"),
-      version: "<value>",
-      service: "product_media",
-      isUploaded: false,
-      createdAt: new Date("2026-06-12T01:48:20.505Z"),
-      sizeReadable: "<value>",
-      publicUrl: "https://entire-slipper.org",
-    },
-  ],
-  attachedCustomFields: [
-    {
-      customFieldId: "<value>",
-      customField: {
-        createdAt: new Date("2024-12-02T03:18:51.837Z"),
-        modifiedAt: new Date("2026-09-25T14:22:13.198Z"),
-        id: "<value>",
-        metadata: {
-          "key": 3666.38,
+      metadata: {},
+      properties: {
+        archived: {
+          "key": true,
+          "key1": true,
         },
-        type: "checkbox",
-        slug: "<value>",
-        name: "<value>",
-        organizationId: "1dbfc517-0bbf-4301-9ba8-555ca42b9737",
-        properties: {},
+        files: [],
       },
-      order: 979536,
-      required: false,
     },
   ],
+  medias: [],
+  attachedCustomFields: [],
 };
 ```
 
@@ -103,6 +81,7 @@ let value: Product = {
 | `trialIntervalCount`                                                                                                                                                                                         | *number*                                                                                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                           | The number of interval units for the trial period.                                                                                                                                                           |
 | `name`                                                                                                                                                                                                       | *string*                                                                                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                           | The name of the product.                                                                                                                                                                                     |
 | `description`                                                                                                                                                                                                | *string*                                                                                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                           | The description of the product.                                                                                                                                                                              |
+| `visibility`                                                                                                                                                                                                 | [components.ProductVisibility](../../models/components/productvisibility.md)                                                                                                                                 | :heavy_check_mark:                                                                                                                                                                                           | N/A                                                                                                                                                                                                          |
 | `recurringInterval`                                                                                                                                                                                          | [components.SubscriptionRecurringInterval](../../models/components/subscriptionrecurringinterval.md)                                                                                                         | :heavy_check_mark:                                                                                                                                                                                           | The recurring interval of the product. If `None`, the product is a one-time purchase.                                                                                                                        |
 | `recurringIntervalCount`                                                                                                                                                                                     | *number*                                                                                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                           | Number of interval units of the subscription. If this is set to 1 the charge will happen every interval (e.g. every month), if set to 2 it will be every other month, and so on. None for one-time products. |
 | `isRecurring`                                                                                                                                                                                                | *boolean*                                                                                                                                                                                                    | :heavy_check_mark:                                                                                                                                                                                           | Whether the product is a subscription.                                                                                                                                                                       |

@@ -6,14 +6,16 @@ import * as z from "zod/v4-mini";
 import { ClosedEnum } from "../../types/enums.js";
 
 export const PresentmentCurrency = {
-  Usd: "usd",
-  Eur: "eur",
-  Gbp: "gbp",
-  Cad: "cad",
   Aud: "aud",
-  Jpy: "jpy",
+  Brl: "brl",
+  Cad: "cad",
   Chf: "chf",
+  Eur: "eur",
+  Inr: "inr",
+  Gbp: "gbp",
+  Jpy: "jpy",
   Sek: "sek",
+  Usd: "usd",
 } as const;
 export type PresentmentCurrency = ClosedEnum<typeof PresentmentCurrency>;
 

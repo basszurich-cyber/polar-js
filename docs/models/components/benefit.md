@@ -48,6 +48,48 @@ const value: components.BenefitDiscord = {
 };
 ```
 
+### `components.BenefitDownloadables`
+
+```typescript
+const value: components.BenefitDownloadables = {
+  id: "<value>",
+  createdAt: new Date("2024-10-18T18:24:22.763Z"),
+  modifiedAt: new Date("2025-09-19T16:48:07.217Z"),
+  type: "downloadables",
+  description: "supposing allocation dull scowl bootleg illiterate hmph amid",
+  selectable: true,
+  deletable: true,
+  organizationId: "<value>",
+  metadata: {
+    "key": false,
+  },
+  properties: {
+    archived: {
+      "key": true,
+      "key1": true,
+    },
+    files: [],
+  },
+};
+```
+
+### `components.BenefitFeatureFlag`
+
+```typescript
+const value: components.BenefitFeatureFlag = {
+  id: "<value>",
+  createdAt: new Date("2026-01-23T21:17:09.985Z"),
+  modifiedAt: new Date("2026-03-18T19:56:22.426Z"),
+  type: "feature_flag",
+  description: "while dreary bestride revoke continually hm so terrible",
+  selectable: true,
+  deletable: true,
+  organizationId: "<value>",
+  metadata: {},
+  properties: {},
+};
+```
+
 ### `components.BenefitGitHubRepository`
 
 ```typescript
@@ -67,33 +109,6 @@ const value: components.BenefitGitHubRepository = {
     repositoryOwner: "polarsource",
     repositoryName: "private_repo",
     permission: "admin",
-  },
-};
-```
-
-### `components.BenefitDownloadables`
-
-```typescript
-const value: components.BenefitDownloadables = {
-  id: "<value>",
-  createdAt: new Date("2024-10-18T18:24:22.763Z"),
-  modifiedAt: new Date("2025-09-19T16:48:07.217Z"),
-  type: "downloadables",
-  description: "supposing allocation dull scowl bootleg illiterate hmph amid",
-  selectable: true,
-  deletable: true,
-  organizationId: "<value>",
-  metadata: {
-    "key": false,
-  },
-  properties: {
-    archived: {
-      "key": false,
-    },
-    files: [
-      "<value 1>",
-      "<value 2>",
-    ],
   },
 };
 ```
@@ -140,7 +155,7 @@ const value: components.BenefitMeterCredit = {
   organizationId: "<value>",
   metadata: {},
   properties: {
-    units: 76669,
+    units: 298008,
     rollover: false,
     meterId: "<value>",
   },

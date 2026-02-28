@@ -1219,3 +1219,53 @@ Based on:
 - [typescript v0.42.5] .
 ### Releases
 - [NPM v0.42.5] https://www.npmjs.com/package/@polar-sh/sdk/v/0.42.5 - .
+
+## 2026-02-10 10:30:57
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.709.3 (2.814.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v0.43.0] .
+### Releases
+- [NPM v0.43.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.43.0 - .
+
+## 2026-02-13 16:30:53
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.715.0 (2.822.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v0.43.1] .
+### Releases
+- [NPM v0.43.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.43.1 - .
+
+## 2026-02-24 10:57:48
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.725.0 (2.836.5) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v0.44.0] .
+### Releases
+- [NPM v0.44.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.44.0 - .
+
+## 2026-02-25 00:44:16
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.728.0 (2.839.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v0.45.0] .
+### Releases
+- [NPM v0.45.0] https://www.npmjs.com/package/@polar-sh/sdk/v/0.45.0 - .
+
+## 2026-02-27 00:41:24
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.731.2 (2.845.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v0.45.1] .
+### Releases
+- [NPM v0.45.1] https://www.npmjs.com/package/@polar-sh/sdk/v/0.45.1 - .

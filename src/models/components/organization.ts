@@ -102,6 +102,10 @@ export type Organization = {
    */
   detailsSubmittedAt: Date | null;
   /**
+   * Default presentment currency. Used as fallback in checkout and customer portal, if the customer's local currency is not available.
+   */
+  defaultPresentmentCurrency: string;
+  /**
    * Organization feature settings
    */
   featureSettings: OrganizationFeatureSettings | null;
@@ -135,6 +139,7 @@ export const Organization$inboundSchema: z.ZodMiniType<Organization, unknown> =
       details_submitted_at: z.nullable(
         z.pipe(z.iso.datetime({ offset: true }), z.transform(v => new Date(v))),
       ),
+      default_presentment_currency: z.string(),
       feature_settings: z.nullable(OrganizationFeatureSettings$inboundSchema),
       subscription_settings: OrganizationSubscriptionSettings$inboundSchema,
       notification_settings: OrganizationNotificationSettings$inboundSchema,
@@ -150,6 +155,7 @@ export const Organization$inboundSchema: z.ZodMiniType<Organization, unknown> =
         "proration_behavior": "prorationBehavior",
         "allow_customer_updates": "allowCustomerUpdates",
         "details_submitted_at": "detailsSubmittedAt",
+        "default_presentment_currency": "defaultPresentmentCurrency",
         "feature_settings": "featureSettings",
         "subscription_settings": "subscriptionSettings",
         "notification_settings": "notificationSettings",
@@ -173,6 +179,7 @@ export type Organization$Outbound = {
   socials: Array<OrganizationSocialLink$Outbound>;
   status: string;
   details_submitted_at: string | null;
+  default_presentment_currency: string;
   feature_settings: OrganizationFeatureSettings$Outbound | null;
   subscription_settings: OrganizationSubscriptionSettings$Outbound;
   notification_settings: OrganizationNotificationSettings$Outbound;
@@ -201,6 +208,7 @@ export const Organization$outboundSchema: z.ZodMiniType<
     detailsSubmittedAt: z.nullable(
       z.pipe(z.date(), z.transform(v => v.toISOString())),
     ),
+    defaultPresentmentCurrency: z.string(),
     featureSettings: z.nullable(OrganizationFeatureSettings$outboundSchema),
     subscriptionSettings: OrganizationSubscriptionSettings$outboundSchema,
     notificationSettings: OrganizationNotificationSettings$outboundSchema,
@@ -215,6 +223,7 @@ export const Organization$outboundSchema: z.ZodMiniType<
       prorationBehavior: "proration_behavior",
       allowCustomerUpdates: "allow_customer_updates",
       detailsSubmittedAt: "details_submitted_at",
+      defaultPresentmentCurrency: "default_presentment_currency",
       featureSettings: "feature_settings",
       subscriptionSettings: "subscription_settings",
       notificationSettings: "notification_settings",

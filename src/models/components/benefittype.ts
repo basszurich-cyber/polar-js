@@ -3,7 +3,8 @@
  */
 
 import * as z from "zod/v4-mini";
-import { ClosedEnum } from "../../types/enums.js";
+import * as openEnums from "../../types/enums.js";
+import { OpenEnum } from "../../types/enums.js";
 
 export const BenefitType = {
   Custom: "custom",
@@ -12,12 +13,13 @@ export const BenefitType = {
   Downloadables: "downloadables",
   LicenseKeys: "license_keys",
   MeterCredit: "meter_credit",
+  FeatureFlag: "feature_flag",
 } as const;
-export type BenefitType = ClosedEnum<typeof BenefitType>;
+export type BenefitType = OpenEnum<typeof BenefitType>;
 
 /** @internal */
-export const BenefitType$inboundSchema: z.ZodMiniEnum<typeof BenefitType> = z
-  .enum(BenefitType);
+export const BenefitType$inboundSchema: z.ZodMiniType<BenefitType, unknown> =
+  openEnums.inboundSchema(BenefitType);
 /** @internal */
-export const BenefitType$outboundSchema: z.ZodMiniEnum<typeof BenefitType> =
-  BenefitType$inboundSchema;
+export const BenefitType$outboundSchema: z.ZodMiniType<string, BenefitType> =
+  openEnums.outboundSchema(BenefitType);

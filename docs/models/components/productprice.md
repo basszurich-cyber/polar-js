@@ -12,14 +12,12 @@ const value: components.ProductPriceCustom = {
   id: "<value>",
   source: "ad_hoc",
   amountType: "custom",
+  priceCurrency: "<value>",
   isArchived: true,
   productId: "<value>",
-  type: "one_time",
-  recurringInterval: "day",
-  priceCurrency: "<value>",
-  minimumAmount: 508827,
-  maximumAmount: 793062,
-  presetAmount: 879510,
+  minimumAmount: 338033,
+  maximumAmount: 234201,
+  presetAmount: 770732,
 };
 ```
 
@@ -32,12 +30,10 @@ const value: components.ProductPriceFixed = {
   id: "<value>",
   source: "catalog",
   amountType: "fixed",
+  priceCurrency: "<value>",
   isArchived: false,
   productId: "<value>",
-  type: "one_time",
-  recurringInterval: "week",
-  priceCurrency: "<value>",
-  priceAmount: 589573,
+  priceAmount: 416058,
 };
 ```
 
@@ -50,10 +46,9 @@ const value: components.ProductPriceFree = {
   id: "<value>",
   source: "ad_hoc",
   amountType: "free",
+  priceCurrency: "<value>",
   isArchived: false,
   productId: "<value>",
-  type: "recurring",
-  recurringInterval: "month",
 };
 ```
 
@@ -66,13 +61,11 @@ const value: components.ProductPriceMeteredUnit = {
   id: "<value>",
   source: "ad_hoc",
   amountType: "metered_unit",
+  priceCurrency: "<value>",
   isArchived: false,
   productId: "<value>",
-  type: "recurring",
-  recurringInterval: "week",
-  priceCurrency: "<value>",
   unitAmount: "<value>",
-  capAmount: 689871,
+  capAmount: 734968,
   meterId: "<value>",
   meter: {
     id: "<value>",
@@ -90,20 +83,18 @@ const value: components.ProductPriceSeatBased = {
   id: "<value>",
   source: "catalog",
   amountType: "seat_based",
+  priceCurrency: "<value>",
   isArchived: false,
   productId: "<value>",
-  type: "recurring",
-  recurringInterval: "month",
-  priceCurrency: "<value>",
   seatTiers: {
     tiers: [
       {
-        minSeats: 415895,
-        pricePerSeat: 164973,
+        minSeats: 675666,
+        pricePerSeat: 558084,
       },
     ],
-    minimumSeats: 562315,
-    maximumSeats: 955772,
+    minimumSeats: 922152,
+    maximumSeats: 164973,
   },
 };
 ```
